@@ -1,0 +1,427 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095323')[0m
+Migrating to CreatePhotos (20101006095457)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "content_type" varchar(255), "filename" varchar(255), "thumbnail" varchar(255), "size" integer, "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095457')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mDROP TABLE "categories"[0m
+  [4;35;1mSQL (13.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095323'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE "photos"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095457'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (61.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095323')[0m
+Migrating to CreatePhotos (20101006095457)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "title" varchar(255), "description" text, "flickr_url" varchar(255), "content_type" varchar(255), "filename" varchar(255), "thumbnail" varchar(255), "size" integer, "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095457')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-06 15:27:36) [GET]
+
+ActionController::RoutingError (No route matches "/photos" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-06 15:28:54) [GET]
+
+ActionController::RoutingError (No route matches "/photos" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-06 15:28:56) [GET]
+
+ActionController::RoutingError (No route matches "/photos" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-06 15:29:04) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-06 15:29:12) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: ):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-06 15:35:33) [GET]
+Rendering photos/new
+Completed in 51ms (View: 50, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-06 15:35:51) [GET]
+Rendering photos/new
+Completed in 40ms (View: 39, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-06 15:37:01) [GET]
+Rendering photos/new
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 04:08:18) [GET]
+Rendering photos/new
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/photos/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (117.3ms)[0m   [0;1mDROP TABLE "photos"[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095457'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+Migrating to CreatePhotos (20101006095457)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "flickr_url" varchar(255), "content_type" varchar(255), "filename" varchar(255), "thumbnail" varchar(255), "size" integer, "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095457')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 08:14:49) [GET]
+Rendering photos/new
+Completed in 90ms (View: 88, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 08:14:49) [GET]
+Rendering photos/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:16:53) [POST]
+  Parameters: {"authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw=", "photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart57096-0>}, "commit"=>"Upload"}
+
+SyntaxError (/usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/gems/1.9.1/gems/gd2-1.1.1/lib/gd2.rb:46: syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'
+          when ?D: 8
+                  ^
+/usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/gems/1.9.1/gems/gd2-1.1.1/lib/gd2.rb:180: syntax error, unexpected keyword_end, expecting $end):
+  app/models/photo.rb:8:in `<class:Photo>'
+  app/models/photo.rb:1:in `<top (required)>'
+  app/controllers/photos_controller.rb:3:in `new'
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (113.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:17:42) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart57116-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 2700ms (View: 133, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:21:41) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart57116-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 176ms (View: 32, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:24:58) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart57116-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 50ms (View: 43, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:25:19) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58018-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 131ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:26:30) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58018-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:31:32) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58175-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 119ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:31:43) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58175-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+Rendering photos/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:34:14) [GET]
+Rendering photos/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 10:34:24) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58175-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+  [4;36;1mPhoto Create (65.2ms)[0m   [0;1mINSERT INTO "photos" ("size", "created_at", "content_type", "flickr_url", "thumbnail", "updated_at", "category_id", "filename", "height", "width") VALUES(271536, '2010-10-07 14:34:24', 'image/jpeg', NULL, NULL, '2010-10-07 14:34:24', NULL, 'Buttercup.jpg', 649, 1024)[0m
+Redirected to http://localhost:3000/photos/1
+Completed in 857ms (DB: 65) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:34:25) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 10:48:12) [GET]
+Rendering photos/new
+Completed in 117ms (View: 30, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 10:48:23) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart58567-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+  [4;36;1mPhoto Create (46.1ms)[0m   [0;1mINSERT INTO "photos" ("size", "created_at", "content_type", "flickr_url", "thumbnail", "updated_at", "category_id", "filename", "height", "width") VALUES(616171, '2010-10-07 14:48:24', 'image/jpeg', NULL, NULL, '2010-10-07 14:48:24', NULL, 'Bell_Tower.jpg', 736, 1024)[0m
+Redirected to http://localhost:3000/photos/2
+Completed in 816ms (DB: 46) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:48:24) [GET]
+  Parameters: {"id"=>"2"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:51:36) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:52:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template photos/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:53:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering photos/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 10:53:50) [GET]
+
+ActionController::RoutingError (No route matches "/photos/0000/0001/Buttercup_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 10:54:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering photos/show
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 10:54:28) [GET]
+
+ActionController::RoutingError (No route matches "/photos/0000/0002/Bell_Tower_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (24.2ms)[0m   [0;1mDROP TABLE "categories"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095323'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE "photos"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095457'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095323')[0m
+Migrating to CreatePhotos (20101006095457)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "flickr_url" varchar(255), "parent_id" integer, "content_type" varchar(255), "filename" varchar(255), "thumbnail" varchar(255), "size" integer, "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095457')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
