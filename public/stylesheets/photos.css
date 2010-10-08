@@ -1,5 +1,11 @@
 body {
     background: black;
+    color: white;
+    font-family: "Helvetica Neue", "Arial", "Helvatica", sans-serif;
+    font-size: 14px;
+}
+a {
+	text-decoration: none;
 }
 #container {
     padding-top: 20px;
@@ -19,8 +25,44 @@ body {
     bottom: 15px;
     right: 20px;
 }
-.image140 {
+.sg-5 {
     height: 140px;
+}
+.sg-5 a {
+	height: 140px;
+	width: 140px;
+}
+.sg-7 {
+	height: 196px;
+}
+.sg-7 a {
+	height: 196px;
+	width: 196px;
+}
+.category {
+    position: relative;
+}
+.category a, .photo a {
+	display: block;
+    color: white;
+    text-decoration: none;
+}
+.category a:focus, .photo a:focus {
+	background: rgba(255,255,255,0.1);
+}
+.category a:hover, .photo a:hover {
+	background: rgba(255,255,255,0.2);
+}
+.blank-category {
+    background: #222;
+    outline: 1px dashed #444;
+}
+.category h3 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: normal;
+    font-size: 1.1em;
 }
 img {
 }

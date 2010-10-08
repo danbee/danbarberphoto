@@ -7,6 +7,10 @@
         <%= f.file_field :photo %>
     </p>
     <p>
+        <%= f.label :category %>
+        <%= f.select :category_id, @categories %>
+    </p>
+    <p>
         <%= submit_tag 'Upload' %>
     </p>
 

@@ -1,5 +1,11 @@
+<% if @category %>
+	<div class="sg-5 category" style="background: <%= @category.base_colour %>">
+		<h3><%=h @category.name.downcase %></h3>
+	</div>
+<% end %>
+
 <% @photos.each do |photo| %>
 
-    <div class="sg-5 image140"><%= link_to image_tag(photo.photo.url(:thumb)), photo.photo.url(:large), :rel => 'photo', :class => 'fancy' %></div>
+    <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')"><%= link_to '&nbsp;', photo.photo.url, :rel => 'photo', :class => 'fancy' %></div>
 
 <% end %>
