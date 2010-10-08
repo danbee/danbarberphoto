@@ -1,0 +1,5 @@
+<% @photos.each do |photo| %>
+
+    <div class="sg-5 image140"><%= link_to image_tag(photo.photo.url(:thumb)), photo.photo.url(:large), :rel => 'photo', :class => 'fancy' %></div>
+
+<% end %>

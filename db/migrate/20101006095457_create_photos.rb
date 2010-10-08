@@ -5,13 +5,10 @@ class CreatePhotos < ActiveRecord::Migration
       
       t.string :flickr_url
       
-      t.integer :parent_id
-      t.string :content_type
-      t.string :filename
-      t.string :thumbnail
-      t.integer :size
-      t.integer :width
-      t.integer :height
+      t.string :photo_file_name
+      t.string :photo_content_type
+      t.integer :photo_file_size
+      t.datetime :photo_updated_at
 
       t.timestamps
     end

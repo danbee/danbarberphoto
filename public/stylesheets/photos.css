@@ -1,0 +1,26 @@
+body {
+    background: black;
+}
+#container {
+    padding-top: 20px;
+}
+#wrapper {
+    background: inherit;
+}
+#header {
+    position: relative;
+    background: #0082bf;
+    height: 308px;
+}
+#header h1 {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+.image140 {
+    height: 140px;
+}
+img {
+}

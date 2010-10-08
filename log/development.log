@@ -425,3 +425,1533 @@ Migrating to CreatePhotos (20101006095457)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+Migrating to CreatePhotos (20101006095457)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 11:09:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Photo with ID=1):
+  app/controllers/photos_controller.rb:17:in `show'
+
+Rendered rescues/_trace (69.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 11:09:29) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 11:09:36) [GET]
+Rendering photos/new
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 11:09:45) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart59048-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+  [4;35;1mPhoto Create (0.5ms)[0m   [0mINSERT INTO "photos" ("size", "created_at", "content_type", "flickr_url", "thumbnail", "updated_at", "category_id", "parent_id", "filename", "height", "width") VALUES(271536, '2010-10-07 15:09:45', 'image/jpeg', NULL, NULL, '2010-10-07 15:09:45', NULL, NULL, 'Buttercup.jpg', 649, 1024)[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."thumbnail" = 'thumb' AND "photos"."parent_id" = 1) LIMIT 1[0m
+  [4;35;1mPhoto Create (0.2ms)[0m   [0mINSERT INTO "photos" ("size", "created_at", "content_type", "flickr_url", "thumbnail", "updated_at", "category_id", "parent_id", "filename", "height", "width") VALUES(22093, '2010-10-07 15:09:45', 'image/jpeg', NULL, 'thumb', '2010-10-07 15:09:45', NULL, 1, 'Buttercup_thumb.jpg', 89, 140)[0m
+Redirected to http://localhost:3000/photos/1
+Completed in 924ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 11:09:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering photos/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/photos/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 11:10:25) [GET]
+Rendering photos/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 11:10:33) [POST]
+  Parameters: {"photo"=>{"uploaded_data"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart59048-1>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("size", "created_at", "content_type", "flickr_url", "thumbnail", "updated_at", "category_id", "parent_id", "filename", "height", "width") VALUES(616171, '2010-10-07 15:10:34', 'image/jpeg', NULL, NULL, '2010-10-07 15:10:34', NULL, NULL, 'Bell_Tower.jpg', 736, 1024)[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."thumbnail" = 'thumb' AND "photos"."parent_id" = 3) LIMIT 1[0m
+
+ArgumentError (invalid geometry format):
+  app/controllers/photos_controller.rb:8:in `create'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (188.4ms)[0m   [0;1mDROP TABLE "categories"[0m
+  [4;35;1mSQL (236.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095323'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (15.1ms)[0m   [0;1mDROP TABLE "photos"[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101006095457'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20101006095323)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095323')[0m
+Migrating to CreatePhotos (20101006095457)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "flickr_url" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101006095457')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:27:43) [GET]
+Rendering photos/new
+Completed in 70ms (View: 52, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:27:59) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-1wix6p2-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-020101007-62042-kbfrrw-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-0.jpg[0]' -resize "x140" -crop "140x140+40+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-m6g5oe-020101007-62042-1t5w9jm-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.6ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1120695, '2010-10-07 17:28:02', NULL, 'Buttercup.jpg', '2010-10-07 17:28:02', 'image/jpeg', NULL, '2010-10-07 17:27:59')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/1/original/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/1/large/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/1/thumb/Buttercup.jpg
+Redirected to http://localhost:3000/photos/1
+Completed in 3045ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:28:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering photos/show
+
+ActionView::TemplateError (undefined method `public_filename' for #<Photo:0x103504660>) on line #1 of app/views/photos/show.html.erb:
+1: <%= link_to image_tag(@photo.public_filename(:thumb)), @photo.public_filename %>
+
+    app/views/photos/show.html.erb:1
+
+Rendered rescues/_trace (123.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:30:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1) [0m
+Rendering photos/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:31:03) [GET]
+Rendering photos/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:31:16) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-1thurbi-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-020101007-62042-rw85nl-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-0.jpg[0]' -resize "x140" -crop "140x140+37+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1s5yovn-020101007-62042-1x0zhc-0' 2>/dev/null
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1065859, '2010-10-07 17:31:17', NULL, 'Dragonfly.jpg', '2010-10-07 17:31:17', 'image/jpeg', NULL, '2010-10-07 17:31:16')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/2/original/Dragonfly.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/2/large/Dragonfly.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/2/thumb/Dragonfly.jpg
+Redirected to http://localhost:3000/photos/2
+Completed in 859ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:31:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 2) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:32:42) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:48:04) [GET]
+Rendering photos/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:48:14) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-9gawfe-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-020101007-62042-ryaqji-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' -resize "x40" -crop "40x40+11+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-020101007-62042-1qoirtk-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-0.jpg[0]' -resize "x140" -crop "140x140+40+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1iixv17-020101007-62042-1nyhthw-0' 2>/dev/null
+  [4;35;1mPhoto Create (0.5ms)[0m   [0mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1120695, '2010-10-07 17:48:16', NULL, 'Buttercup.jpg', '2010-10-07 17:48:16', 'image/jpeg', NULL, '2010-10-07 17:48:14')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/3/original/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/3/admin_thumb/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/3/large/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/3/thumb/Buttercup.jpg
+Redirected to http://localhost:3000/photos/3
+Completed in 1728ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:48:16) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/3]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:48:35) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:50:32) [GET]
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:51:01) [GET]
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:51:21) [GET]
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:51:31) [GET]
+Rendering photos/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:51:39) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-1csffio-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-020101007-62042-1elgovt-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' -resize "x40" -crop "40x40+7+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-020101007-62042-ncq2ae-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-0.jpg[0]' -resize "x140" -crop "140x140+27+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13eob09-020101007-62042-xi2w1l-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1877137, '2010-10-07 17:51:41', NULL, 'Bell Tower.jpg', '2010-10-07 17:51:41', 'image/jpeg', NULL, '2010-10-07 17:51:39')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/4/original/Bell Tower.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/4/admin_thumb/Bell Tower.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/4/large/Bell Tower.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/4/thumb/Bell Tower.jpg
+Redirected to http://localhost:3000/photos/4
+Completed in 1684ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:51:41) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:51:43) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:51:47) [GET]
+Rendering photos/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:51:51) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-1bmykjp-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-020101007-62042-5f7qoh-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' -resize "40x" -crop "40x40+0+10" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-020101007-62042-clrav5-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-0.jpg[0]' -resize "140x" -crop "140x140+0+35" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-6vyt0j-020101007-62042-1k26qeo-0' 2>/dev/null
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(3275560, '2010-10-07 17:51:53', NULL, 'Church of Ireland.jpg', '2010-10-07 17:51:53', 'image/jpeg', NULL, '2010-10-07 17:51:51')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/5/original/Church of Ireland.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/5/admin_thumb/Church of Ireland.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/5/large/Church of Ireland.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/5/thumb/Church of Ireland.jpg
+Redirected to http://localhost:3000/photos/5
+Completed in 2048ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:51:53) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/5]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:51:55) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 13:51:58) [GET]
+Rendering photos/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 13:52:05) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-a1kg42-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-020101007-62042-11w3imk-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' -resize "x40" -crop "40x40+22+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-020101007-62042-xachv2-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-0.jpg[0]' -resize "x140" -crop "140x140+78+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-cxh6zd-020101007-62042-mu6nkg-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(5675107, '2010-10-07 17:52:10', NULL, 'Emerald Panarama.jpg', '2010-10-07 17:52:10', 'image/jpeg', NULL, '2010-10-07 17:52:05')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/6/original/Emerald Panarama.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/6/admin_thumb/Emerald Panarama.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/6/large/Emerald Panarama.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/6/thumb/Emerald Panarama.jpg
+Redirected to http://localhost:3000/photos/6
+Completed in 4546ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:52:10) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:52:19) [GET]
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:53:38) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:57:27) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering photos/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:28) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/5]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:29) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/3]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering photos/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:38) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/5]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/3]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:57:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering photos/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 13:58:57) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 61ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 13:58:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 4) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/4]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:03:03) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:05:18) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:05:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:05:59) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 64ms (View: 60, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:05:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:06:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:06:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:06:39) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 5) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:06:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:06:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:06:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:07:04) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:07:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:07:49) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 14:07:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:08:23) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 14:08:48) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 56ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 14:08:59) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-djurid-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-020101007-62042-vj5zs2-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' -resize "x40" -crop "40x40+19+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-020101007-62042-1q9khb0-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-0.jpg[0]' -resize "x140" -crop "140x140+67+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-1eh5gg7-020101007-62042-aq30z4-0' 2>/dev/null
+  [4;36;1mPhoto Create (1.0ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1082099, '2010-10-07 18:09:00', NULL, 'Croagh Patrick Sunset.jpg', '2010-10-07 18:09:00', 'image/jpeg', NULL, '2010-10-07 18:08:59')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/7/original/Croagh Patrick Sunset.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/7/admin_thumb/Croagh Patrick Sunset.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/7/large/Croagh Patrick Sunset.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/7/thumb/Croagh Patrick Sunset.jpg
+Redirected to http://localhost:3000/photos/7
+Completed in 1440ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:09:00) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/7]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:09:02) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 76ms (View: 6, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:10:47) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:10:58) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:11:11) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 56ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:11:27) [GET]
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:12:02) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:12:18) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:12:27) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:13:08) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:13:20) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:13:34) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:15:03) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:15:31) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 65ms (View: 60, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:15:54) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:16:10) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:20:15) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:20:38) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:20:49) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:21:20) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:21:50) [GET]
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 14:22:00) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 14:22:10) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-uig349-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-020101007-62042-1w0gx1m-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' -resize "x40" -crop "40x40+13+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-020101007-62042-mh3asd-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-0.jpg[0]' -resize "x140" -crop "140x140+45+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-13pe829-020101007-62042-1grnzf7-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1362163, '2010-10-07 18:22:11', NULL, 'Cross.jpg', '2010-10-07 18:22:11', 'image/jpeg', NULL, '2010-10-07 18:22:10')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/8/original/Cross.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/8/admin_thumb/Cross.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/8/large/Cross.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/8/thumb/Cross.jpg
+Redirected to http://localhost:3000/photos/8
+Completed in 1572ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:22:11) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 8) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/8]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 14:22:14) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 14:22:22) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-125xupm-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-020101007-62042-b9ansm-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' -resize "40x" -crop "40x40+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-020101007-62042-1sqwdtb-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-0.jpg[0]' -resize "140x" -crop "140x140+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-kzpggv-020101007-62042-191ndm6-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(2822720, '2010-10-07 18:22:24', NULL, 'Light and Shade.jpg', '2010-10-07 18:22:24', 'image/jpeg', NULL, '2010-10-07 18:22:22')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/9/original/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/9/admin_thumb/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/9/large/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/9/thumb/Light and Shade.jpg
+Redirected to http://localhost:3000/photos/9
+Completed in 1591ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:22:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 9) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/9]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-07 14:22:25) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-07 14:22:29) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101007-62042-1r0tyyt-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-020101007-62042-fh2rae-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' -resize "40x" -crop "40x40+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-020101007-62042-kztyot-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-0.jpg[0]' -resize "140x" -crop "140x140+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101007-62042-vp2cgg-020101007-62042-16qki8d-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1574250, '2010-10-07 18:22:30', NULL, 'Moody Me.jpg', '2010-10-07 18:22:30', 'image/jpeg', NULL, '2010-10-07 18:22:29')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/10/original/Moody Me.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/10/admin_thumb/Moody Me.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/10/large/Moody Me.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/10/thumb/Moody Me.jpg
+Redirected to http://localhost:3000/photos/10
+Completed in 1054ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-07 14:22:30) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 10) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/10]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 14:22:31) [GET]
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 79ms (View: 74, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 192.168.42.32 at 2010-10-07 14:59:54) [GET]
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://junpei/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.32 at 2010-10-07 14:59:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.32 at 2010-10-07 15:23:03) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://junpei/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.32 at 2010-10-07 15:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.32 at 2010-10-07 15:38:46) [GET]
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://junpei/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.32 at 2010-10-07 15:38:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-07 16:20:38) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 45ms (View: 41, DB: 1) | 200 OK [http://junpei/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-07 16:20:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:32:52) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:33:08) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:33:20) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:33:28) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 60ms (View: 56, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:34:00) [GET]
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-07 16:34:24) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:24:53) [GET]
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:25:17) [GET]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:25:33) [GET]
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:26:01) [GET]
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:26:09) [GET]
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:26:19) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 03:27:03) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:37:46) [GET]
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 47ms (View: 42, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/photo/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:38:11) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 58ms (View: 51, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:38:27) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-117hg1u-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-020101008-62042-njn20n-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' -resize "x40" -crop "40x40+20+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-020101008-62042-yv60l8-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-0.jpg[0]' -resize "x140" -crop "140x140+71+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1msdntj-020101008-62042-1rsrk5z-0' 2>/dev/null
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1858172, '2010-10-08 08:38:29', NULL, 'Bubble #2.jpg', '2010-10-08 08:38:29', 'image/jpeg', NULL, '2010-10-08 08:38:27')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/11/original/Bubble #2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/11/admin_thumb/Bubble #2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/11/large/Bubble #2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/11/thumb/Bubble #2.jpg
+Redirected to http://localhost:3000/photos/11
+Completed in 2446ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:38:29) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 11) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:38:29) [GET]
+
+ActionController::RoutingError (No route matches "/system/photos/11/thumb/Bubble%20" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:38:32) [GET]
+
+ActionController::RoutingError (No route matches "/system/photos/11/large/Bubble%20" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:38:40) [GET]
+  [4;35;1mPhoto Load (1.7ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 123ms (View: 111, DB: 2) | 200 OK [http://localhost/photos/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:38:41) [GET]
+
+ActionController::RoutingError (No route matches "/system/photos/11/thumb/Bubble%20" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:38:49) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:39:01) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-gyih7c-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-020101008-62042-l83gzo-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' -resize "40x" -crop "40x40+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-020101008-62042-1gbo0d7-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-0.jpg[0]' -resize "140x" -crop "140x140+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-szc6kd-020101008-62042-dt92x9-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(2060700, '2010-10-08 08:39:03', NULL, 'Halfway There.jpg', '2010-10-08 08:39:03', 'image/jpeg', NULL, '2010-10-08 08:39:01')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/12/original/Halfway There.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/12/admin_thumb/Halfway There.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/12/large/Halfway There.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/12/thumb/Halfway There.jpg
+Redirected to http://localhost:3000/photos/12
+Completed in 1716ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:39:03) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 12) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/12]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:39:05) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/photos/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:39:05) [GET]
+
+ActionController::RoutingError (No route matches "/system/photos/11/thumb/Bubble%20" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:40:06) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 65ms (View: 60, DB: 1) | 200 OK [http://localhost/photos/]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:40:09) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:40:41) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-dpcjdh-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-020101008-62042-1g6upw7-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' -resize "x40" -crop "40x40+20+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-020101008-62042-bj8zwv-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-0.jpg[0]' -resize "x140" -crop "140x140+71+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-1o20o4v-020101008-62042-t87l4k-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1858172, '2010-10-08 08:40:42', NULL, 'Bubble no2.jpg', '2010-10-08 08:40:42', 'image/jpeg', NULL, '2010-10-08 08:40:41')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/13/original/Bubble no2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/13/admin_thumb/Bubble no2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/13/large/Bubble no2.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/13/thumb/Bubble no2.jpg
+Redirected to http://localhost:3000/photos/13
+Completed in 1616ms (DB: 1) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:40:42) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 13) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/13]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:40:44) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/photos/]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:40:52) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:40:56) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-1c1tjuo-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-020101008-62042-3twkkj-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' -resize "40x" -crop "40x40+0+10" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-020101008-62042-1wyqhfq-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-0.jpg[0]' -resize "140x" -crop "140x140+0+35" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-4dglhp-020101008-62042-51nswz-0' 2>/dev/null
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(2040957, '2010-10-08 08:40:58', NULL, 'Church of Ireland Gate.jpg', '2010-10-08 08:40:58', 'image/jpeg', NULL, '2010-10-08 08:40:56')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/14/original/Church of Ireland Gate.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/14/admin_thumb/Church of Ireland Gate.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/14/large/Church of Ireland Gate.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/14/thumb/Church of Ireland Gate.jpg
+Redirected to http://localhost:3000/photos/14
+Completed in 1869ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:40:58) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 14) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/photos/14]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:41:04) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:41:10) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:41:17) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-1hdeirj-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-020101008-62042-1cczpg5-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' -resize "x40" -crop "40x40+10+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-020101008-62042-2vfnt8-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-0.jpg[0]' -resize "x140" -crop "140x140+37+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-esxq8y-020101008-62042-1kmad9o-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1065859, '2010-10-08 08:41:18', NULL, 'Dragonfly.jpg', '2010-10-08 08:41:18', 'image/jpeg', NULL, '2010-10-08 08:41:17')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/15/original/Dragonfly.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/15/admin_thumb/Dragonfly.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/15/large/Dragonfly.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/15/thumb/Dragonfly.jpg
+Redirected to http://localhost:3000/photos/15
+Completed in 1210ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:41:18) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 15) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/15]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:41:20) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:41:30) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-j6aj92-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-020101008-62042-11asebv-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' -resize "40x" -crop "40x40+0+8" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-020101008-62042-190d5hb-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-0.jpg[0]' -resize "140x" -crop "140x140+0+28" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-ji2p83-020101008-62042-3mdrno-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(1020911, '2010-10-08 08:41:31', NULL, 'House through the Doorway.jpg', '2010-10-08 08:41:31', 'image/jpeg', NULL, '2010-10-08 08:41:30')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/16/original/House through the Doorway.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/16/admin_thumb/House through the Doorway.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/16/large/House through the Doorway.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/16/thumb/House through the Doorway.jpg
+Redirected to http://localhost:3000/photos/16
+Completed in 1476ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:41:31) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 16) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/16]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:41:33) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:41:46) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:41:54) [GET]
+  [4;35;1mPhoto Load (1.2ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 78ms (View: 72, DB: 1) | 200 OK [http://localhost/photos/]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-10-08 04:42:36) [GET]
+Rendering template within layouts/photos
+Rendering photos/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-10-08 04:42:53) [POST]
+  Parameters: {"photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101008-62042-pv7210-0>}, "commit"=>"Upload", "authenticity_token"=>"MRMA5jN8F+L8Qu/qxudBGU2lL/82P68aMbmoNbKb5zw="}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-020101008-62042-mxdt6v-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' -resize "x40" -crop "40x40+21+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-020101008-62042-h8dvma-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-0.jpg[0]' -resize "x140" -crop "140x140+74+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101008-62042-17laygy-020101008-62042-ouvolf-0' 2>/dev/null
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("photo_file_size", "created_at", "flickr_url", "photo_file_name", "updated_at", "photo_content_type", "category_id", "photo_updated_at") VALUES(997816, '2010-10-08 08:42:54', NULL, 'Croagh Patrick no3.jpg', '2010-10-08 08:42:54', 'image/jpeg', NULL, '2010-10-08 08:42:53')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/17/original/Croagh Patrick no3.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/17/admin_thumb/Croagh Patrick no3.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/17/large/Croagh Patrick no3.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/17/thumb/Croagh Patrick no3.jpg
+Redirected to http://localhost:3000/photos/17
+Completed in 1404ms (DB: 0) | 302 Found [http://localhost/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-10-08 04:42:54) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 17) [0m
+Rendering template within layouts/photos
+Rendering photos/show
+Completed in 76ms (View: 3, DB: 0) | 200 OK [http://localhost/photos/17]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:42:55) [GET]
+  [4;36;1mPhoto Load (1.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:44:37) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 24ms (View: 20, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:47:13) [GET]
+  [4;36;1mPhoto Load (1.2ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:47:14) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:52:04) [GET]
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+
+ActionView::TemplateError (No expansion found for :jquery) on line #8 of app/views/layouts/photos.html.erb:
+5:         <title>Photos</title>
+6:         <%= stylesheet_link_tag "squaregrid", :media => "all" %>
+7:         <%= stylesheet_link_tag "photos", :media => "all" %>
+8:         <%= javascript_include_tag :jquery, :jrails %>
+9:     </head>
+10: 
+11:     <body>
+
+    app/views/layouts/photos.html.erb:8
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:52:29) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:56:24) [GET]
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+
+ActionView::TemplateError (undefined method `stylesheel_link_tag' for #<ActionView::Base:0x1032a0ab8>) on line #8 of app/views/layouts/photos.html.erb:
+5:         <title>Photos</title>
+6:         <%= stylesheet_link_tag "squaregrid", :media => "all" %>
+7:         <%= stylesheet_link_tag "photos", :media => "all" %>
+8:         <%= stylesheel_link_tag "fancybox", :media => "all" %>
+9:         <%= javascript_include_tag 'jquery', 'jrails', 'fancybox' %>
+10:     </head>
+11: 
+
+    app/views/layouts/photos.html.erb:8
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:56:37) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 04:59:26) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:59:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/photos.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 04:59:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/photos.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:00:43) [GET]
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 05:00:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 05:00:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 05:00:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox-x.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 05:00:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox-y.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 05:00:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:06:33) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:07:36) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:08:59) [GET]
+  [4;36;1mPhoto Load (1.1ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:10:23) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:10:52) [GET]
+  [4;36;1mPhoto Load (1.6ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-08 05:35:29) [GET]
+  [4;35;1mPhoto Load (1.1ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 54ms (View: 49, DB: 1) | 200 OK [http://localhost/photos]

@@ -21,13 +21,10 @@ ActiveRecord::Schema.define(:version => 20101006095457) do
   create_table "photos", :force => true do |t|
     t.integer  "category_id"
     t.string   "flickr_url"
-    t.integer  "parent_id"
-    t.string   "content_type"
-    t.string   "filename"
-    t.string   "thumbnail"
-    t.integer  "size"
-    t.integer  "width"
-    t.integer  "height"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+
+    <head>
+        <title>Photos</title>
+        <%= stylesheet_link_tag "squaregrid", :media => "all" %>
+        <%= stylesheet_link_tag "photos", :media => "all" %>
+        <%= stylesheet_link_tag "fancybox", :media => "all" %>
+        <%= javascript_include_tag 'jquery', 'jrails', 'fancybox', 'photos' %>
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+            <div id="container">
+
+                <div id="header" class="sg-11"><h1><%= image_tag('title.png') %></h1></div>
+                
+                <%= yield %>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>
