@@ -1,7 +1,7 @@
 require 'exifr'
 
 class Photo < ActiveRecord::Base
-    belongs_to :category
+    has_and_belongs_to_many :categories
 
     has_attached_file :photo, :styles => {  :original => "1024x1024>",
                                             :size11 => "308x308#",
@@ -10,9 +10,9 @@ class Photo < ActiveRecord::Base
                                             :size3 => "84x84#",
                                             :size2 => "56x56#" }
 
-    validates_presence_of :category
-
-    before_post_process :get_exif
+    after_create :get_exif
+    
+    @@per_page = 11
 
 private
     def get_exif

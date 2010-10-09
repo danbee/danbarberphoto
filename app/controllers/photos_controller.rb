@@ -7,9 +7,11 @@ class PhotosController < ApplicationController
     def index
         if params[:category_id]
             @category = Category.find_by_id(params[:category_id])
-            @photos = Photo.find(:all, :conditions => { :category_id => params[:category_id] })
+            @photos = @category.photos.paginate :page => params[:page], :per_page => 11
+            @num_photos = @photos.count
         else
-            @photos = Photo.find(:all)
+            @photos = Photo.paginate :all, :page => params[:page], :per_page => 11
+            @num_photos = @photos.count
         end
     end
     

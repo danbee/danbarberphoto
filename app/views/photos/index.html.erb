@@ -1,11 +1,40 @@
+	<div class="sg-5">
+	</div>
+	<div class="sg-5 page-links">
+		<% if @photos.previous_page -%>
+			<%= link_to '<div>&larr;</div>', { :page => @photos.previous_page }, :class => 'prev-link' %>
+		<% end %>
+		<% if @photos.next_page -%>
+			<%= link_to '<div>&rarr;</div>', { :page => @photos.next_page }, :class => 'next-link' %>
+		<% end %>
+	</div>
+</div>
+
+<div class="sg-24 sgParent">
+
 <% if @category %>
 	<div class="sg-5 category" style="background: <%= @category.base_colour %>">
-		<h3><%=h @category.name.downcase %></h3>
+		<%= link_to '<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>', categories_url %>
+	</div>
+<% else %>
+	<div class="sg-5 category" style="background: #333;">
+		<h3>all photos</h3>
 	</div>
 <% end %>
 
+<% @num_blank = 11 - @num_photos -%>
+
 <% @photos.each do |photo| %>
 
-    <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')"><%= link_to '&nbsp;', photo.photo.url, :rel => 'photo', :class => 'fancy' %></div>
+    <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')">
+		<%= link_to '&nbsp;', photo.photo.url, :rel => 'photo', :class => 'fancy' %>
+	</div>
 
 <% end %>
+
+<% @num_blank.times do %>
+	<div class="sg-5 photo blank-photo">
+	</div>
+<% end %>
+
+</div>

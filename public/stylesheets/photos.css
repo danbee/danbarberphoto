@@ -11,7 +11,7 @@ a {
     padding-top: 20px;
 }
 #wrapper {
-    background: inherit;
+    background: black;
 }
 #header {
     position: relative;
@@ -47,22 +47,58 @@ a {
     color: white;
     text-decoration: none;
 }
+.category a .arrow {
+	position: absolute;
+   	bottom: 10px;
+    left: 20px;
+}
 .category a:focus, .photo a:focus {
 	background: rgba(255,255,255,0.1);
 }
 .category a:hover, .photo a:hover {
 	background: rgba(255,255,255,0.2);
 }
-.blank-category {
+.blank-category, .blank-photo {
     background: #222;
     outline: 1px dashed #444;
 }
 .category h3 {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+	position: absolute;
+	top: 16px;
+	right: 0;
+	text-align: right;
+	margin: 0 20px;
     font-weight: normal;
     font-size: 1.1em;
+	line-height: 1em;
 }
 img {
+}
+.page-links {
+	background: #c03232;
+}
+.prev-link, .next-link {
+	color: white;
+	position: relative;
+	display: block;
+	width: 70px !important;
+}
+.prev-link {
+	float: left;
+}
+.next-link {
+	float: right;
+}
+.prev-link div, .next-link div {
+	position: absolute;
+	bottom: 10px;
+}
+.prev-link div {
+	left: 20px;
+}
+.next-link div {
+	right: 20px;
+}
+.prev-link:hover, .next-link:hover {
+	background: rgba(255,255,255,0.2);
 }

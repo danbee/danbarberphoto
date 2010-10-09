@@ -1,14 +1,11 @@
+</div>
+
 <div class="sg-24 sgParent">
 
 <% @categories.each do |category| %>
-    <div class="sg-8 sgParent">
-		<div class="category sg-7" style="background: <%= category.base_colour %>">
-	        <%= link_to '<h3>'+h(category.name.downcase)+'</h3>', category_photos_path(category) %>
-		</div>
-    </div>
+	<div class="category sg-5" style="background: <%= category.base_colour %>">
+        <%= link_to '<h3>'+h(category.name.downcase)+'</h3>', category_photos_path(category) %>
+	</div>
 <% end %>
-
-    <div class="sg-7 category blank-category">
-    </div>
 
 </div>
