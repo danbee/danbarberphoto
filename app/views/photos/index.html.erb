@@ -1,9 +1,9 @@
-	<div class="sg-5">
-	</div>
 	<div class="sg-5 page-links">
 		<% if @photos.previous_page -%>
 			<%= link_to '<div>&larr;</div>', { :page => @photos.previous_page }, :class => 'prev-link' %>
 		<% end %>
+	</div>
+	<div class="sg-5 page-links">
 		<% if @photos.next_page -%>
 			<%= link_to '<div>&rarr;</div>', { :page => @photos.next_page }, :class => 'next-link' %>
 		<% end %>

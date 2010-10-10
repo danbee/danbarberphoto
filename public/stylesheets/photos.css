@@ -1,22 +1,37 @@
 body {
-    background: black;
+    background: #101010;
     color: white;
     font-family: "Helvetica Neue", "Arial", "Helvatica", sans-serif;
     font-size: 14px;
+	overflow: hidden;
 }
 a {
 	text-decoration: none;
+}
+#page {
+	position: absolute;
+	top: 40%;
+	margin-top: -230px;
+	width: 100%;
 }
 #container {
     padding-top: 20px;
 }
 #wrapper {
-    background: black;
+    background: #101010;
 }
 #header {
     position: relative;
     background: #0082bf;
     height: 308px;
+}
+#header a {
+	display: block;
+	height: 308px;
+	width: 308px;
+}
+#header a:hover {
+	background: rgba(255,255,255,0.1);
 }
 #header h1 {
     padding: 0;
@@ -25,10 +40,27 @@ a {
     bottom: 15px;
     right: 20px;
 }
+#footer {
+	background: #333;
+	color: black;
+	text-align: right;
+	height: 28px;
+}
+#footer p {
+	margin: 0 10px;
+}
+.sg-5, .sg-7, .sg-11, .sg-17, .sg-35 {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
 .sg-5 {
     height: 140px;
 }
 .sg-5 a {
+	position: relative;
+	display: block;
+	color: white;
 	height: 140px;
 	width: 140px;
 }
@@ -36,8 +68,37 @@ a {
 	height: 196px;
 }
 .sg-7 a {
+	position: relative;
+	display: block;
+	color: white;
 	height: 196px;
 	width: 196px;
+}
+.sg-11 {
+	height: 308px;
+}
+.sg-17 {
+	height: 476px;
+}
+.about {
+	background-color: #99BF00;
+}
+.portfolio {
+	background-color: #C03232;
+}
+.contact {
+	background-color: #777;
+}
+.about a:focus, .portfolio a:focus, .contact a:focus {
+	background: rgba(255,255,255,0.1);
+}
+.about a:hover, .portfolio a:hover, .contact a:hover {
+	background: rgba(255,255,255,0.2);
+}
+.about a div, .portfolio a div, .contact a div {
+	position: absolute;
+	top: 10px;
+	right: 20px;	
 }
 .category {
     position: relative;
@@ -49,7 +110,8 @@ a {
 }
 .category a .arrow {
 	position: absolute;
-   	bottom: 10px;
+	font-size: 2em;
+   	bottom: 20px;
     left: 20px;
 }
 .category a:focus, .photo a:focus {
@@ -75,23 +137,17 @@ a {
 img {
 }
 .page-links {
-	background: #c03232;
+	background: #666;
 }
 .prev-link, .next-link {
 	color: white;
+	font-size: 2em;
 	position: relative;
 	display: block;
-	width: 70px !important;
-}
-.prev-link {
-	float: left;
-}
-.next-link {
-	float: right;
 }
 .prev-link div, .next-link div {
 	position: absolute;
-	bottom: 10px;
+	bottom: 15px;
 }
 .prev-link div {
 	left: 20px;

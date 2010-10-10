@@ -3,7 +3,11 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
   def index
-    @categories = Category.all
+    @categories = Category.paginate :all, :page => params[:page], :per_page => 4
+    
+    @num_categories = @categories.count
+    
+    @photos = Photo.all(:limit => 2, :order => 'RANDOM()')
 
     respond_to do |format|
       format.html # index.html.erb

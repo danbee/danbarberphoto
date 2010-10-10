@@ -1,0 +1,18 @@
+	<div class="sg-5 about">
+		<%= link_to '<div>about</div>', :action => 'about' %>
+	</div>
+	<div class="sg-5 portfolio">
+		<%= link_to '<div>portfolio</div>', :controller => 'categories' %>
+	</div>
+</div>
+
+<div class="sg-17" style="background: url('<%= @photo.photo.url(:size17) %>')">
+</div>
+
+<div class="sg-5" style="background: #333;">
+</div>
+<div class="sg-5" style="background: #555;">
+</div>
+<div class="sg-5 contact">
+	<%= link_to '<div>contact</div>', :action => 'contact' %>
+</div>

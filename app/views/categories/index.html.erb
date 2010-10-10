@@ -1,11 +1,46 @@
+	<div class="sg-5 page-links">
+		<% if @categories.previous_page -%>
+			<%= link_to '<div>&larr;</div>', { :page => @categories.previous_page }, :class => 'prev-link' %>
+		<% end %>
+	</div>
+	<div class="sg-5 page-links">
+		<% if @categories.next_page -%>
+			<%= link_to '<div>&rarr;</div>', { :page => @categories.next_page }, :class => 'next-link' %>
+		<% end %>
+	</div>
 </div>
 
+<% @num_blank = 4 - @num_categories -%>
+
 <div class="sg-24 sgParent">
+	
+<% @photos.each do |photo| %>
+
+    <div class="sg-11 photo" style="background: url('<%= photo.photo.url(:size11) %>')">
+		<%= link_to '&nbsp;', photo.photo.url, :rel => 'photo', :class => 'fancy' %>
+	</div>
+
+<% end %>
 
 <% @categories.each do |category| %>
 	<div class="category sg-5" style="background: <%= category.base_colour %>">
         <%= link_to '<h3>'+h(category.name.downcase)+'</h3>', category_photos_path(category) %>
 	</div>
 <% end %>
+
+<% @num_blank.times do %>
+	<div class="sg-5 photo blank-photo">
+	</div>
+<% end %>
+
+	<!--<div class="sg-5" style="background: #222;">
+	</div>
+	<div class="sg-5" style="background: #333;">
+	</div>
+	<div class="sg-5" style="background: #555;">
+	</div>
+	<div class="sg-5 contact">
+		<%= link_to '<div>contact</div>', :action => 'contact' %>
+	</div>-->
 
 </div>

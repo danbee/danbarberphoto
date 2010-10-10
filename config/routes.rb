@@ -42,6 +42,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories, :has_many => :photos
   map.resources :photos
   
+  map.root :controller => "pages"
+
+  map.pages ':action', :controller => 'pages'
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  
 end

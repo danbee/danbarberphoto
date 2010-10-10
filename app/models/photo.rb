@@ -1,9 +1,10 @@
-require 'exifr'
+require 'mini_exiftool'
 
 class Photo < ActiveRecord::Base
     has_and_belongs_to_many :categories
 
     has_attached_file :photo, :styles => {  :original => "1024x1024>",
+                                            :size17 => "476x476#",
                                             :size11 => "308x308#",
                                             :size8 => "224x224#",
                                             :size5 => "140x140#",
@@ -16,7 +17,9 @@ class Photo < ActiveRecord::Base
 
 private
     def get_exif
-        exif = EXIFR::JPEG.new(photo.queued_for_write[:original].path)
-        self.description = exif.image_description
+        exif = MiniExiftool.new photo.queued_for_write[:original].path
+        self.title = exif.title
+        self.description = exif.description
+        self.save
     end
 end

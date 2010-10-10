@@ -10,18 +10,28 @@
     </head>
 
     <body>
+	
+		<div id="page">
 
-        <div id="wrapper">
-            <div id="container">
+	        <div id="wrapper">
+	            <div id="container">
 				
-				<div class="sgParent sg-12">
+					<div class="sgParent sg-12">
 
-                	<div id="header" class="sg-11"><h1><%= image_tag('title.png') %></h1></div>
+	                	<div id="header" class="sg-11">
+							<%= link_to '<h1>'+image_tag('title.png')+'</h1>', '/' %>
+						</div>
                 
-                	<%= yield %>
+	                	<%= yield %>
+	
+						<div id="footer" class="sg-35">
+							<p>&copy;2010 dan barber</p>
+						</div>
 
-            </div>
-        </div>
+	            </div>
+	        </div>
+
+		</div>
 
     </body>
 

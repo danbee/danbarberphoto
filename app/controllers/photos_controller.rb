@@ -13,6 +13,9 @@ class PhotosController < ApplicationController
             @photos = Photo.paginate :all, :page => params[:page], :per_page => 11
             @num_photos = @photos.count
         end
+        respond_to do |format|
+          format.html
+        end
     end
     
     def create
