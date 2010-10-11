@@ -33,7 +33,7 @@ a {
 #header a:hover {
 	background: rgba(255,255,255,0.1);
 }
-#header h1 {
+#header img {
     padding: 0;
     margin: 0;
     position: absolute;
@@ -50,6 +50,11 @@ a {
 	margin: 0 10px;
 }
 .sg-5, .sg-7, .sg-11, .sg-17, .sg-35 {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+.sg-5 a, .sg-7 a, .sg-11 a, .sg-17 a, .sg-35 {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -77,6 +82,11 @@ a {
 .sg-11 {
 	height: 308px;
 }
+.sg-11 a {
+	display: block;
+	height: 308px;
+	width: 308px;
+}
 .sg-17 {
 	height: 476px;
 }
@@ -95,7 +105,7 @@ a {
 .about a:hover, .portfolio a:hover, .contact a:hover {
 	background: rgba(255,255,255,0.2);
 }
-.about a div, .portfolio a div, .contact a div {
+.about a span, .portfolio a span, .contact a span {
 	position: absolute;
 	top: 10px;
 	right: 20px;	

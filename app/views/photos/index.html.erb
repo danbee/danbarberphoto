@@ -1,11 +1,11 @@
 	<div class="sg-5 page-links">
 		<% if @photos.previous_page -%>
-			<%= link_to '<div>&larr;</div>', { :page => @photos.previous_page }, :class => 'prev-link' %>
+			<%= link_to raw('<div>&larr;</div>'), { :page => @photos.previous_page }, :class => 'prev-link' %>
 		<% end %>
 	</div>
 	<div class="sg-5 page-links">
 		<% if @photos.next_page -%>
-			<%= link_to '<div>&rarr;</div>', { :page => @photos.next_page }, :class => 'next-link' %>
+			<%= link_to raw('<div>&rarr;</div>'), { :page => @photos.next_page }, :class => 'next-link' %>
 		<% end %>
 	</div>
 </div>
@@ -14,7 +14,7 @@
 
 <% if @category %>
 	<div class="sg-5 category" style="background: <%= @category.base_colour %>">
-		<%= link_to '<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>', categories_url %>
+		<%= link_to raw('<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>'), categories_url %>
 	</div>
 <% else %>
 	<div class="sg-5 category" style="background: #333;">
@@ -27,7 +27,7 @@
 <% @photos.each do |photo| %>
 
     <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')">
-		<%= link_to '&nbsp;', photo.photo.url, :rel => 'photo', :class => 'fancy' %>
+		<%= link_to '', photo.photo.url, :rel => 'photo', :class => 'fancy' %>
 	</div>
 
 <% end %>

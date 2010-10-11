@@ -1,8 +1,8 @@
 	<div class="sg-5 about">
-		<%= link_to '<div>about</div>', :action => 'about' %>
+		<%= link_to raw('<span>about</span>'), :action => 'about' %>
 	</div>
 	<div class="sg-5 portfolio">
-		<%= link_to '<div>portfolio</div>', :controller => 'categories' %>
+		<%= link_to raw('<span>portfolio</span>'), :controller => 'categories' %>
 	</div>
 </div>
 
@@ -14,5 +14,5 @@
 <div class="sg-5" style="background: #555;">
 </div>
 <div class="sg-5 contact">
-	<%= link_to '<div>contact</div>', :action => 'contact' %>
+	<%= link_to raw('<span>contact</span>'), :action => 'contact' %>
 </div>

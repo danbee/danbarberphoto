@@ -5,22 +5,20 @@
 Category:
   fields:
     default: name, photo_id, base_colour, sort
-    list: name, photo_id, base_colour, sort
     form: name, description, photo_id, base_colour, sort
   order_by: 
   relationships: photos
   filters: 
   search: name
-  application: photos
+  application: Photos
 
 Photo:
   fields:
-    default: photo_file_name, photo_content_type, photo_file_size, photo_updated_at, title, sort
-    list: photo_file_name, categories, photo_content_type, photo_file_size, photo_updated_at, title, sort
-    form: photo, flickr_url, title, description, sort
+    default: title, sort
+    form: photo, title, description, flickr_url, sort
   order_by: 
   relationships: categories
   filters: 
   search: title
-  application: photos
+  application: Photos
 
