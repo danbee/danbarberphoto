@@ -90,6 +90,11 @@ a {
 .sg-17 {
 	height: 476px;
 }
+.sg-17 a {
+	display: block;
+	width: 476px;
+	height: 476px;
+}
 .about {
 	background-color: #99BF00;
 }

@@ -1913,3 +1913,748 @@ Started GET "/about" for 127.0.0.1 at 2010-10-11 07:40:04 -0400
   Processing by PagesController#about as HTML
 Rendered pages/about.html.erb within layouts/photos (2.1ms)
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:41:43 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (15.4ms)
+Completed 200 OK in 31ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:41:46 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (15.3ms)
+Completed 200 OK in 30ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:42:30 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (17.6ms)
+Completed 200 OK in 36ms (Views: 19.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:43:19 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (19.4ms)
+Completed 200 OK in 43ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:43:36 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (15.8ms)
+Completed 200 OK in 31ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:50:36 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (16.3ms)
+Completed 200 OK in 32ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2010-10-11 07:50:38 -0400
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb within layouts/photos (2.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:51:10 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (15.4ms)
+Completed 200 OK in 30ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2010-10-11 07:51:11 -0400
+  Processing by PagesController#about as HTML
+Rendered pages/about.html.erb within layouts/photos (2.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-11 07:51:14 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (23.0ms)
+Completed 200 OK in 103ms (Views: 48.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 07:51:15 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (16.5ms)
+Completed 200 OK in 31ms (Views: 18.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-11 07:51:16 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (23.5ms)
+Completed 200 OK in 55ms (Views: 25.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2010-10-11 07:51:22 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 4
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (56.1ms)
+Completed 200 OK in 81ms (Views: 58.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2010-10-11 07:51:23 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories"[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (50.8ms)
+Completed 200 OK in 80ms (Views: 52.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/photos/new" for 127.0.0.1 at 2010-10-11 07:59:45 -0400
+  Processing by Admin::PhotosController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_new.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (26.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/new.html.erb within layouts/admin/base (55.9ms)
+Completed 200 OK in 123ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/photos/create" for 127.0.0.1 at 2010-10-11 07:59:56 -0400
+  Processing by Admin::PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101011-58086-2vtnhs>, "title"=>"", "description"=>"", "flickr_url"=>"", "sort"=>""}, "commit"=>"Create Photo"}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "476x" -crop "476x476+0+120" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-18jhfi6' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "308x" -crop "308x308+0+78" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-n5z0jr' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "224x" -crop "224x224+0+56" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-h0n1xf' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "140x" -crop "140x140+0+35" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-1whwwvk' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "84x" -crop "84x84+0+21" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-vw4bt8' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t1[0]' -resize "56x" -crop "56x56+0+14" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-dztenp20101011-58086-odx5t120101011-58086-1r74kif' 2>/dev/null
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "description", "flickr_url", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "sort", "title", "updated_at") VALUES ('2010-10-11 11:59:59.084616', '', '', 'image/jpeg', 'Croagh Patrick Chapel.jpg', 220894, '2010-10-11 11:59:56.657605', NULL, '', '2010-10-11 11:59:59.084616')[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "photos" SET "created_at" = '2010-10-11 11:59:59.084616', "description" = '', "flickr_url" = '', "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Croagh Patrick Chapel.jpg', "photo_file_size" = 220894, "photo_updated_at" = '2010-10-11 11:59:56.657605', "title" = '', "updated_at" = '2010-10-11 11:59:59.084616' WHERE ("photos"."id" = 30)
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/original/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size17/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size11/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size8/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size5/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size3/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/30/size2/Croagh Patrick Chapel.jpg
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/photos/edit/30
+Completed 302 Found in 3725ms
+
+
+Started GET "/admin/photos/edit/30" for 127.0.0.1 at 2010-10-11 08:00:00 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 30) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (3.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (13.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (36.1ms)
+  [1m[35mCategory Load (1.8ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 30 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 30) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 30 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 30) LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 30 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (145.6ms)
+Completed 200 OK in 214ms (Views: 185.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:00:31 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+  [1m[36mPhoto Load (0.7ms)[0m  [1mSELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (10.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (86.5ms)
+Completed 200 OK in 119ms (Views: 96.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/photos/destroy/30" for 127.0.0.1 at 2010-10-11 08:00:35 -0400
+  Processing by Admin::PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "id"=>"30"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 30) LIMIT 1
+[paperclip] Deleting attachments.
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/original/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size17/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size11/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size8/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size5/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size3/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/30/size2/Croagh Patrick Chapel.jpg
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "photos" WHERE ("photos"."id" = 30)[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 30 )
+Redirected to http://localhost:3000/admin/photos
+Completed 302 Found in 108ms
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:00:35 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (9.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (55.4ms)
+Completed 200 OK in 122ms (Views: 65.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/photos/new" for 127.0.0.1 at 2010-10-11 08:00:36 -0400
+  Processing by Admin::PhotosController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_new.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (27.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/new.html.erb within layouts/admin/base (86.8ms)
+Completed 200 OK in 117ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/photos/create" for 127.0.0.1 at 2010-10-11 08:00:42 -0400
+  Processing by Admin::PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101011-58086-5g26mv>, "title"=>"", "description"=>"", "flickr_url"=>"", "sort"=>""}, "commit"=>"Create Photo"}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "476x" -crop "476x476+0+120" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-1vvgjtc' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "308x" -crop "308x308+0+78" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-1s83ljk' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "224x" -crop "224x224+0+56" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-ajp7m6' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "140x" -crop "140x140+0+35" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-ri3of5' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "84x" -crop "84x84+0+21" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-pegccd' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l[0]' -resize "56x" -crop "56x56+0+14" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-14qbef20101011-58086-1qflo9l20101011-58086-1mbip7' 2>/dev/null
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "description", "flickr_url", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "sort", "title", "updated_at") VALUES ('2010-10-11 12:00:44.045982', '', '', 'image/jpeg', 'Croagh Patrick Chapel.jpg', 220894, '2010-10-11 12:00:42.636744', NULL, '', '2010-10-11 12:00:44.045982')[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "photos" SET "created_at" = '2010-10-11 12:00:44.045982', "flickr_url" = '', "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Croagh Patrick Chapel.jpg', "photo_file_size" = 220894, "photo_updated_at" = '2010-10-11 12:00:42.636744', "title" = 'Croagh Patrick Chapel', "updated_at" = '2010-10-11 12:00:44.045982' WHERE ("photos"."id" = 31)
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/original/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size17/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size11/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size8/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size5/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size3/Croagh Patrick Chapel.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/31/size2/Croagh Patrick Chapel.jpg
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/photos/edit/31
+Completed 302 Found in 2355ms
+
+
+Started GET "/admin/photos/edit/31" for 127.0.0.1 at 2010-10-11 08:00:44 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 31) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (8.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (46.7ms)
+  [1m[35mCategory Load (1.7ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 31 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 31) LIMIT 1
+  [1m[36mSQL (8.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 31 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 31) LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 31 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (187.0ms)
+Completed 200 OK in 225ms (Views: 188.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:00:51 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+  [1m[36mPhoto Load (0.7ms)[0m  [1mSELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (9.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (82.7ms)
+Completed 200 OK in 116ms (Views: 93.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/photos/destroy/31" for 127.0.0.1 at 2010-10-11 08:00:55 -0400
+  Processing by Admin::PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "id"=>"31"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 31) LIMIT 1
+[paperclip] Deleting attachments.
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/original/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size17/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size11/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size8/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size5/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size3/Croagh Patrick Chapel.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/31/size2/Croagh Patrick Chapel.jpg
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "photos" WHERE ("photos"."id" = 31)[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 31 )
+Redirected to http://localhost:3000/admin/photos
+Completed 302 Found in 94ms
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:00:55 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (9.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (54.4ms)
+Completed 200 OK in 119ms (Views: 65.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/photos/new" for 127.0.0.1 at 2010-10-11 08:00:56 -0400
+  Processing by Admin::PhotosController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_new.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (31.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (57.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/new.html.erb within layouts/admin/base (86.1ms)
+Completed 200 OK in 116ms (Views: 97.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/photos/create" for 127.0.0.1 at 2010-10-11 08:01:02 -0400
+  Processing by Admin::PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101011-58086-3uq3c5>, "title"=>"", "description"=>"", "flickr_url"=>"", "sort"=>""}, "commit"=>"Create Photo"}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe7.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe7.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "476x" -crop "476x476+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-9o0n6q' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "308x" -crop "308x308+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-11i5fep' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "224x" -crop "224x224+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-5gw2un' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "140x" -crop "140x140+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-1wd76z8' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "84x" -crop "84x84+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-1scwuh1' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux0[0]' -resize "56x" -crop "56x56+0+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-1nwyhe720101011-58086-oghux020101011-58086-1q7xy6a' 2>/dev/null
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "description", "flickr_url", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "sort", "title", "updated_at") VALUES ('2010-10-11 12:01:04.549945', '', '', 'image/jpeg', 'Light and Shade.jpg', 935147, '2010-10-11 12:01:03.080004', NULL, '', '2010-10-11 12:01:04.549945')[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "photos" SET "created_at" = '2010-10-11 12:01:04.549945', "description" = 'The sunlight looked amazing coming through the trees, I couldn''t resist taking a shot.', "flickr_url" = '', "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Light and Shade.jpg', "photo_file_size" = 935147, "photo_updated_at" = '2010-10-11 12:01:03.080004', "title" = 'Light and Shade', "updated_at" = '2010-10-11 12:01:04.549945' WHERE ("photos"."id" = 32)
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/original/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size17/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size11/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size8/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size5/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size3/Light and Shade.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/32/size2/Light and Shade.jpg
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/photos/edit/32
+Completed 302 Found in 1899ms
+
+
+Started GET "/admin/photos/edit/32" for 127.0.0.1 at 2010-10-11 08:01:04 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 32) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (8.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (27.8ms)
+  [1m[35mCategory Load (1.9ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 32 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 32) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 32 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 32) LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 32 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (133.1ms)
+Completed 200 OK in 199ms (Views: 141.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/photos/new" for 127.0.0.1 at 2010-10-11 08:01:10 -0400
+  Processing by Admin::PhotosController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_new.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (25.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/new.html.erb within layouts/admin/base (53.7ms)
+Completed 200 OK in 114ms (Views: 64.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/photos/create" for 127.0.0.1 at 2010-10-11 08:01:22 -0400
+  Processing by Admin::PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101011-58086-1qlglwm>, "title"=>"Definitely a Buttercup", "description"=>"", "flickr_url"=>"", "sort"=>""}, "commit"=>"Create Photo"}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk3.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk3.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x476" -crop "476x476+137+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-d379sz' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x308" -crop "308x308+88+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-47vjd7' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x224" -crop "224x224+64+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-wrc8az' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x140" -crop "140x140+40+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-oy87vp' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x84" -crop "84x84+24+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-chaxkj' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx[0]' -resize "x56" -crop "56x56+16+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-19ggxk320101011-58086-3d1xhx20101011-58086-6px6yu' 2>/dev/null
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("created_at", "description", "flickr_url", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "sort", "title", "updated_at") VALUES ('2010-10-11 12:01:23.515130', '', '', 'image/jpeg', 'Buttercup.jpg', 113067, '2010-10-11 12:01:22.197840', NULL, 'Definitely a Buttercup', '2010-10-11 12:01:23.515130')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "photos" SET "created_at" = '2010-10-11 12:01:23.515130', "flickr_url" = '', "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Buttercup.jpg', "photo_file_size" = 113067, "photo_updated_at" = '2010-10-11 12:01:22.197840', "title" = 'Definitely a Buttercup', "updated_at" = '2010-10-11 12:01:23.515130' WHERE ("photos"."id" = 33)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/original/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size17/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size11/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size8/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size5/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size3/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/33/size2/Buttercup.jpg
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/photos/edit/33
+Completed 302 Found in 1726ms
+
+
+Started GET "/admin/photos/edit/33" for 127.0.0.1 at 2010-10-11 08:01:23 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 33) LIMIT 1
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (8.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (27.4ms)
+  [1m[36mCategory Load (1.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 33 )
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 33) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 33 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 33) LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 33 ) LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (139.4ms)
+Completed 200 OK in 206ms (Views: 149.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:02:30 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+  [1m[35mPhoto Load (0.9ms)[0m  SELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (10.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (51.6ms)
+Completed 200 OK in 113ms (Views: 61.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/photos/destroy/33" for 127.0.0.1 at 2010-10-11 08:02:33 -0400
+  Processing by Admin::PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "id"=>"33"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 33) LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/original/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size17/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size11/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size8/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size5/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size3/Buttercup.jpg
+[paperclip] deleting /Users/danbee/Sites/rails/photos/public/system/photos/33/size2/Buttercup.jpg
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "photos" WHERE ("photos"."id" = 33)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 33 )[0m
+Redirected to http://localhost:3000/admin/photos
+Completed 302 Found in 95ms
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-11 08:02:33 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+  [1m[36mPhoto Load (0.7ms)[0m  [1mSELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (40.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (85.8ms)
+Completed 200 OK in 118ms (Views: 95.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/photos/new" for 127.0.0.1 at 2010-10-11 08:02:36 -0400
+  Processing by Admin::PhotosController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_new.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (56.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/new.html.erb within layouts/admin/base (85.5ms)
+Completed 200 OK in 115ms (Views: 96.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/photos/create" for 127.0.0.1 at 2010-10-11 08:02:44 -0400
+  Processing by Admin::PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"photo"=>#<File:/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/RackMultipart20101011-58086-12f98dp>, "title"=>"", "description"=>"", "flickr_url"=>"", "sort"=>""}, "commit"=>"Create Photo"}
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm25.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm25.jpg[0]' -resize "1024x1024>" '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x476" -crop "476x476+137+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-1cjrd0a' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x308" -crop "308x308+88+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-eytvwf' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x224" -crop "224x224+64+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-ud6pna' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x140" -crop "140x140+40+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-g9hnwe' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x84" -crop "84x84+24+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-1ozsf2x' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' 2>/dev/null
+[paperclip] convert '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u[0]' -resize "x56" -crop "56x56+16+0" +repage '/var/folders/B2/B2qStFgNHj4CjwOiJRPQ+++++TI/-Tmp-/stream20101011-58086-k1zm2520101011-58086-81r45u20101011-58086-9xw2a' 2>/dev/null
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("created_at", "description", "flickr_url", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "sort", "title", "updated_at") VALUES ('2010-10-11 12:02:46.153541', '', '', 'image/jpeg', 'Buttercup.jpg', 113067, '2010-10-11 12:02:44.473698', NULL, '', '2010-10-11 12:02:46.153541')
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "photos" SET "created_at" = '2010-10-11 12:02:46.153541', "flickr_url" = '', "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Buttercup.jpg', "photo_file_size" = 113067, "photo_updated_at" = '2010-10-11 12:02:44.473698', "title" = 'Buttercup', "updated_at" = '2010-10-11 12:02:46.153541' WHERE ("photos"."id" = 34)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/original/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size17/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size11/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size8/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size5/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size3/Buttercup.jpg
+[paperclip] saving /Users/danbee/Sites/rails/photos/public/system/photos/34/size2/Buttercup.jpg
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/photos/edit/34
+Completed 302 Found in 2170ms
+
+
+Started GET "/admin/photos/edit/34" for 127.0.0.1 at 2010-10-11 08:02:46 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 34) LIMIT 1
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (2.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (9.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (31.2ms)
+  [1m[36mCategory Load (2.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 34 )
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 34) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 34 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 34) LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 34 ) LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (144.3ms)
+Completed 200 OK in 184ms (Views: 153.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:04 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (46.6ms)
+Completed 200 OK in 84ms (Views: 70.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:11 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (44.4ms)
+Completed 200 OK in 59ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:14 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (44.5ms)
+Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:14 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (16.0ms)
+Completed 200 OK in 31ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:15 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (15.3ms)
+Completed 200 OK in 30ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:16 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (15.6ms)
+Completed 200 OK in 30ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-11 08:03:17 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (52.1ms)
+Completed 200 OK in 105ms (Views: 76.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2010-10-11 08:03:23 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 4
+  [1m[36mPhoto Load (28.4ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (30.8ms)
+Completed 200 OK in 84ms (Views: 32.9ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2010-10-11 08:03:25 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mCategory Load (1.1ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories"[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (24.1ms)
+Completed 200 OK in 55ms (Views: 26.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2010-10-11 08:03:27 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 4[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (57.7ms)
+Completed 200 OK in 82ms (Views: 59.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2010-10-11 08:03:28 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (22.9ms)
+Completed 200 OK in 82ms (Views: 24.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-11 08:03:29 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (17.2ms)
+Completed 200 OK in 33ms (Views: 19.2ms | ActiveRecord: 0.4ms)

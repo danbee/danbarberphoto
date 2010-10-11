@@ -18,8 +18,8 @@ class Photo < ActiveRecord::Base
 private
     def get_exif
         exif = MiniExiftool.new photo.queued_for_write[:original].path
-        self.title = exif.title
-        self.description = exif.description
+        self.title = exif.title if self.title.empty?
+        self.description = exif.description if self.description.empty?
         self.save
     end
 end
