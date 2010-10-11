@@ -23160,3 +23160,589 @@ Processing PagesController#index (for 127.0.0.1 at 2010-10-10 11:44:53) [GET]
 Rendering template within layouts/photos
 Rendering pages/index
 Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-10 11:46:26) [GET]
+  [4;36;1mPhoto Load (1.3ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 11 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-10 11:46:30) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 11 OFFSET 11[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/photos?page=2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-10 11:46:33) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPhoto Load (1.5ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 11 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://localhost/photos?page=1]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-10 11:46:34) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 11 OFFSET 11[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/photos?page=2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-10 11:46:42) [GET]
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-10 11:46:45) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/categories?page=2]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-10-10 11:46:48) [GET]
+  Parameters: {"category_id"=>"6"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = '6') LIMIT 1[0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 6 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/categories/6/photos]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-10 11:46:52) [GET]
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-10-10 11:46:55) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 66ms (View: 59, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 192.168.42.102 at 2010-10-10 11:47:27) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://junpei/]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 11:47:40) [GET]
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 31ms (View: 16, DB: 2) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 11:47:45) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 77ms (View: 10, DB: 1) | 200 OK [http://junpei/categories?page=2]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 11:47:47) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://junpei/categories?page=1]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 11:47:50) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://junpei/categories?page=2]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 11:47:53) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://junpei/categories?page=1]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 11:47:58) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = '1') LIMIT 1[0m
+  [4;36;1mPhoto Load (1.3ms)[0m   [0;1mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) LIMIT 11 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 30ms (View: 14, DB: 2) | 200 OK [http://junpei/categories/1/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:47:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 192.168.42.102 at 2010-10-10 11:48:04) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://junpei/]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:48:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#about (for 192.168.42.102 at 2010-10-10 11:48:11) [GET]
+Rendering template within layouts/photos
+Rendering pages/about
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://junpei/about]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:48:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 192.168.42.102 at 2010-10-10 11:48:21) [GET]
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://junpei/]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 11:48:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:47:43) [GET]
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (1.0ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 103ms (View: 9, DB: 2) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:47:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:47:45) [GET]
+  Parameters: {"category_id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = '1') LIMIT 1[0m
+  [4;36;1mPhoto Load (16.6ms)[0m   [0;1mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) LIMIT 11 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 48ms (View: 15, DB: 17) | 200 OK [http://junpei/categories/1/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:47:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:48:06) [GET]
+  Parameters: {"category_id"=>"1", "page"=>"2"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = '1') LIMIT 1[0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) LIMIT 11 OFFSET 11[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://junpei/categories/1/photos?page=2]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:48:28) [GET]
+  Parameters: {"category_id"=>"1", "page"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = '1') LIMIT 1[0m
+  [4;35;1mPhoto Load (1.3ms)[0m   [0mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) LIMIT 11 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 1 ) [0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 31ms (View: 14, DB: 2) | 200 OK [http://junpei/categories/1/photos?page=1]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:48:29) [GET]
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 87ms (View: 9, DB: 1) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:48:31) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = '2') LIMIT 1[0m
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 2 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://junpei/categories/2/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:48:37) [GET]
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:48:41) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://junpei/categories?page=2]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:48:49) [GET]
+  Parameters: {"category_id"=>"5"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = '5') LIMIT 1[0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 5 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://junpei/categories/5/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:48:56) [GET]
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 77ms (View: 8, DB: 1) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:48:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:49:05) [GET]
+  Parameters: {"category_id"=>"2"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = '2') LIMIT 1[0m
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 2 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://junpei/categories/2/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:49:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:49:44) [GET]
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 26ms (View: 11, DB: 2) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:49:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:49:48) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;36;1mPhoto Load (0.8ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://junpei/categories?page=2]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:49:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:49:50) [GET]
+  Parameters: {"category_id"=>"6"}
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = '6') LIMIT 1[0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 6 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 24ms (View: 9, DB: 1) | 200 OK [http://junpei/categories/6/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:49:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 192.168.42.102 at 2010-10-10 13:50:07) [GET]
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://junpei/categories]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:50:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#index (for 192.168.42.102 at 2010-10-10 13:50:14) [GET]
+  Parameters: {"category_id"=>"3"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = '3') LIMIT 1[0m
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" INNER JOIN "categories_photos" ON "photos".id = "categories_photos".photo_id WHERE ("categories_photos".category_id = 3 ) LIMIT 11 OFFSET 0[0m
+Rendering template within layouts/photos
+Rendering photos/index
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://junpei/categories/3/photos]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:50:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 192.168.42.102 at 2010-10-10 13:50:21) [GET]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://junpei/]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:50:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#about (for 192.168.42.102 at 2010-10-10 13:50:30) [GET]
+Rendering template within layouts/photos
+Rendering pages/about
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://junpei/about]
+
+
+Processing ApplicationController#index (for 192.168.42.102 at 2010-10-10 13:50:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/sg_grid_sub.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#about (for 127.0.0.1 at 2010-10-11 03:01:12) [GET]
+Rendering template within layouts/photos
+Rendering pages/about
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-11 03:01:14) [GET]
+  [4;35;1mCategory Load (19.3ms)[0m   [0mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 83ms (View: 10, DB: 21) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-11 03:01:16) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 4[0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/categories?page=2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-10-11 03:01:19) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendering template within layouts/photos
+Rendering categories/index
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/categories?page=1]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-10-11 03:01:22) [GET]
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering pages/index
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/]
