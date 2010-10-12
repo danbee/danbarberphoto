@@ -7530,3 +7530,31 @@ Started GET "/categories" for 127.0.0.1 at 2010-10-12 09:56:33 -0400
   [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
 Rendered categories/index.html.erb within layouts/photos (24.0ms)
 Completed 200 OK in 131ms (Views: 38.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-12 10:04:53 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories"[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (55.2ms)
+Completed 200 OK in 125ms (Views: 57.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2010-10-12 10:05:00 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 4[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (57.5ms)
+Completed 200 OK in 81ms (Views: 59.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2010-10-12 10:05:01 -0400
+  Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (21.3ms)
+Completed 200 OK in 83ms (Views: 23.2ms | ActiveRecord: 1.5ms)
