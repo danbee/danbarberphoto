@@ -1,4 +1,6 @@
 Photos::Application.routes.draw do
+  resources :contacts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -61,7 +63,8 @@ Photos::Application.routes.draw do
   root :to => 'pages#index'
 
   match 'about' => 'pages#about', :as => :about
-  match 'contact' => 'pages#contact', :as => :contact
+  #match 'contact' => 'pages#contact', :as => :contact
+  resources :contacts, :only => [:new, :create]
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.

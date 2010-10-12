@@ -22,3 +22,12 @@ Photo:
   search: title
   application: Photos
 
+Page:
+  fields:
+    default: name, title
+    form: name, title, content
+  order_by:
+  relationships:
+  filters: 
+  search: title
+  application: Photos

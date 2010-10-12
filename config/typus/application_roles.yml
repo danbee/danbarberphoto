@@ -5,3 +5,4 @@
 admin:
   Category: create, read, update, delete
   Photo: create, read, update, delete
+  Page: create, read, update, delete

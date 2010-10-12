@@ -32,3 +32,4 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 gem 'mini_exiftool'
 gem "will_paginate", "3.0.pre"
+gem 'rdiscount'

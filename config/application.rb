@@ -40,3 +40,5 @@ module Photos
     config.filter_parameters += [:password]
   end
 end
+
+ActionMailer::Base.delivery_method = :sendmail
