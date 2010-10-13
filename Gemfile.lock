@@ -4,6 +4,13 @@ GIT
   specs:
     typus (1.0.0.pre8)
 
+GIT
+  remote: http://github.com/mislav/will_paginate.git
+  revision: b1a5beeec9f56ecbe3594fcdca76d92b6767ce50
+  branch: rails3
+  specs:
+    will_paginate (3.0.pre3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -46,6 +53,7 @@ GEM
       treetop (>= 1.4.5)
     mime-types (1.16)
     mini_exiftool (1.0.1)
+    pg (0.9.0)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -72,15 +80,15 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
-    will_paginate (3.0.pre)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   mini_exiftool
+  pg
   rails (= 3.0.0)
   rdiscount
   sqlite3-ruby
   typus!
-  will_paginate (= 3.0.pre)
+  will_paginate!

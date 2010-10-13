@@ -13,6 +13,14 @@ class Photo < ActiveRecord::Base
     after_create :get_exif
     
     @@per_page = 11
+    
+    def to_s
+      self.title
+    end
+    
+    def name
+      self.title
+    end
 
 private
     def get_exif
