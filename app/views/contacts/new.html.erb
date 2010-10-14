@@ -7,7 +7,7 @@
 </div>
 
 <div class="sg-17 contact-form">
-	<%= form_for :contact, :url => { :action => 'create' } do |f| %>
+    <%= form_for :contact, :url => { :action => 'create' }, :html => { :id => 'contact_form' } do |f| %>
 	<% if flash[:notice] -%>
 		<div id="notice"><%= flash[:notice] %></div>
 	<% end -%>
