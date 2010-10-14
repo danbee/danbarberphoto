@@ -5,6 +5,12 @@ GIT
     typus (1.0.0.pre8)
 
 GIT
+  remote: git://github.com/rails/exception_notification
+  revision: 192a49a02d63d28b23ed41cebadfedd490929cf1
+  specs:
+    exception_notification (1.0.0)
+
+GIT
   remote: http://github.com/mislav/will_paginate.git
   revision: b1a5beeec9f56ecbe3594fcdca76d92b6767ce50
   branch: rails3
@@ -85,6 +91,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  exception_notification!
   mini_exiftool
   pg
   rails (= 3.0.0)

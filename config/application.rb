@@ -38,6 +38,12 @@ module Photos
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Rack Middleware
+    config.middleware.use ::ExceptionNotifier, :email_prefix => "[DanBarberPhoto] ",
+                                               :sender_address => %{"Exception Notification" <notifier@danbarberphoto.com>},
+                                               :exception_recipients => %w{dan@danbarberphoto.com}
+     
   end
 end
 
