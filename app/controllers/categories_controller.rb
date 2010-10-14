@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
     
     @num_categories = @categories.count
     
-    @photos = Photo.all(:limit => 2, :order => 'RANDOM()')
+    @photos = Photo.all(:limit => 2, :order => 'RANDOM()', :conditions => { :featured => true })
 
     respond_to do |format|
       format.html # index.html.erb

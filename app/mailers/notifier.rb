@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
   
   def contact_notification(sender)
     @sender = sender
-    mail( :to => 'danbee@gmail.com',
+    mail( :to => 'enquiries@danbarberphoto.com',
           :from => sender.email,
           :subject => sender.subject)
   end

@@ -8077,3 +8077,596 @@ Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/view
 Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.6ms)
 Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (161.6ms)
 Completed 200 OK in 344ms (Views: 171.4ms | ActiveRecord: 4.2ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:33:49 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPhoto Load (6.9ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (45.6ms)
+Completed 200 OK in 164ms (Views: 103.1ms | ActiveRecord: 7.1ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateCategories (20101006095323)
+Migrating to CreatePhotos (20101006095457)
+Migrating to AddPhotoToCategory (20101008101157)
+Migrating to AddDetailsToPhoto (20101008103053)
+Migrating to AddColourToCategory (20101008105348)
+Migrating to AddSortOrders (20101008122736)
+Migrating to MoveToManyToMany (20101008172319)
+Migrating to CreateAdminUsers (20101011133558)
+Migrating to CreatePages (20101012132954)
+Migrating to PhotoShowcase (20101013165208)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (20.8ms)[0m  [1mALTER TABLE "photos" ADD "showcase" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101013165208')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("admin_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("categories_photos")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pages")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("photos")
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "altered_photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "flickr_url" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "description" text, "sort" integer, "showcase" boolean) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("photos")
+  [1m[36mSQL (0.6ms)[0m  [1mDROP TABLE "photos"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "flickr_url" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "description" text, "sort" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_photos")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_photos"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20101013165208'[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("admin_users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("categories")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories_photos")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("pages")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("photos")[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateCategories (20101006095323)
+Migrating to CreatePhotos (20101006095457)
+Migrating to AddPhotoToCategory (20101008101157)
+Migrating to AddDetailsToPhoto (20101008103053)
+Migrating to AddColourToCategory (20101008105348)
+Migrating to AddSortOrders (20101008122736)
+Migrating to MoveToManyToMany (20101008172319)
+Migrating to CreateAdminUsers (20101011133558)
+Migrating to CreatePages (20101012132954)
+Migrating to PhotoShowcase (20101013165208)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "photos" ADD "featured" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101013165208')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("admin_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("categories_photos")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pages")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("photos")
+
+
+Started GET "/admin" for 127.0.0.1 at 2010-10-13 12:55:19 -0400
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2010-10-13 12:55:19 -0400
+  Processing by Admin::DashboardController#show as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/dashboard/_sidebar.html.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/dashboard/_applications.html.erb (85.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/dashboard/_resources.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/dashboard/show.html.erb within layouts/admin/base (161.0ms)
+Completed 200 OK in 237ms (Views: 171.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-13 12:55:21 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (2.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+  [1m[35mPhoto Load (34.5ms)[0m  SELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (12.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (133.6ms)
+Completed 200 OK in 233ms (Views: 111.2ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/admin/photos/edit/28" for 127.0.0.1 at 2010-10-13 12:55:23 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (2.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (8.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (55.8ms)
+  [1m[36mCategory Load (43.9ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 ) LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (6.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (211.5ms)
+Completed 200 OK in 377ms (Views: 225.8ms | ActiveRecord: 46.6ms)
+
+
+Started POST "/admin/photos/update/28" for 127.0.0.1 at 2010-10-13 12:55:28 -0400
+  Processing by Admin::PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"title"=>"Croagh Patrick Sunset", "description"=>"The west of Ireland is so photogenic!", "flickr_url"=>"", "featured"=>"0", "sort"=>""}, "commit"=>"Save Photo", "id"=>"28"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "photos" SET "featured" = 'f', "updated_at" = '2010-10-13 16:55:29.126939' WHERE ("photos"."id" = 28)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:4000/admin/photos/edit/28
+Completed 302 Found in 97ms
+
+
+Started GET "/admin/photos/edit/28" for 127.0.0.1 at 2010-10-13 12:55:29 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (9.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (63.7ms)
+  [1m[35mCategory Load (1.8ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (3.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (238.2ms)
+Completed 200 OK in 335ms (Views: 247.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-13 12:55:31 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+  [1m[35mPhoto Load (42.9ms)[0m  SELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (13.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (111.9ms)
+Completed 200 OK in 199ms (Views: 81.3ms | ActiveRecord: 44.3ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "flickr_url" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "description" text, "sort" integer, "featured" boolean) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("photos")
+  [1m[36mSQL (0.6ms)[0m  [1mDROP TABLE "photos"[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "flickr_url" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "photo_updated_at" datetime, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "description" text, "sort" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_photos")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_photos"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20101013165208'[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("admin_users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("categories")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories_photos")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("pages")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("photos")[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: reset_javascript_include_default is deprecated. Please manipulate config.action_view.javascript_expansions[:defaults] directly. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:14)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /Users/danbee/Sites/rails/photos/vendor/plugins/jrails/rails/init.rb:16)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/danbee/Sites/rails/photos/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from <top (required)> at /Users/danbee/Sites/rails/photos/config/initializers/cookie_verification_secret.rb:7)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateCategories (20101006095323)
+Migrating to CreatePhotos (20101006095457)
+Migrating to AddPhotoToCategory (20101008101157)
+Migrating to AddDetailsToPhoto (20101008103053)
+Migrating to AddColourToCategory (20101008105348)
+Migrating to AddSortOrders (20101008122736)
+Migrating to MoveToManyToMany (20101008172319)
+Migrating to CreateAdminUsers (20101011133558)
+Migrating to CreatePages (20101012132954)
+Migrating to PhotoShowcase (20101013165208)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "photos" ADD "featured" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101013165208')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("admin_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("categories_photos")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pages")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("photos")
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-13 12:56:10 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (0.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+  [1m[36mPhoto Load (1.1ms)[0m  [1mSELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (15.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (68.5ms)
+Completed 200 OK in 151ms (Views: 77.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:56:58 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (2.8ms)
+Completed 200 OK in 73ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/photos/edit/36" for 127.0.0.1 at 2010-10-13 12:57:07 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (2.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (7.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (63.1ms)
+  [1m[36mCategory Load (2.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 )
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 ) LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (149.8ms)
+Completed 200 OK in 237ms (Views: 157.7ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/admin/photos/update/36" for 127.0.0.1 at 2010-10-13 12:57:11 -0400
+  Processing by Admin::PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"title"=>"Bell Tower", "description"=>"Church of Ireland bell tower, Tourmakeady, Co. Mayo.", "flickr_url"=>"", "featured"=>"1", "sort"=>""}, "commit"=>"Save Photo", "id"=>"36"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "photos" SET "featured" = 't', "updated_at" = '2010-10-13 16:57:11.422596' WHERE ("photos"."id" = 36)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:4000/admin/photos/edit/36
+Completed 302 Found in 88ms
+
+
+Started GET "/admin/photos/edit/36" for 127.0.0.1 at 2010-10-13 12:57:11 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (7.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (65.7ms)
+  [1m[35mCategory Load (2.0ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 36) LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 36 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (157.0ms)
+Completed 200 OK in 250ms (Views: 169.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:57:11 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (15.5ms)
+Completed 200 OK in 37ms (Views: 17.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/photos" for 127.0.0.1 at 2010-10-13 12:57:15 -0400
+  Processing by Admin::PhotosController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_index.html.erb (0.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "photos"[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/search/_search.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM "photos"
+  [1m[36mPhoto Load (1.1ms)[0m  [1mSELECT "photos".* FROM "photos" LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (18.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/index.html.erb within layouts/admin/base (115.4ms)
+Completed 200 OK in 211ms (Views: 127.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/photos/edit/28" for 127.0.0.1 at 2010-10-13 12:57:19 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mAdminUser Load (0.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (7.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (61.7ms)
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 ) LIMIT 15 OFFSET 0[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (3.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (143.8ms)
+Completed 200 OK in 232ms (Views: 153.0ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/admin/photos/update/28" for 127.0.0.1 at 2010-10-13 12:57:23 -0400
+  Processing by Admin::PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI/EVGrai3ZKvzFWeagi05czgp8I0TF8vdeWdEkaMs=", "photo"=>{"title"=>"Croagh Patrick Sunset", "description"=>"The west of Ireland is so photogenic!", "flickr_url"=>"", "featured"=>"1", "sort"=>""}, "commit"=>"Save Photo", "id"=>"28"}
+  [1m[35mAdminUser Load (0.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "photos" SET "featured" = 't', "updated_at" = '2010-10-13 16:57:23.768070' WHERE ("photos"."id" = 28)
+[paperclip] Saving attachments.
+Redirected to http://localhost:4000/admin/photos/edit/28
+Completed 302 Found in 93ms
+
+
+Started GET "/admin/photos/edit/28" for 127.0.0.1 at 2010-10-13 12:57:23 -0400
+  Processing by Admin::PhotosController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE ("admin_users"."id" = 1) LIMIT 1[0m
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/sidebar/_sidebar.html.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_flash_message.html.erb (0.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_edit.html.erb (0.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_preview.html.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_file.html.erb (8.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_text.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_boolean.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_string.html.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/_form.html.erb (62.2ms)
+  [1m[36mCategory Load (1.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT * FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_relate_form.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."id" = 28) LIMIT 1[0m
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_photos" ON "categories".id = "categories_photos".category_id WHERE ("categories_photos".photo_id = 28 ) LIMIT 15 OFFSET 0
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/table/_table.html.erb (4.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/templates/_has_n.html.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_header.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_apps.html.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/helpers/_login_info.html.erb (0.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/bundler/gems/typus-e0ce90d39989/app/views/admin/resources/edit.html.erb within layouts/admin/base (146.4ms)
+Completed 200 OK in 231ms (Views: 154.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:57:25 -0400
+  Processing by PagesController#index as HTML
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 1[0m
+Rendered pages/index.html.erb within layouts/photos (21.4ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:57:26 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (47.4ms)
+Completed 200 OK in 68ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-13 12:57:28 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (32.6ms)[0m  [1mSELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (22.1ms)
+Completed 200 OK in 98ms (Views: 40.8ms | ActiveRecord: 33.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-13 12:58:01 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (1.5ms)[0m  SELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "categories"[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 2
+Rendered categories/index.html.erb within layouts/photos (57.5ms)
+Completed 200 OK in 130ms (Views: 59.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-10-13 12:58:03 -0400
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories".* FROM "categories" LIMIT 4 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM "categories"
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 2[0m
+Rendered categories/index.html.erb within layouts/photos (22.1ms)
+Completed 200 OK in 88ms (Views: 24.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-13 12:58:12 -0400
+  Processing by PagesController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos"."featured" = 't') ORDER BY RANDOM() LIMIT 1
+Rendered pages/index.html.erb within layouts/photos (48.8ms)
+Completed 200 OK in 67ms (Views: 50.7ms | ActiveRecord: 0.4ms)
