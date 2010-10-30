@@ -11,12 +11,6 @@ GIT
     exception_notification (1.0.0)
 
 GIT
-  remote: http://github.com/alexdunae/validates_email_format_of.git
-  revision: 39750a7462028c25c387074744eee4b01d09f5a5
-  specs:
-    validates_email_format_of (1.4.1)
-
-GIT
   remote: http://github.com/mislav/will_paginate.git
   revision: b1a5beeec9f56ecbe3594fcdca76d92b6767ce50
   branch: rails3
@@ -104,5 +98,4 @@ DEPENDENCIES
   rdiscount
   sqlite3-ruby
   typus!
-  validates_email_format_of!
   will_paginate!
