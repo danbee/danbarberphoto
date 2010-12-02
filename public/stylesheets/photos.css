@@ -183,13 +183,14 @@ img {
 .about-content {
     background: #444;
     color: #ccc;
+    overflow: auto;
 }
 .about-content div {
     padding: 15px 20px;
 }
 .about-content div p {
     margin-bottom: 0.6em;
-    line-height: 1.4em;
+    line-height: 1.35em;
 }
 /* FORM */
 .contact-form {

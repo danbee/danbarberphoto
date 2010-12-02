@@ -1,10 +1,10 @@
 class ContactsController < ApplicationController
   layout "photos"
-  
+
   def new
     @contact = Contact.new(:id => 1)
   end
-  
+
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
