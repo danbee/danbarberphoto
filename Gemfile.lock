@@ -57,6 +57,10 @@ GEM
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
+    meta_where (0.9.6)
+      activerecord (~> 3.0.0)
+      activesupport (~> 3.0.0)
+      arel (~> 1.0.1)
     mime-types (1.16)
     mini_exiftool (1.0.1)
     pg (0.9.0)
@@ -92,6 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   exception_notification!
+  meta_where
   mini_exiftool
   pg
   rails (= 3.0.0)

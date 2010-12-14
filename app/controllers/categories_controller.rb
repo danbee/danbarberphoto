@@ -5,9 +5,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.order('sort ASC').paginate :all, :page => params[:page], :per_page => 4
 
-    @num_categories = @categories.count
-
-    @photos = Photo.where(:enabled => true).where(:featured => true).limit(2).order('RANDOM()')
+    @photos = Photo.featured.limit(2).order('RANDOM()')
 
     respond_to do |format|
       format.html # index.html.erb

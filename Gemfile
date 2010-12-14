@@ -31,6 +31,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
 gem 'pg'
+gem 'meta_where'
 gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 gem 'mini_exiftool'
 gem 'will_paginate', :git => 'http://github.com/mislav/will_paginate.git', :branch => 'rails3'

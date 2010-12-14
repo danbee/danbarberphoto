@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   layout "photos"
   
   def index
-    @photo = Photo.where(:featured => true).where(:enabled => true).order('RANDOM()').first
+    @photo = Photo.featured.order('RANDOM()').first
   end
   
   def about
