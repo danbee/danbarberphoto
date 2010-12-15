@@ -34,6 +34,7 @@ private
         exif = MiniExiftool.new photo.queued_for_write[:original].path
         self.title = exif.title if self.title.empty?
         self.description = exif.description if self.description.empty?
+        self.taken_at = exif.date_time_original
         self.save
     end
 end
