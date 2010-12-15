@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
      "lib/jquery_selector_assertions.rb",
      "lib/jrails.rb",
      "rails/init.rb",
-     "tasks/jrails.rake"
+     "lib/tasks/jrails.rake"
   ]
   s.homepage = %q{http://ennerchi.com/projects/jrails}
   s.rdoc_options = ["--charset=UTF-8"]

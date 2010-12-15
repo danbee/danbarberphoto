@@ -11,7 +11,7 @@ begin
     gem.homepage = "http://ennerchi.com/projects/jrails"
     gem.authors = ["Aaron Eisenberger", "Patrick Hurley"]
     gem.rubyforge_project = "jrails"
-    gem.files =  FileList["[A-Z]*.rb","{bin,javascripts,lib,rails,tasks}/**/*"]
+    gem.files =  FileList["[A-Z]*.rb","{bin,javascripts,lib,rails}/**/*"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
