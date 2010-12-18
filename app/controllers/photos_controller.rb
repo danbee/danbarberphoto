@@ -16,12 +16,8 @@ class PhotosController < ApplicationController
     end
   end
 
-  def show
-    # Log the view
+  def log_view
     @photo = Photo.find(params[:id])
-    # Get the image and send it to the browser
-    data = File.open(@photo.photo.path, 'rb').read
-    send_data(data , :filename => 'photo', :type => 'image/jpg', :disposition => 'inline')
     @photo.log_view
   end
 end
