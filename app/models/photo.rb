@@ -29,6 +29,15 @@ class Photo < ActiveRecord::Base
       self.title
     end
 
+    def log_view
+      if self.views.nil?
+        self.views = 1
+      else
+        self.views += 1
+      end
+      self.save
+    end
+
 private
     def get_exif
         exif = MiniExiftool.new photo.queued_for_write[:original].path
