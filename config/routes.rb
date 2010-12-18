@@ -56,9 +56,16 @@ Photos::Application.routes.draw do
 
   resources :categories do
     resources :photos
+    member do
+      get :log_view
+    end
   end
   
-  resources :photos
+  resources :photos do
+    member do
+      get :log_view
+    end
+  end
   
   root :to => 'pages#index'
 

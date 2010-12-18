@@ -8,7 +8,7 @@
 
 <% if @photo %>
 <div class="sg-17 photo" style="background: url('<%= @photo.photo.url(:size17) %>')">
-  <%= link_to '', @photo.photo.url, :class => 'fancy' %>
+  <%= link_to_photo @photo %>
 </div>
 <% end %>
 

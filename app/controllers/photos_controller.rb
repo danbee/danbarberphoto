@@ -19,5 +19,6 @@ class PhotosController < ApplicationController
   def log_view
     @photo = Photo.find(params[:id])
     @photo.log_view
+    render :nothing => true
   end
 end

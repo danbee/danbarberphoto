@@ -1,6 +1,9 @@
 $(document).ready(function() {
     $('.fancy').fancybox({
-        'titlePosition'     : 'inside'
+        'titlePosition'     : 'inside',
+        'onComplete'        : function(links, index) {
+          $.get('/photos/'+$(links[index]).attr('id')+'/log_view')
+        }
     });
 
     if ($('#contact_form').length) {
