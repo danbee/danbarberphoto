@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101215172105) do
+ActiveRecord::Schema.define(:version => 20101216180143) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20101215172105) do
     t.boolean  "featured",           :default => false
     t.boolean  "enabled",            :default => true
     t.datetime "taken_at"
+    t.integer  "views",              :default => 0
   end
 
 end

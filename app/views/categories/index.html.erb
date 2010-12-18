@@ -16,8 +16,8 @@
 	
 <% @photos.each do |photo| %>
 
-    <div class="sg-11 photo" style="background: url('<%= photo.photo.url(:size11) %>')">
-		<%= link_to '', photo.photo.url, :rel => 'photo', :class => 'fancy' %>
+  <div class="sg-11 photo" style="background: url('<%= photo.photo.url(:size11) %>')">
+    <%= link_to '', photo_url(photo, :format => :jpg), :class => 'fancy' %>
 	</div>
 
 <% end %>

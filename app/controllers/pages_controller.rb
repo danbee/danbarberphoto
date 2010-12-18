@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
   
   def about
-    @content = Page.find_by_name('about')
+    @page = Page.find_by_name('about')
+    @content = @page.content
   end
 end
