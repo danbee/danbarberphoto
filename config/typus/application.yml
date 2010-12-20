@@ -14,7 +14,7 @@ Category:
 
 Photo:
   fields:
-    default: title, sort, enabled, featured
+    default: photo, title, enabled, featured, views
     form: photo, title, description, flickr_url, enabled, featured, sort
   order_by: 
   relationships: categories

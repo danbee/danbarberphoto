@@ -3,7 +3,8 @@ require 'mini_exiftool'
 class Photo < ActiveRecord::Base
     has_and_belongs_to_many :categories
 
-    has_attached_file :photo, :styles => {  :size17 => "476x476#",
+    has_attached_file :photo, :styles => {  :preview => "600x600",
+                                            :size17 => "476x476#",
                                             :size11 => "308x308#",
                                             :size8 => "224x224#",
                                             :size5 => "140x140#",
