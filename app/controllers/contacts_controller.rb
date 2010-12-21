@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new(:id => 1)
+    @page_title = 'Contact'
   end
 
   def create

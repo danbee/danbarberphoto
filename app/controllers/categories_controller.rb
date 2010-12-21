@@ -7,6 +7,8 @@ class CategoriesController < ApplicationController
 
     @photos = Photo.featured.limit(2).order('RANDOM()')
 
+    @page_title = 'Portfolio'
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
