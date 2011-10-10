@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Pixelhum Admin
+    = stylesheet_link_tag    "admin"
+    = javascript_include_tag "admin"
+    = csrf_meta_tag
+  
+  %body
+    #login
+      %header{ :role => "banner" }= render :partial => "admin/shared/login_header"
+      = render :partial => "shared/flash_messages"
+      = yield
