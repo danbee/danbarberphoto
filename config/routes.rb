@@ -14,6 +14,12 @@ Abidownloads::Application.routes.draw do
   namespace :admin do
     root :to => "dashboard#index", :as => :dashboard
     resources :admin_users
+    resource :admin_user do
+      member do
+        get :edit_password
+        put :update_password
+      end
+    end
   end
 
   # The priority is based upon order of creation:

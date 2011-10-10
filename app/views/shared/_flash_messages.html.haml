@@ -1,5 +1,10 @@
 - if !flash[:notice].blank?
-  %p.notice= flash[:notice]
+  %p.flash.notice
+    = flash[:notice]
+    = link_to raw("&times;"), "#", :class => :close
 
 - if !flash[:alert].blank?
-  %p.alert= flash[:alert]
+  %p.flash.alert
+    = flash[:alert]
+    = link_to raw("&times;"), "#", :class => :close
+  

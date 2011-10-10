@@ -60,7 +60,7 @@ class Admin::AdminUsersController < Admin::AdminController
 
     if @admin_user.update_with_password(params[:admin_user])
       sign_in(@admin_user, :bypass => true)
-      redirect_to admin_enterprises_path, :notice => "Password updated!"
+      redirect_to admin_dashboard_path, :notice => "Password updated!"
     else
       render :edit_password
     end

@@ -37,6 +37,7 @@ header
     a
       color: #999
   h1
+    background: #333
     font-size: 2em
     margin-bottom: 0em
     a
@@ -52,6 +53,9 @@ header
 #login
   h1
     margin-bottom: 0.5em
+    position: relative
+    z-index: 1
+    @include box-shadow("0 1px 2px rgba(0, 0, 0, 0.3)")
 
 h2
   margin-top: 1.2em
