@@ -39,6 +39,6 @@ Pixelhum::Application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = { :host => "abidownloads.dev" }
+  config.action_mailer.default_url_options = { :host => "template.dev" }
 
 end

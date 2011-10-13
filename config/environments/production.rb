@@ -69,6 +69,6 @@ Pixelhum::Application.configure do
   }
   ActionMailer::Base.delivery_method = :smtp
   
-  config.action_mailer.default_url_options = { :host => "abidownloads.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "pixelhum_template.herokuapp.com" }
 
 end
