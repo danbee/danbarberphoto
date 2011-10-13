@@ -1,0 +1,1 @@
+%li= link_to menu_item.to_s.gsub(/_/, ' ').titleize, { :controller => menu_item }, :class => (params[:controller] == "admin/" + menu_item.to_s ? "selected" : nil)

@@ -1,4 +1,4 @@
 %nav
   %ul
-    %li= link_to "Dashboard", admin_dashboard_path, :class => (params[:controller] == "admin/dashboard" ? "selected" : nil)
-    %li= link_to "Admin Users", admin_admin_users_path, :class => (params[:controller] == "admin/admin_users" ? "selected" : nil)
+    - @admin_menu.each do |key, value|
+      = render :partial => "admin/shared/menu_item", :locals => { :menu_item => key }
