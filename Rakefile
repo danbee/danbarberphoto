@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Abidownloads::Application.load_tasks
+Pixelhum::Application.load_tasks

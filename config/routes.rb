@@ -1,4 +1,4 @@
-Abidownloads::Application.routes.draw do
+Pixelhum::Application.routes.draw do
   as :admin_user do
     match '/admin_users/confirmation' => 'admin/confirmations#update', :via => :put, :as => :update_user_confirmation
   end
