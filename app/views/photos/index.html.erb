@@ -14,7 +14,7 @@
 
 <% if @category %>
 	<div class="sg-5 category" style="background: <%= @category.base_colour %>">
-		<%= link_to raw('<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>'), categories_url %>
+		<%= link_to raw('<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>'), categories_path %>
 	</div>
 <% else %>
 	<div class="sg-5 category" style="background: #333;">
