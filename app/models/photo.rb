@@ -9,7 +9,13 @@ class Photo < ActiveRecord::Base
                                             :size8 => "224x224#",
                                             :size5 => "140x140#",
                                             :size3 => "84x84#",
-                                            :size2 => "56x56#" }
+                                            :size2 => "56x56#" },
+                      :storage => :s3,
+                      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                      :s3_protocol => "https",
+                      :path => ":attachment/:id/:style.:extension",
+                      :bucket => 'danbarberphoto',
+                      :url  => ":s3_eu_url"
 
     after_create :get_exif
     
