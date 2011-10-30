@@ -1,4 +1,4 @@
-Photos::Application.routes.draw do
+DanBarberPhoto::Application.routes.draw do
   resources :contacts
 
   # The priority is based upon order of creation:

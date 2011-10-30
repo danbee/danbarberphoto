@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Photos::Application.config.secret_token = 'd1211d350d798302a7221c5278ead687c890f694207a9f6b5224a26bac2f00e853f9ecc780554d2e3f1f36606a583c7c6f1f371ce945082f7a3154132762e1b7'
+DanBarberPhoto::Application.config.secret_token = '61b03777f23e7feb0610d1a7ef5f89c7cf884b73502ab4ef88517d578308a8adeddbf5b362776b1d48957a0b4f3d2227208b62ba057666b90eec6cd804a71a03'

@@ -1,0 +1,276 @@
+@import "includes/box_shadow"
+
+body
+  background: #101010
+  color: white
+  font-family: "Helvetica Neue", "Arial", "Helvatica", sans-serif
+  font-size: 14px
+  overflow: hidden
+
+a
+  text-decoration: none
+
+p a
+  display: inline !important
+  color: #acf
+  &:hover
+    color: #fff
+
+#page
+  position: absolute
+  top: 40%
+  margin-top: -230px
+  width: 100%
+
+#container
+  padding-top: 20px
+
+#wrapper
+  background: #101010
+
+#header
+  position: relative
+  background: #0082bf
+  height: 308px
+  a
+    display: block
+    height: 306px
+    width: 306px
+    &:hover
+      background: rgba(255, 255, 255, 0.1)
+  img
+    padding: 0
+    margin: 0
+    position: absolute
+    bottom: 18px
+    right: 20px
+
+#footer
+  //background: #333
+  color: #333
+  text-align: right
+  height: 28px
+  p
+    margin: 0 10px
+
+.sg-5, .sg-7, .sg-11, .sg-17, .sg-35, .sg-5 a, .sg-7 a, .sg-11 a, .sg-17 a, .sg-35
+  -moz-border-radius: 2px
+  -webkit-border-radius: 2px
+  border-radius: 2px
+  
+.sg-5 a, .sg-7 a, .sg-11 a, .sg-17 a
+  border: 1px solid rgba(255, 255, 255, 0.1)
+
+.sg-5
+  height: 140px
+  a
+    position: relative
+    display: block
+    color: white
+    height: 138px
+    width: 138px
+
+.sg-7
+  height: 196px
+  a
+    position: relative
+    display: block
+    color: white
+    height: 194px
+    width: 194px
+
+.sg-11
+  height: 308px
+  a
+    display: block
+    height: 306px
+    width: 306px
+
+.sg-17
+  height: 476px
+  a
+    display: block
+    width: 474px
+    height: 474px
+
+.about
+  background-color: #99BF00
+
+.portfolio
+  background-color: #C03232
+
+.contact
+  background-color: #777
+
+.about a:focus, .portfolio a:focus, .contact a:focus
+  background: rgba(255, 255, 255, 0.1)
+
+.about a:hover, .portfolio a:hover, .contact a:hover
+  background: rgba(255, 255, 255, 0.2)
+
+.about a span, .portfolio a span, .contact a span
+  position: absolute
+  top: 10px
+  right: 20px
+
+.category
+  position: relative
+  a
+    display: block
+    color: white
+    text-decoration: none
+
+.photo a
+  display: block
+  color: white
+  text-decoration: none
+
+.category a
+  .arrow
+    position: absolute
+    font-size: 2em
+    bottom: 20px
+    left: 20px
+  &:focus
+    background: rgba(255, 255, 255, 0.1)
+
+.photo a:focus
+  background: rgba(255, 255, 255, 0.1)
+
+.category a:hover, .photo a:hover
+  background: rgba(255, 255, 255, 0.2)
+
+.blank-category, .blank-photo
+  background: #222
+  outline: 1px dashed #444
+
+.category h3
+  position: absolute
+  top: 16px
+  right: 0
+  text-align: right
+  margin: 0 20px
+  font-weight: normal
+  font-size: 1.1em
+  line-height: 1em
+
+img
+
+.page-links
+  background: #666
+
+.prev-link, .next-link
+  color: white
+  font-size: 2em
+  position: relative
+  display: block
+
+.prev-link div, .next-link div
+  position: absolute
+  bottom: 15px
+
+.prev-link div
+  left: 20px
+
+.next-link div
+  right: 20px
+
+.prev-link:hover, .next-link:hover
+  background: rgba(255, 255, 255, 0.2)
+
+.about-content
+  background: #444
+  color: #ccc
+  overflow: auto
+  div
+    padding: 15px 20px
+    p
+      margin-bottom: 0.6em
+      line-height: 1.35em
+
+/* FORM
+
+.contact-form
+  background: #ddd
+
+.field_with_errors
+  display: inline
+
+form
+  padding: 10px 25px
+  p
+    margin: 10px 0
+    color: #555
+  label
+    color: #666
+    display: block
+    width: 75px
+    float: left
+    &.error
+      float: none
+      display: inline
+      color: #990000
+      margin-left: 10px
+  textarea
+    height: 150px
+    width: 335px
+    font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
+    font-size: 14px
+    padding: 3px
+    color: #333
+    border: 2px solid #999
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    border-radius: 3px
+  input
+    &[type='text']
+      font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
+      font-size: 14px
+      padding: 3px
+      color: #333
+      border: 2px solid #999
+      -moz-border-radius: 3px
+      -webkit-border-radius: 3px
+      border-radius: 3px
+    &#contact_name, &#contact_email
+      width: 175px
+    &#contact_subject
+      width: 335px
+
+#alert
+  background: #fffeef
+  color: #664400
+  border-width: 2px 0
+  border-style: solid
+  border-color: #996600
+  padding: 0 10px 2px
+  margin-top: 15px
+
+#notice
+  background: #efffef
+  color: #446600
+  border-width: 2px 0
+  border-style: solid
+  border-color: #669900
+  padding: 0 10px 2px
+  margin-top: 15px
+
+.field_with_errors
+  input, textarea
+    background: #ffefef
+    border-color: #cc3333 !important
+
+input.error, textarea.error
+  background: #ffefef
+  border-color: #cc3333 !important
+
+form input[type='submit']
+  background: #666
+  font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
+  font-size: 14px
+  padding: 3px
+  color: white
+  border: 2px solid #333
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
+  border-radius: 3px

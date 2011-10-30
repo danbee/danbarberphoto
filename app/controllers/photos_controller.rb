@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
   def index
     if params[:category_id]
       @category = Category.find_by_id(params[:category_id])
-      @photos = @category.photos.enabled.order(:taken_at.desc).paginate(:page => params[:page], :per_page => 11)
+      @photos = @category.photos.enabled.order{taken_at.desc}.paginate(:page => params[:page], :per_page => 11)
       @page_title = @category.name
     else
       @photos = Photo.enabled.order(:taken_at.desc).paginate :all, :page => params[:page], :per_page => 11

@@ -11,7 +11,7 @@ class Photo < ActiveRecord::Base
                                             :size3 => "84x84#",
                                             :size2 => "56x56#" },
                       :storage => :s3,
-                      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                      :s3_credentials => "#{Rails.root}/config/s3.yml",
                       :s3_protocol => "https",
                       :path => ":attachment/:id/:style.:extension",
                       :bucket => 'danbarberphoto',

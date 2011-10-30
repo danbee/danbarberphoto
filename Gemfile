@@ -1,11 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,14 +39,14 @@ gem 'aws-s3', :require => 'aws/s3'
 #   gem 'webrat'
 # end
 
+gem 'sass-rails', "~> 3.1.0"
 gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
 gem 'pg'
-gem 'meta_where'
-gem 'typus', :git => 'https://github.com/fesplugas/typus.git'
+gem 'devise'
+gem 'squeel'
 gem 'mini_exiftool'
-gem 'will_paginate', :git => 'http://github.com/mislav/will_paginate.git', :branch => 'rails3'
+gem 'will_paginate'
 gem 'rdiscount'
 gem 'paperclip'
 gem 'acts_as_markup'
-gem 'jquery-rails', '>= 0.2.6'
 gem 'yaml_db'

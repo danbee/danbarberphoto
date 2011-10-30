@@ -11,7 +11,7 @@
         <%= stylesheet_link_tag "photos", :media => "all" %>
         <%= stylesheet_link_tag "fancybox", :media => "all" %>
         <%= stylesheet_link_tag "scrollbars", :media => "screen" %>
-        <%= javascript_include_tag 'jquery', 'jquery.validate', 'jrails', 'fancybox', 'photos' %>
+        <%= javascript_include_tag 'application' %>
     </head>
 
     <body>
@@ -24,7 +24,7 @@
 					<div class="sgParent sg-12">
 
 	                	<div id="header" class="sg-11">
-							<%= link_to image_tag('title.png', :alt => 'Dan Barber Photography'), '/' %>
+							<%= link_to image_tag('/assets/title.png', :alt => 'Dan Barber Photography'), '/' %>
 						</div>
                 
 	                	<%= yield %>

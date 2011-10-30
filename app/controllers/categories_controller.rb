@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
   def index
-    @categories = Category.order('sort ASC').paginate :all, :page => params[:page], :per_page => 4
+    @categories = Category.order('sort ASC').paginate :page => params[:page], :per_page => 4
 
     @photos = Photo.featured.limit(2).order('RANDOM()')
 
