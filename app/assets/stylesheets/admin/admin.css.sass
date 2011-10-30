@@ -1,0 +1,141 @@
+// Place all the styles related to the admin/admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "../includes/v_linear_grad"
+@import "../includes/round_corners"
+@import "../includes/transition"
+@import "../includes/box_shadow"
+
+body
+  background-color: #999
+  color: #333
+  font-family: "Helvetica Neue", "Arial", sans-serif
+  font-size: 14px
+  line-height: 18px
+  margin: 0
+  padding: 0
+  
+#page, #login
+  background: #fafafa
+  padding: 1em 2em 3em
+  border-bottom: 1px solid #666
+  @include box-shadow("0 1px 4px rgba(0, 0, 0, 0.3)")
+  
+#login
+  width: 40em
+  margin: 5em auto 0
+
+header
+  background: #333
+  margin: -2.5em -2em 0
+  #user
+    position: absolute
+    top: 1em
+    right: 2em
+    color: #ccc
+    a
+      color: #999
+  h1
+    background: #333
+    font-size: 2em
+    margin-bottom: 0em
+    a
+      width: 263px
+      height: 24px
+      display: inline-block
+      padding: 1em 1em
+      text-indent: -1000em
+      background: url(/assets/admin/logo.png) 1em 0.75em no-repeat
+      &:hover
+        background-color: inherit
+
+#login
+  h1
+    margin-bottom: 0.5em
+    position: relative
+    z-index: 1
+    @include box-shadow("0 1px 2px rgba(0, 0, 0, 0.3)")
+
+h2
+  margin-top: 1.2em
+
+p, ol, ul, td
+  font-family: "Helvetica Neue", "Arial", sans-serif
+  font-size: 1em
+  line-height: 1.5em
+
+pre
+  background-color: #eee
+  padding: 0.5em
+  font-size: 0.9em
+
+a
+  color: #000
+  &:hover
+    color: #fff
+    background-color: #000
+
+div
+  &.field, &.actions
+    margin-bottom: 0.5em
+
+#notice
+  color: green
+
+.field_with_errors
+  padding: 0.3em
+  background-color: red
+  display: table
+
+table
+  border: 1px solid #bbb
+  border-spacing: 0
+  @include box-shadow("0 2px 2px rgba(0, 0, 0, 0.2)")
+  @include round-corners(5px)
+  td, th
+    border-bottom: 1px solid #bbb
+  tr:nth-child(even) td
+    background: #f0f0f0
+  tr:nth-child(odd) td
+    background: #fff
+  thead
+    background: #ddd
+    color: #333
+  td, th
+    text-align: left
+    padding: 0.5em 0.7em
+  tfoot td
+    background: #ddd !important
+    border-bottom: 0
+
+#error_explanation
+  width: 450px
+  border: 2px solid red
+  padding: 7px
+  padding-bottom: 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px
+    margin-bottom: 0px
+    background-color: #c00
+    color: #fff
+  ul li
+    font-size: 12px
+    list-style: square
+
+form ul.taxonomies
+  border: 1px solid #ccc
+  @include round-corners(3px)
+  @include box-shadow("inset 2px 2px 4px rgba(0, 0, 0, 0.1)")
+  margin-top: 1em
+  padding: 1em
+  width: 25%
+  float: right
+  > li
+    font-weight: bold

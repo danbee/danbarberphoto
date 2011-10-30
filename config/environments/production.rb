@@ -58,7 +58,7 @@ DanBarberPhoto::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # Heroku Sendgrid settings.
+  # Settings for Sendgrid Free on Heroku
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',

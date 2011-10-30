@@ -1,6 +1,29 @@
 DanBarberPhoto::Application.routes.draw do
   resources :contacts
 
+  as :admin_user do
+    match '/admin_users/confirmation' => 'admin/confirmations#update', :via => :put, :as => :update_user_confirmation
+  end
+
+  devise_for :admin_users, :controllers => {
+    :sessions => "admin/sessions",
+    :passwords => "admin/passwords",
+    #:registrations => "admin/registrations",
+    :confirmations => "admin/confirmations",
+    :unlocks => "admin/unlocks"
+  }
+
+  namespace :admin do
+    root :to => "dashboard#index", :as => :dashboard
+    resources :admin_users
+    resource :admin_user do
+      member do
+        get :edit_password
+        put :update_password
+      end
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -67,8 +90,6 @@ DanBarberPhoto::Application.routes.draw do
     end
   end
   
-  root :to => 'pages#index'
-
   match 'about' => 'pages#about', :as => :about
   #match 'contact' => 'pages#contact', :as => :contact
   resources :contacts, :only => [:new, :create]
@@ -77,4 +98,12 @@ DanBarberPhoto::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
+  # root :to => 'welcome#index'
+  root :to => 'pages#index'
+
+  # See how all your routes lay out with "rake routes"
+
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end
