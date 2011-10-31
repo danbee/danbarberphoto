@@ -1,10 +1,13 @@
 @import "includes/box_shadow"
 
+html
+  -webkit-text-size-adjust: 100%
+
 body
   background: #101010
   color: white
-  font-family: "Helvetica Neue", "Arial", "Helvatica", sans-serif
-  font-size: 14px
+  font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
+  font-size: 100%
   overflow: hidden
 
 a
@@ -151,7 +154,7 @@ p a
   text-align: right
   margin: 0 20px
   font-weight: normal
-  font-size: 1.1em
+  font-size: 1em
   line-height: 1em
 
 img
@@ -183,9 +186,9 @@ img
   color: #ccc
   overflow: auto
   div
-    padding: 15px 20px
+    padding: 2px 12px
     p
-      margin-bottom: 0.6em
+      margin-top: 0.6em
       line-height: 1.35em
 
 /* FORM
@@ -206,6 +209,7 @@ form
     display: block
     width: 75px
     float: left
+    margin-top: 6px
     &.error
       float: none
       display: inline
@@ -214,9 +218,9 @@ form
   textarea
     height: 150px
     width: 335px
-    font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
-    font-size: 14px
-    padding: 3px
+    font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
+    font-size: 1em
+    padding: 5px
     color: #333
     border: 2px solid #999
     -moz-border-radius: 3px
@@ -224,9 +228,9 @@ form
     border-radius: 3px
   input
     &[type='text']
-      font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
-      font-size: 14px
-      padding: 3px
+      font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
+      font-size: 1em
+      padding: 5px
       color: #333
       border: 2px solid #999
       -moz-border-radius: 3px
@@ -266,9 +270,9 @@ input.error, textarea.error
 
 form input[type='submit']
   background: #666
-  font-family: "Helvetica Neue","Arial","Helvatica",sans-serif
-  font-size: 14px
-  padding: 3px
+  font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
+  font-size: 1em
+  padding: 3px 8px
   color: white
   border: 2px solid #333
   -moz-border-radius: 3px

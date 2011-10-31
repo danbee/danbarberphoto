@@ -50,6 +50,13 @@ form.formtastic
         -webkit-appearance: none
         margin: 0
         
+  .fragments
+    .label label
+      width: 13em
+        
+  .fragments-group
+    padding-left: 14em
+        
   input[type=submit], a.button
     @include button
     &[name=commit]
@@ -60,6 +67,11 @@ form.formtastic
       @include box-shadow("0 1px 0 rgba(0, 0, 0, 0.25), inset -1px -1px 0 rgba(255, 255, 255, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.3)")
       &:hover, &:focus
         background-color: #8B6
+  
+  .boolean
+    label
+      padding-left: 14em
+      text-align: left
 
   .error input
     border-width: 1px

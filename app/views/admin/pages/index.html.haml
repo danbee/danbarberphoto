@@ -1,0 +1,15 @@
+%h2 Pages
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Title
+      %th
+  %tbody
+    = render :partial => "page", :collection => @pages
+  %tfoot
+    %tr
+      %td{:colspan => 4}
+%br/
+= link_to 'New Category', new_admin_page_path, :class => [:button, :new]

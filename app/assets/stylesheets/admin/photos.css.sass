@@ -1,0 +1,21 @@
+@import "../includes/round_corners"
+@import "../includes/box_shadow"
+
+.photos
+  .photo
+    float: left
+    margin-right: 1em
+    margin-top: 1em
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+ul.categories
+  border: 1px solid #ccc
+  @include round-corners(3px)
+  @include box-shadow("inset 2px 2px 4px rgba(0, 0, 0, 0.1)")
+  margin-top: 1em
+  padding: 1em
+  width: 25%
+  float: right

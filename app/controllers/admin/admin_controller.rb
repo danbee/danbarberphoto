@@ -5,6 +5,9 @@ class Admin::AdminController < ApplicationController
   
   def admin_menu
     @admin_menu = { :dashboard => '',
-                    :admin_users => '' }
+                    :admin_users => '',
+                    :categories => '',
+                    :photos => '',
+                    :pages => '' }
   end
 end

@@ -22,6 +22,9 @@ DanBarberPhoto::Application.routes.draw do
         put :update_password
       end
     end
+    resources :categories
+    resources :photos
+    resources :pages
   end
 
   # The priority is based upon order of creation:
