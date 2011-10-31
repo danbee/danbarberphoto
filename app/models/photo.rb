@@ -1,5 +1,3 @@
-require 'mini_exiftool'
-
 class Photo < ActiveRecord::Base
     has_and_belongs_to_many :categories
 
@@ -17,7 +15,7 @@ class Photo < ActiveRecord::Base
                       :bucket => 'danbarberphoto',
                       :url  => ":s3_eu_url"
 
-    after_create :get_exif
+    #after_create :get_exif
     
     @@per_page = 11
 
@@ -45,12 +43,12 @@ class Photo < ActiveRecord::Base
       self.save
     end
 
-private
-    def get_exif
-        exif = MiniExiftool.new photo.queued_for_write[:original].path
-        self.title = exif.title if self.title.empty?
-        self.description = exif.description if self.description.empty?
-        self.taken_at = exif.date_time_original
-        self.save
-    end
+#private
+    #def get_exif
+    #    exif = MiniExiftool.new photo.queued_for_write[:original].path
+    #    self.title = exif.title if self.title.empty?
+    #    self.description = exif.description if self.description.empty?
+    #    self.taken_at = exif.date_time_original
+    #    self.save
+    #end
 end
