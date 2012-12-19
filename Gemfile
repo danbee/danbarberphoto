@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '~> 3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -39,6 +39,8 @@ group :development do
   gem 'hpricot'
   gem 'powder'
 end
+
+gem "newrelic_rpm"
 
 gem 'sass-rails', "~> 3.1.0"
 gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
