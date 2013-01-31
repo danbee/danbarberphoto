@@ -13,7 +13,7 @@ class Photo < ActiveRecord::Base
                       :s3_protocol => "https",
                       :path => ":attachment/:id/:style.:extension",
                       :bucket => 'danbarberphoto',
-                      :url  => ":s3_eu_url"
+                      :url => ':s3_domain_url'
 
     #after_create :get_exif
     

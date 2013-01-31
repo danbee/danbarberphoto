@@ -15,7 +15,7 @@ $(document).ready(function() {
                     email: true
                 },
                 'contact[message]': "required",
-            
+
             },
             messages: {
                 'contact[email]': {

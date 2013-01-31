@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.1.1'
+gem 'rails', '~> 3.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,8 +8,8 @@ gem 'rails', '~> 3.1.1'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', "  ~> 3.2.0"
+  gem 'coffee-rails', "~> 3.2.0"
   gem 'uglifier'
 end
 
@@ -28,7 +28,7 @@ gem 'jquery-rails'
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-sdk'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -42,7 +42,7 @@ end
 
 gem "newrelic_rpm"
 
-gem 'sass-rails', "~> 3.1.0"
+gem 'sass-rails', "~> 3.2.0"
 gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
 gem 'pg'
 gem 'devise'
