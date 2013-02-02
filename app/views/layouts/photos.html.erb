@@ -1,38 +1,38 @@
 <!doctype HTML>
 <html lang="en">
 
-    <head>
-      <title><%= @page_title + ' - ' unless @page_title.blank? %> Dan Barber Photography</title>
-		<meta http-equiv="Content-Type" content="text/html" />
-		<meta name="keywords" content="photography, images, landscapes" />
-		<meta name="description" content="The photography portfolio of Dan Barber" />
-		<meta name="language" content="English" />
-        <%= stylesheet_link_tag "application" %>
-        <%= javascript_include_tag 'application' %>
-        <%= render :partial => "shared/typekit" %>
-    </head>
+  <head>
+    <title><%= @page_title + ' - ' unless @page_title.blank? %> Dan Barber Photography</title>
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="keywords" content="photography, images, landscapes" />
+    <meta name="description" content="The photography portfolio of Dan Barber" />
+    <meta name="language" content="English" />
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag 'application' %>
+    <%= render :partial => "shared/typekit" %>
+  </head>
 
-    <body>
-	
-		  <div id="page">
+  <body>
 
-	        <div id="wrapper">
-	            <div id="container">
-				
-					<div class="sgParent sg-12">
+    <div id="page">
 
-	                	<div id="header" class="sg-11">
-                      <%= link_to image_tag('/assets/title.png', :alt => 'Dan Barber Photography', :width => 236), '/' %>
-						</div>
-                
-	                	<%= yield %>
-	
-						<div id="footer" class="sg-35">
-							<p>&copy;2013 Dan Barber</p>
-						</div>
+      <div id="wrapper">
+        <div id="container">
 
-	            </div>
-	        </div>
+          <div class="sgParent sg-12">
+
+            <div id="header" class="sg-11">
+              <%= link_to image_tag('/assets/title.png', :alt => 'Dan Barber Photography', :width => 236), '/' %>
+            </div>
+
+            <%= yield %>
+
+            <div id="footer" class="sg-35">
+              <p>&copy;2013 Dan Barber</p>
+            </div>
+
+          </div>
+        </div>
 
       </div>
 
@@ -40,4 +40,4 @@
 
     </body>
 
-</html>
+  </html>

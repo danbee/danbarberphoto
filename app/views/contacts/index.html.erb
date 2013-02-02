@@ -1,14 +1,14 @@
-	<div class="sg-5 about">
-		<%= link_to raw('<span>about</span>'), about_path %>
-	</div>
-	<div class="sg-5 portfolio">
-		<%= link_to raw('<span>portfolio</span>'), :controller => 'categories' %>
-	</div>
+<div class="sg-5 about">
+  <%= link_to raw('<span>about</span>'), about_path %>
+</div>
+<div class="sg-5 portfolio">
+  <%= link_to raw('<span>portfolio</span>'), :controller => 'categories' %>
+</div>
 </div>
 
 <div class="sg-17 contact-form">
-	<% if flash[:notice] -%>
-		<div id="notice"><%= flash[:notice] %></div>
-	<% end -%>
-	<p>Tel: 01752 546981</p>
+  <% if flash[:notice] -%>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end -%>
+  <p>Tel: 01752 546981</p>
 </div>
