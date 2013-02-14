@@ -5,4 +5,4 @@
         = check_box_tag "photo[category_ids][]", photo_category.id, @photo.categories.include?(photo_category), :id => "photo_category_ids_#{photo_category.id}"
         = label_tag "photo_category_ids_#{photo_category.id}", photo_category.name
   = f.inputs :photo, :title, :description, :flickr_url, :featured, :enabled, :taken_at
-  = f.buttons
+  = f.actions
