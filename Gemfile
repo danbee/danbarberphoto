@@ -40,6 +40,7 @@ group :development do
   gem 'powder'
   gem 'better_errors'
   gem "binding_of_caller"
+  gem 'yaml_db'
 end
 
 gem "newrelic_rpm"
@@ -55,5 +56,4 @@ gem 'will_paginate'
 gem 'rdiscount'
 gem 'paperclip'
 gem 'acts_as_markup'
-gem 'yaml_db'
 gem 'haml'
