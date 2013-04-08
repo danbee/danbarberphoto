@@ -1,4 +1,15 @@
-name: Dan Barber Photo
-page_title: Dan Barber Photography
-meta_description: ""
-meta_keywords: ""
+development: &default
+  name: Dan Barber Photography
+  page_title: Dan Barber Photography
+  meta_description: ""
+  meta_keywords: ""
+
+  ssl_hostname: secure.danbarberphoto.dev
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+
+  ssl_hostname: danbarberphoto.herokuapp.com
