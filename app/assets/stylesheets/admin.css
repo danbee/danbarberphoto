@@ -5,5 +5,5 @@
  *= require_self
  *= require formtastic
  *= require fancybox
- *= require_directory ./admin 
-*/
+ *= require_directory ./admin
+ */
