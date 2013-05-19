@@ -43,6 +43,14 @@ group :development do
   gem 'yaml_db'
 end
 
+group :test do
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'poltergeist', git: 'git://github.com/jonleighton/poltergeist.git'
+  gem 'fivemat'
+  gem 'capybara-screenshot'
+end
+
 gem "newrelic_rpm"
 
 gem 'sass-rails', "~> 3.2.0"
