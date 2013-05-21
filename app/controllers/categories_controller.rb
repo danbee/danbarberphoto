@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-  layout "photos"
   # GET /categories
   # GET /categories.xml
   def index

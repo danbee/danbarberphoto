@@ -86,23 +86,24 @@ DanBarberPhoto::Application.routes.draw do
       get :log_view
     end
   end
-  
+
   resources :photos do
     member do
       get :log_view
     end
   end
-  
-  match 'about' => 'pages#about', :as => :about
+
   #match 'contact' => 'pages#contact', :as => :contact
   resources :contacts, :only => [:new, :create]
+
+  match '/:name' => 'pages#show', :as => :page
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
   # root :to => 'welcome#index'
-  root :to => 'pages#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
