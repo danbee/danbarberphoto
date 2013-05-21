@@ -43,6 +43,11 @@ group :development do
   gem 'yaml_db'
 end
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'pry'
+end
+
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
