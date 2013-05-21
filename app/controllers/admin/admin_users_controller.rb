@@ -1,17 +1,17 @@
 class Admin::AdminUsersController < Admin::AdminController
-  
+
   def index
     @admin_users = AdminUser.all
   end
-  
+
   def new
     @admin_user = AdminUser.new
   end
-  
+
   def edit
     @admin_user = AdminUser.find(params[:id])
   end
-  
+
   def update
     @admin_user = AdminUser.find(params[:id])
 
@@ -54,7 +54,7 @@ class Admin::AdminUsersController < Admin::AdminController
   def edit_password
     @admin_user = current_admin_user
   end
-  
+
   def update_password
     @admin_user = current_admin_user
 

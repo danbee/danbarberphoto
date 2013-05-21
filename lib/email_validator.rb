@@ -6,5 +6,5 @@ class EmailValidator < ActiveModel::EachValidator
       object.errors[attribute] << (options[:message] || "is not valid") 
     end
   end
-  
+
 end

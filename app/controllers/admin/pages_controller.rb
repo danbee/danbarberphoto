@@ -1,17 +1,17 @@
 class Admin::PagesController < Admin::AdminController
-  
+
   def index
     @pages = Page.all
   end
-  
+
   def new
     @page = Page.new
   end
-  
+
   def edit
     @page = Page.find(params[:id])
   end
-  
+
   def update
     @page = Page.find(params[:id])
 

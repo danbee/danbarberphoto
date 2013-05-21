@@ -1,18 +1,18 @@
 class Admin::PhotosController < Admin::AdminController
   before_filter :get_categories
-  
+
   def index
     @photos = Photo.paginate(:page => params[:page])
   end
-  
+
   def new
     @photo = Photo.new
   end
-  
+
   def edit
     @photo = Photo.find(params[:id])
   end
-  
+
   def update
     @photo = Photo.find(params[:id])
 
@@ -50,9 +50,9 @@ class Admin::PhotosController < Admin::AdminController
       format.xml  { head :ok }
     end
   end
-  
+
   private
-  
+
   def get_categories
     @categories = Category.all
   end
