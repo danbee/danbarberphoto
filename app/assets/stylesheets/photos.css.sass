@@ -147,8 +147,17 @@ p a
   background: rgba(255, 255, 255, 0.2)
 
 .blank-category, .blank-photo
-  background: #222
-  outline: 1px dashed #444
+  position: relative
+  background: #181818
+  border-radius: 3px
+  &:before
+    display: block
+    content: ""
+    position: absolute
+    width: 138px
+    height: 138px
+    border: 1px dotted rgba(255, 255, 255, 0.1)
+    border-radius: 3px
 
 .category h3
   position: absolute
@@ -212,9 +221,9 @@ form
   label
     color: #666
     display: block
-    width: 75px
+    width: 85px
     float: left
-    margin-top: 6px
+    margin-top: 4px
     &.error
       float: none
       display: inline
@@ -222,29 +231,27 @@ form
       margin-left: 10px
   textarea
     height: 150px
-    width: 335px
+    width: 325px
     font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
     font-size: 1em
     padding: 5px
     color: #333
-    border: 2px solid #999
-    -moz-border-radius: 3px
-    -webkit-border-radius: 3px
+    border: 0
     border-radius: 3px
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
   input
     &[type='text']
       font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
       font-size: 1em
       padding: 5px
       color: #333
-      border: 2px solid #999
-      -moz-border-radius: 3px
-      -webkit-border-radius: 3px
+      border: 0
       border-radius: 3px
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
     &#contact_name, &#contact_email
       width: 175px
     &#contact_subject
-      width: 335px
+      width: 325px
 
 #alert
   background: #fffeef
@@ -274,12 +281,12 @@ input.error, textarea.error
   border-color: #cc3333 !important
 
 form input[type='submit']
+  -webkit-font-smoothing: antialiased
   background: #666
   font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
   font-size: 1em
-  padding: 3px 8px
+  padding: 6px 11px
   color: white
-  border: 2px solid #333
-  -moz-border-radius: 3px
-  -webkit-border-radius: 3px
+  border: 0
   border-radius: 3px
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.1)
