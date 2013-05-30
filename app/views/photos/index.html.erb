@@ -1,40 +1,35 @@
-<div class="sg-5 page-links">
-  <% if @photos.previous_page -%>
-    <%= link_to raw('<div>&larr;</div>'), { :page => @photos.previous_page }, :class => 'prev-link' %>
-  <% end %>
-</div>
-<div class="sg-5 page-links">
-  <% if @photos.next_page -%>
-    <%= link_to raw('<div>&rarr;</div>'), { :page => @photos.next_page }, :class => 'next-link' %>
-  <% end %>
-</div>
-</div>
+<% content_for :navigation do %>
+  <div class="sg-5 page-links">
+    <% if @photos.previous_page -%>
+      <%= link_to raw('<div>&larr;</div>'), { :page => @photos.previous_page }, :class => 'prev-link' %>
+    <% end %>
+  </div>
+  <div class="sg-5 page-links">
+    <% if @photos.next_page -%>
+      <%= link_to raw('<div>&rarr;</div>'), { :page => @photos.next_page }, :class => 'next-link' %>
+    <% end %>
+  </div>
+<% end %>
 
-<div class="sg-24 sgParent">
+<% if @category %>
+  <div class="sg-5 category" style="background: <%= @category.base_colour %>">
+    <%= link_to raw('<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>'), categories_path %>
+  </div>
+<% else %>
+  <div class="sg-5 category" style="background: #333;">
+    <h3>all photos</h3>
+  </div>
+<% end %>
 
-  <% if @category %>
-    <div class="sg-5 category" style="background: <%= @category.base_colour %>">
-      <%= link_to raw('<h3>'+h(@category.name.downcase)+'</h3><div class="arrow">&uarr;</div>'), categories_path %>
-    </div>
-  <% else %>
-    <div class="sg-5 category" style="background: #333;">
-      <h3>all photos</h3>
-    </div>
-  <% end %>
+<% @num_blank = 11 - @photos.length -%>
 
-  <% @num_blank = 11 - @photos.length -%>
+<% @photos.each do |photo| %>
+  <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')">
+    <%= link_to_photo photo %>
+  </div>
+<% end %>
 
-  <% @photos.each do |photo| %>
-
-    <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')">
-      <%= link_to_photo photo %>
-    </div>
-
-  <% end %>
-
-  <% @num_blank.times do %>
-    <div class="sg-5 photo blank-photo">
-    </div>
-  <% end %>
-
-</div>
+<% @num_blank.times do %>
+  <div class="sg-5 photo blank-photo">
+  </div>
+<% end %>

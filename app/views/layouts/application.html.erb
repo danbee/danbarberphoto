@@ -21,17 +21,18 @@
         <div id="container">
 
           <div class="sgParent sg-12">
-
             <header class="sg-11">
               <%= link_to image_tag('/assets/title.png', :alt => 'Dan Barber Photography', :width => 236), '/' %>
             </header>
 
+            <%= yield :navigation %>
+          </div>
+          <div class="sg-24 sgParent">
             <%= yield %>
 
             <footer class="sg-35">
               &copy;2013 Dan Barber
             </footer>
-
           </div>
         </div>
 
