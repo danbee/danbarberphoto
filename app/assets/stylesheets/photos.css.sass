@@ -1,12 +1,15 @@
 @import "includes/box_shadow"
 
+*
+  box-sizing: border-box
+
 html
   -webkit-text-size-adjust: 100%
 
 body
   background: #101010
   color: white
-  font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
+  font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
   letter-spacing: 0.1em
   font-weight: 400
   font-size: 100%
@@ -73,8 +76,8 @@ footer
     position: relative
     display: block
     color: white
-    height: 138px
-    width: 138px
+    height: 140px
+    width: 140px
 
 .sg-7
   height: 196px
@@ -82,22 +85,22 @@ footer
     position: relative
     display: block
     color: white
-    height: 194px
-    width: 194px
+    height: 196px
+    width: 196px
 
 .sg-11
   height: 308px
   a
     display: block
-    height: 306px
-    width: 306px
+    height: 308px
+    width: 308px
 
 .sg-17
   height: 476px
   a
     display: block
-    width: 474px
-    height: 474px
+    width: 476px
+    height: 476px
 
 .about
   background-color: #99BF00
@@ -232,7 +235,7 @@ form
   textarea
     height: 150px
     width: 325px
-    font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
+    font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
     font-size: 1em
     padding: 5px
     color: #333
@@ -241,7 +244,7 @@ form
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
   input
     &[type='text']
-      font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
+      font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
       font-size: 1em
       padding: 5px
       color: #333
@@ -283,10 +286,36 @@ input.error, textarea.error
 form input[type='submit']
   -webkit-font-smoothing: antialiased
   background: #666
-  font-family: proxima-nova, "Helvetica Neue", "Arial", sans-serif
+  font-family: freight-sans-pro, "Helvetica Neue", "Arial", sans-serif
   font-size: 1em
   padding: 6px 11px
   color: white
   border: 0
   border-radius: 3px
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.1)
+
+.error
+  position: relative
+  background-color: #333333
+  padding: 20px
+  h1, p
+    text-align: center
+  h1
+    font-size: 2em
+    font-weight: 600
+    line-height: 1em
+    margin-top: 1em
+    margin-bottom: 1em
+  p.pointer
+    position: absolute
+    bottom: 60px
+    left: 20px
+
+.error-code
+  text-align: center
+  span
+    color: rgba(255, 255, 255, 0.2)
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+    font-size: 8em
+    font-weight: 300
+    line-height: 0.8em

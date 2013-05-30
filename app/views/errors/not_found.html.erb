@@ -1,1 +1,19 @@
-<h1 class="sg-1">404</h1>
+<% content_for :navigation do %>
+  <%= render 'shared/main_nav' %>
+<% end %>
+
+<div class="sg-17 error">
+  <h1>Page Not Found</h1>
+  <p>Oops! It doesn't look like there's anything here.</p>
+  <p class="pointer"><span>&larr;</span> Why not try one of these links here?</p>
+</div>
+
+<div class="sg-5 error-code" style="background: #444;">
+  <span>4</span>
+</div>
+<div class="sg-5 error-code" style="background: #333;">
+  <span>0</span>
+</div>
+<div class="sg-5 error-code" style="background: #222;">
+  <span>4</span>
+</div>
