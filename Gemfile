@@ -70,3 +70,5 @@ gem 'rdiscount'
 gem 'paperclip'
 gem 'acts_as_markup'
 gem 'haml'
+
+gem 'slugtastic'

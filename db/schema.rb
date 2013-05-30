@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111030164012) do
+ActiveRecord::Schema.define(:version => 20130522071132) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20111030164012) do
     t.integer  "photo_id"
     t.string   "base_colour"
     t.integer  "sort"
+    t.string   "slug"
   end
 
   create_table "categories_photos", :id => false, :force => true do |t|
