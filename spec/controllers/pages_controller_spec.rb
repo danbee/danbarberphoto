@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PagesController do
   describe "GET show" do
-    let(:test_page) { FactoryGirl.create(:page) }
+    let(:test_page) { create(:page) }
 
     it "renders a page" do
       get :show, name: test_page.name
