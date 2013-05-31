@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe HomeController do
   describe "GET index" do
-    it "responds with success" do
+    it "renders the index template" do
       get :index
       expect(response).to render_template(:index)
     end
