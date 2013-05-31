@@ -12,8 +12,14 @@ describe PhotosController do
     let(:photo) { create(:photo) }
 
     it "logs a photo view" do
-      photo.should_receive(:log_view).once
+      Photo.any_instance.should_receive(:log_view).once
       get :log_view, id: photo.id
+      should respond_with(:success)
+    end
+
+    it "responds with not_found if the photo isn't present" do
+      get :log_view, id: 999
+      should respond_with(:not_found)
     end
   end
 end
