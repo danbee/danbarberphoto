@@ -2,4 +2,6 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  contact:
+    thanks: Thanks for your email, I'll be in touch as soon as possible.
+    invalid: Please fill in fields marked in red.

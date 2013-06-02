@@ -7,9 +7,9 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
-      redirect_to(:new_contact, :notice => "Thanks for your email, I'll be in touch as soon as possible.")
+      redirect_to(:new_contact, :notice => t("contact.thanks"))
     else
-      flash[:alert] = "Please fill in fields marked in red."
+      flash[:alert] = t("contact.invalid")
       render :new
     end
   end
