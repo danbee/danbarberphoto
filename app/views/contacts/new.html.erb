@@ -3,33 +3,33 @@
 <% end %>
 
 <div class="sg-17 contact-form">
+  <% if flash[:notice] -%>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end -%>
+  <% if flash[:alert] -%>
+    <div id="alert"><%= flash[:alert] %></div>
+  <% end -%>
   <%= form_for :contact, :url => { :action => 'create' }, :html => { :id => 'contact_form' } do |f| %>
-    <% if flash[:notice] -%>
-      <div id="notice"><%= flash[:notice] %></div>
-    <% end -%>
-    <% if flash[:alert] -%>
-      <div id="alert"><%= flash[:alert] %></div>
-    <% end -%>
     <p>Please use the form below to contact me.</p>
     <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
     </p>
     <p>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
     </p>
     <p>
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
+      <%= f.label :subject %>
+      <%= f.text_field :subject %>
     </p>
     <p>
-    <%= f.label :message %>
-    <%= f.text_area :message %>
+      <%= f.label :message %>
+      <%= f.text_area :message %>
     </p>
     <p>
-    <%= f.label "-", :style => "opacity: 0;" %>
-    <%= f.submit 'Send Message' %>
+      <%= f.label "-", :style => "opacity: 0;" %>
+      <%= f.submit 'Send Message' %>
     </p>
   <% end %>
 </div>

@@ -229,7 +229,7 @@ form
     margin-top: 4px
     &.error
       float: none
-      display: inline
+      display: none !important
       color: #990000
       margin-left: 10px
   textarea
@@ -259,28 +259,30 @@ form
 #alert
   background: #fffeef
   color: #664400
-  border-width: 2px 0
+  border-width: 0 0 1px
   border-style: solid
   border-color: #996600
-  padding: 0 10px 2px
-  margin-top: 15px
+  padding: 0 25px 2px
+  border-radius: 2px
 
 #notice
   background: #efffef
   color: #446600
-  border-width: 2px 0
+  border-width: 0 0 1px
   border-style: solid
   border-color: #669900
-  padding: 0 10px 2px
-  margin-top: 15px
+  padding: 0 25px 2px
+  border-radius: 2px
 
 .field_with_errors
   input, textarea
     background: #ffefef
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 2px rgba(255, 0, 0, 0.8) !important
     border-color: #cc3333 !important
 
 input.error, textarea.error
   background: #ffefef
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 2px rgba(255, 0, 0, 0.8) !important
   border-color: #cc3333 !important
 
 form input[type='submit']
