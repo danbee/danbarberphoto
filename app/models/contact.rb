@@ -1,5 +1,3 @@
-require 'email_validator'
-
 class Contact
   include ActiveModel::Validations
 
