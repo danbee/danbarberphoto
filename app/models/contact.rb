@@ -11,11 +11,10 @@ class Contact
     attributes.each do |key, value|
       self.send("#{key}=", value)
     end
-    @attributes = attributes
   end
 
   def read_attribute_for_validation(key)
-    @attributes[key]
+    self.send(key)
   end
 
   def save
