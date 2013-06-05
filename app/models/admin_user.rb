@@ -7,7 +7,7 @@ class AdminUser < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
-  # new function to set the password without knowing the current password used in our confirmation controller. 
+  # new function to set the password without knowing the current password used in our confirmation controller.
   def attempt_set_password(params)
     p = {}
     p[:password] = params[:password]
@@ -27,7 +27,7 @@ class AdminUser < ActiveRecord::Base
 
   def password_required?
     # Password is required if it is being set, but not for new records
-    if !persisted? 
+    if !persisted?
       false
     else
       !password.nil? || !password_confirmation.nil?
