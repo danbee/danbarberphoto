@@ -48,6 +48,12 @@ module DanBarberPhoto
     # Prefer SASS syntax for stylesheets
     config.sass.preferred_syntax = :sass
 
+    # Configure factories
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
+
     if Rails.env.production?
       # Heartbeat
       config.middleware.insert_before 0, 'Heartbeat'
