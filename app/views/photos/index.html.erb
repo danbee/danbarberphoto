@@ -1,3 +1,5 @@
+<%= render 'shared/photo_styles', photos: @photos, size: 5 %>
+
 <% content_for :navigation do %>
   <div class="sg-5 page-links">
     <% if @photos.previous_page -%>
@@ -24,7 +26,7 @@
 <% @num_blank = 11 - @photos.length -%>
 
 <% @photos.each do |photo| %>
-  <div class="sg-5 photo" style="background: url('<%= photo.photo.url(:size5) %>')">
+  <div class="sg-5 photo" id="<%= photo.name.parameterize %>">
     <%= link_to_photo photo %>
   </div>
 <% end %>

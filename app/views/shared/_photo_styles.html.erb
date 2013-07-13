@@ -1,0 +1,18 @@
+<style type="text/css">
+  <% photos.each do |photo| %>
+    #<%= photo.name.parameterize %>.sg-<%= size %> {
+      background: url(<%= photo.photo.url(:"size#{size}") %>);
+    }
+  <% end %>
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+    <% photos.each do |photo| %>
+      #<%= photo.name.parameterize %>.sg-<%= size %> {
+        background: url(<%= photo.photo.url(:"size#{size}x2") %>);
+        background-size: 100%;
+      }
+    <% end %>
+  }
+</style>
