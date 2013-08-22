@@ -58,6 +58,10 @@ group :test do
   gem 'capybara-screenshot'
 end
 
+group :production do
+  gem 'thin'
+end
+
 gem "newrelic_rpm"
 
 gem 'sass-rails', "~> 3.2.0"
