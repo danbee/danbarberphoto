@@ -16,7 +16,7 @@ class Admin::AdminUsersController < Admin::AdminController
     @admin_user = AdminUser.find(params[:id])
 
     respond_to do |format|
-      if @admin_user.update_attributes(params[:admin_user])
+      if @admin_user.update_attributes(permitted_params)
         format.html { redirect_to(admin_admin_users_path, :notice => 'Admin User was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -27,7 +27,7 @@ class Admin::AdminUsersController < Admin::AdminController
   end
 
   def create
-    @admin_user = AdminUser.new(params[:admin_user])
+    @admin_user = AdminUser.new(permitted_params)
 
     respond_to do |format|
       if @admin_user.save
@@ -58,12 +58,18 @@ class Admin::AdminUsersController < Admin::AdminController
   def update_password
     @admin_user = current_admin_user
 
-    if @admin_user.update_with_password(params[:admin_user])
+    if @admin_user.update_with_password(permitted_params)
       sign_in(@admin_user, :bypass => true)
       redirect_to admin_dashboard_path, :notice => "Password updated!"
     else
       render :edit_password
     end
+  end
+
+  private
+
+  def permitted_params
+    params.require(:admin_user).permit(:email, :password, :password_confirmable, :remember_me)
   end
 
 end

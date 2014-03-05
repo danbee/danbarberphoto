@@ -4,9 +4,6 @@ class AdminUser < ActiveRecord::Base
   devise :database_authenticatable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :lockable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-
   # new function to set the password without knowing the current password used in our confirmation controller.
   def attempt_set_password(params)
     p = {}
