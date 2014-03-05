@@ -2,19 +2,19 @@ DanBarberPhoto::Application.routes.draw do
   resources :contacts
 
   as :admin_user do
-    match '/admin_users/confirmation' => 'admin/confirmations#update', :via => :put, :as => :update_user_confirmation
+    match '/admin_users/confirmation' => 'admin/confirmations#update', via: :put, as: :update_user_confirmation
   end
 
-  devise_for :admin_users, :controllers => {
-    :sessions => "admin/sessions",
-    :passwords => "admin/passwords",
-    #:registrations => "admin/registrations",
-    :confirmations => "admin/confirmations",
-    :unlocks => "admin/unlocks"
+  devise_for :admin_users, controllers: {
+    sessions: "admin/sessions",
+    passwords: "admin/passwords",
+    #registrations: "admin/registrations",
+    confirmations: "admin/confirmations",
+    unlocks: "admin/unlocks"
   }
 
   namespace :admin do
-    root :to => "dashboard#index", :as => :dashboard
+    root to: "dashboard#index", as: :dashboard
     resources :admin_users
     resource :admin_user do
       member do
@@ -94,9 +94,9 @@ DanBarberPhoto::Application.routes.draw do
   end
 
   #match 'contact' => 'pages#contact', :as => :contact
-  resources :contacts, :only => [:new, :create]
+  resources :contacts, only: [:new, :create]
 
-  match '/:name' => 'pages#show', :as => :page
+  match '/:name' => 'pages#show', as: :page, via: :get
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
