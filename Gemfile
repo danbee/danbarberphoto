@@ -35,7 +35,7 @@ gem 'aws-sdk'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'sqlite3'
   gem 'ruby_parser'
   gem 'hpricot'
   gem 'powder'
