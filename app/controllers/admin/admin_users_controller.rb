@@ -15,14 +15,10 @@ class Admin::AdminUsersController < Admin::AdminController
   def update
     @admin_user = AdminUser.find(params[:id])
 
-    respond_to do |format|
-      if @admin_user.update_attributes(permitted_params)
-        format.html { redirect_to(admin_admin_users_path, :notice => 'Admin User was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_user.errors, :status => :unprocessable_entity }
-      end
+    if @admin_user.update_attributes(permitted_params)
+      redirect_to admin_admin_users_path, notice: 'Admin User was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -31,11 +27,9 @@ class Admin::AdminUsersController < Admin::AdminController
 
     respond_to do |format|
       if @admin_user.save
-        format.html { redirect_to(admin_admin_users_path, :notice => 'Admin User was successfully added.') }
-        format.xml  { head :ok }
+        redirect_to admin_admin_users_path, notice: 'Admin User was successfully added.'
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_user.errors, :status => :unprocessable_entity }
+        render :edit
       end
     end
   end
@@ -44,10 +38,7 @@ class Admin::AdminUsersController < Admin::AdminController
     @admin_user = AdminUser.find(params[:id])
     @admin_user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(admin_admin_users_path, :notice => 'Admin User was deleted.') }
-      format.xml  { head :ok }
-    end
+    redirect_to admin_admin_users_path, notice: 'Admin User was deleted.'
   end
 
   # Allow the current logged in user to change their password
@@ -59,8 +50,8 @@ class Admin::AdminUsersController < Admin::AdminController
     @admin_user = current_admin_user
 
     if @admin_user.update_with_password(permitted_params)
-      sign_in(@admin_user, :bypass => true)
-      redirect_to admin_dashboard_path, :notice => "Password updated!"
+      sign_in @admin_user, bypass: true
+      redirect_to admin_dashboard_path, notice: "Password updated!"
     else
       render :edit_password
     end

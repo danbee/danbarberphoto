@@ -16,39 +16,28 @@ class Admin::PhotosController < Admin::AdminController
   def update
     @photo = Photo.find(params[:id])
 
-    respond_to do |format|
-      if @photo.update_attributes(params[:photo])
-        format.html { redirect_to(admin_photos_path, :notice => 'Photo was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
-      end
+    if @photo.update_attributes(params[:photo])
+      redirect_to admin_photos_path, notice: 'Photo was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def create
     @photo = Photo.new(params[:photo])
 
-    respond_to do |format|
       if @photo.save
-        format.html { redirect_to(admin_photos_path, :notice => 'Photo was successfully added.') }
-        format.xml  { head :ok }
+        redirect_to admin_photos_path, notice: 'Photo was successfully added.'
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
+        render :edit
       end
-    end
   end
 
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(admin_photos_path, :notice => 'Photo was deleted.') }
-      format.xml  { head :ok }
-    end
+    redirect_to admin_photos_path, notice: 'Photo was deleted.'
   end
 
   private

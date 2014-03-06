@@ -2,7 +2,7 @@ class Admin::ConfirmationsController < ::Devise::PasswordsController
   layout "admin/layouts/login"
 
   skip_before_filter(:authenticate_user!)
-  # PUT /resource/confirmation
+
   def update
     with_unconfirmed_confirmable do
       if @confirmable.has_no_password?
@@ -23,7 +23,6 @@ class Admin::ConfirmationsController < ::Devise::PasswordsController
     end
   end
 
-  # GET /resource/confirmation?confirmation_token=abcdef
   def show
     with_unconfirmed_confirmable do
       if @confirmable.has_no_password?
@@ -38,6 +37,7 @@ class Admin::ConfirmationsController < ::Devise::PasswordsController
   end
 
   protected
+
   def with_unconfirmed_confirmable
     @confirmable = AdminUser.find_or_initialize_with_error_by(:confirmation_token, params[:confirmation_token])
     if !@confirmable.new_record?

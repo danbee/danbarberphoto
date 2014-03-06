@@ -15,28 +15,20 @@ class Admin::PagesController < Admin::AdminController
   def update
     @page = Page.find(params[:id])
 
-    respond_to do |format|
-      if @page.update_attributes(params[:page])
-        format.html { redirect_to(admin_pages_path, :notice => 'Page was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
-      end
+    if @page.update_attributes(params[:page])
+      redirect_to admin_pages_path, notice: 'Page was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def create
     @page = Page.new(params[:page])
 
-    respond_to do |format|
-      if @page.save
-        format.html { redirect_to(admin_pages_path, :notice => 'Page was successfully added.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
-      end
+    if @page.save
+      redirect_to admin_pages_path, notice: 'Page was successfully added.'
+    else
+      render :edit
     end
   end
 
@@ -44,10 +36,7 @@ class Admin::PagesController < Admin::AdminController
     @page = Page.find(params[:id])
     @page.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(admin_pages_path, :notice => 'Page was deleted.') }
-      format.xml  { head :ok }
-    end
+    redirect_to admin_pages_path, notice: 'Page was deleted.'
   end
 
 end
