@@ -19,7 +19,7 @@ class Photo < ActiveRecord::Base
                             s3_credentials: "#{Rails.root}/config/s3.yml",
                             s3_protocol: 'https',
                             path: ':attachment/:id/:style.:extension',
-                            bucket: 'danbarberphoto',
+                            bucket: ENV['AWS_BUCKET_NAME'],
                             url: ':s3_domain_url'
 
   @@per_page = 11

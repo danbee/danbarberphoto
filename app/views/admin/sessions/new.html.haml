@@ -1,14 +1,14 @@
 %h3 Sign in
 
-= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  = f.inputs do
-    = f.input :email
-    = f.input :password
+= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  = inputs_field_set do
+    = f.input :email, required: true
+    = f.input :password, required: true
 
     - if devise_mapping.rememberable?
-      = f.input :remember_me, :as => :boolean
-  
-  = f.actions do
+      = f.input :remember_me, as: :boolean
+
+  = actions_field_set do
     = f.submit "Sign In"
 
-= render :partial => "devise/shared/links"
+= render partial: "devise/shared/links"

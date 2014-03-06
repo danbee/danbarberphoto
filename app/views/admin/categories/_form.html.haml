@@ -1,3 +1,9 @@
-= semantic_form_for [:admin, category] do |f|
-  = f.inputs :name, :slug, :description, :base_colour, :sort
-  = f.actions
+= simple_form_for [:admin, category] do |f|
+  = inputs_field_set do
+    = f.input :name
+    = f.input :slug, placeholder: 'derived from name if blank'
+    = f.input :description
+    = f.input :base_colour
+    = f.input :sort
+  = actions_field_set do
+    = f.submit

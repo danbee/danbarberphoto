@@ -15,7 +15,7 @@ class Admin::PagesController < Admin::AdminController
   def update
     @page = Page.find(params[:id])
 
-    if @page.update_attributes(params[:page])
+    if @page.update_attributes(permitted_params)
       redirect_to admin_pages_path, notice: 'Page was successfully updated.'
     else
       render :edit
@@ -23,7 +23,7 @@ class Admin::PagesController < Admin::AdminController
   end
 
   def create
-    @page = Page.new(params[:page])
+    @page = Page.new(permitted_params)
 
     if @page.save
       redirect_to admin_pages_path, notice: 'Page was successfully added.'
@@ -37,6 +37,12 @@ class Admin::PagesController < Admin::AdminController
     @page.destroy
 
     redirect_to admin_pages_path, notice: 'Page was deleted.'
+  end
+
+  private
+
+  def permitted_params
+    params.require(:page).permit(:name, :title, :content)
   end
 
 end

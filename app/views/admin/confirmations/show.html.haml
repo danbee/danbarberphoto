@@ -1,12 +1,12 @@
 %h3= "Account Activation for #{resource.email}"
 
-= semantic_form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'}, :id => 'activation-form' do |f|
+= simple_form_for resource, as: resource_name, url: update_user_confirmation_path, html: {method: 'put'}, id: 'activation-form' do |f|
   = devise_error_messages!
-  = field_set_tag "", :class => "inputs" do
+  = inputs_field_set do
     %ol
       - if @requires_password
-        = f.input :password, :label => 'Choose a Password'
-        = f.input :password_confirmation, :label => 'Confirm Password'
-      = hidden_field_tag :confirmation_token,@confirmation_token
+        = f.input :password, :label 'Choose a Password'
+        = f.input :password_confirmation, :label 'Confirm Password'
+      = hidden_field_tag :confirmation_token, @confirmation_token
   = f.actions do
     = f.submit "Activate"

@@ -12,6 +12,8 @@ group :assets do
   gem 'sass-rails', "  ~> 4.0.0"
   gem 'coffee-rails', "~> 4.0.0"
   gem 'uglifier'
+
+  gem 'bourbon'
 end
 
 gem 'jquery-rails'
@@ -67,7 +69,7 @@ gem "newrelic_rpm"
 gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
 gem 'pg'
 gem 'devise'
-gem 'formtastic'
+gem 'simple_form'
 gem 'squeel'
 #gem 'mini_exiftool'
 gem 'will_paginate'

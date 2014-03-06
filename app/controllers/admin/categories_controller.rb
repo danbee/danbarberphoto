@@ -15,7 +15,7 @@ class Admin::CategoriesController < Admin::AdminController
   def update
     @category = Category.find(params[:id])
 
-    if @category.update_attributes(params[:category])
+    if @category.update_attributes(permitted_params)
       redirect_to admin_categories_path, notice: 'Category was successfully updated.'
     else
       render :edit
@@ -23,7 +23,7 @@ class Admin::CategoriesController < Admin::AdminController
   end
 
   def create
-    @category = Category.new(params[:category])
+    @category = Category.new(permitted_params)
 
       if @category.save
         redirect_to admin_categories_path, notice: 'Category was successfully added.'
@@ -37,6 +37,12 @@ class Admin::CategoriesController < Admin::AdminController
     @category.destroy
 
     redirect_to admin_categories_path, notice: 'Category was deleted.'
+  end
+
+  private
+
+  def permitted_params
+    params.require(:category).permit(:name, :slug, :description, :base_colour, :sort)
   end
 
 end

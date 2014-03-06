@@ -16,7 +16,7 @@ class Admin::PhotosController < Admin::AdminController
   def update
     @photo = Photo.find(params[:id])
 
-    if @photo.update_attributes(params[:photo])
+    if @photo.update_attributes(permitted_params)
       redirect_to admin_photos_path, notice: 'Photo was successfully updated.'
     else
       render :edit
@@ -24,7 +24,7 @@ class Admin::PhotosController < Admin::AdminController
   end
 
   def create
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(permitted_params)
 
       if @photo.save
         redirect_to admin_photos_path, notice: 'Photo was successfully added.'
@@ -44,6 +44,10 @@ class Admin::PhotosController < Admin::AdminController
 
   def get_categories
     @categories = Category.all
+  end
+
+  def permitted_params
+    params.require(:photo).permit(:image, :title, :description, :flickr_url, :featured, :enabled, :taken_at)
   end
 
 end
