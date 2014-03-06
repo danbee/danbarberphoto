@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @photo = Photo.featured.order('RANDOM()').first
+    @photos = Photo.featured.order('RANDOM()').limit(1)
   end
 end

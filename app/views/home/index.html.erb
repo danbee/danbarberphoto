@@ -1,12 +1,12 @@
-<%= render 'shared/photo_styles', photos: [@photo], size: 17 %>
+<%= render 'shared/photo_styles', photos: @photos, size: 17 %>
 
 <% content_for :navigation do %>
   <%= render 'shared/main_nav' %>
 <% end %>
 
-<% if @photo %>
-  <div class="sg-17 photo" id="<%= @photo.name.parameterize %>">
-    <%= link_to_photo @photo %>
+<% if @photos.first.present? %>
+  <div class="sg-17 photo" id="<%= @photos.first.name.parameterize %>">
+    <%= link_to_photo @photos.first %>
   </div>
 <% end %>
 
