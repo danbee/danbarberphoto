@@ -103,7 +103,7 @@ DanBarberPhoto::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 
   # root :to => 'welcome#index'
-  root :to => 'home#index'
+  root to: 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
