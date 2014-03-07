@@ -55,7 +55,7 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  gem 'poltergeist', git: 'git://github.com/jonleighton/poltergeist.git'
+  gem 'poltergeist'
   gem 'fivemat'
   gem 'capybara-screenshot'
 end
@@ -64,9 +64,9 @@ group :production do
   gem 'thin'
 end
 
-gem "newrelic_rpm"
+gem 'newrelic_rpm'
 
-gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
+gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
 gem 'pg'
 gem 'devise'
 gem 'simple_form'
