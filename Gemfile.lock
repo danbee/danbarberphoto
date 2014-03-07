@@ -66,11 +66,7 @@ GEM
     capybara-screenshot (0.3.17)
       capybara (>= 1.0, < 3)
       launchy
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
     cliver (0.3.2)
-    cocaine (0.5.3)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -142,11 +138,6 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
-    paperclip (4.1.1)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
     pg (0.17.1)
     poltergeist (1.5.0)
       capybara (~> 2.1)
@@ -275,7 +266,6 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   newrelic_rpm
-  paperclip
   pg
   poltergeist
   powder
