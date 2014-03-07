@@ -22,6 +22,8 @@ class Photo < ActiveRecord::Base
                             bucket: ENV['AWS_BUCKET_NAME'],
                             url: ':s3_domain_url'
 
+  dragonfly_accessor :image
+
   @@per_page = 11
 
   scope :enabled, lambda {

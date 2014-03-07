@@ -25,6 +25,9 @@ DanBarberPhoto::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  # Enable errors for Sprockets
+  config.assets.raise_production_errors = true
+
   # Expands the lines which load the assets
   config.assets.debug = true
 

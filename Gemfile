@@ -13,6 +13,8 @@ group :assets do
   gem 'coffee-rails', "~> 4.0.0"
   gem 'uglifier'
 
+  gem 'sprockets_better_errors'
+
   gem 'bourbon'
 end
 
@@ -75,6 +77,8 @@ gem 'squeel'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'paperclip'
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
 gem 'haml'
 
 gem 'slugtastic'
