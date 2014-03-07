@@ -5,3 +5,5 @@ en:
   contact:
     thanks: Thanks for your email, I'll be in touch as soon as possible.
     invalid: Please fill in fields marked in red.
+
+  insecure_alert: You are on an insecure connection. Sign in will not work. <a href="%{secure_link}">Switch</a>.
