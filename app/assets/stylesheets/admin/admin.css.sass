@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//= depend_on_asset "admin/logo.svg"
+
 @import "../includes/v_linear_grad"
 @import "../includes/round_corners"
 @import "../includes/transition"
@@ -46,7 +48,7 @@ header
       display: inline-block
       padding: 1em 1em
       text-indent: -1000em
-      background: url(/assets/admin/logo.png) 1em 0.75em no-repeat
+      background: asset-url('admin/logo.svg') 1em 0.75em no-repeat
       &:hover
         background-color: inherit
 
