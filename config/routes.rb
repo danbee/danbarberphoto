@@ -81,15 +81,16 @@ DanBarberPhoto::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
   resources :categories do
-    resources :photos
-    member do
-      get :log_view
+    resources :photos do
+      member do
+        post :log_view
+      end
     end
   end
 
   resources :photos do
     member do
-      get :log_view
+      post :log_view
     end
   end
 
