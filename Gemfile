@@ -54,6 +54,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'poltergeist'
+  gem 'database_cleaner'
   gem 'fivemat'
   gem 'capybara-screenshot'
 end
