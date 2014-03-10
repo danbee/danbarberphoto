@@ -43,6 +43,8 @@ module DanBarberPhoto
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.assets.precompile += %w(favicon.ico fancybox/sprite.png fancybox/loading.gif fancybox/blank.gif fancybox/overlay.png)
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 

@@ -1,3 +1,8 @@
+//= depend_on_asset "fancybox/sprite.png"
+//= depend_on_asset "fancybox/loading.gif"
+//= depend_on_asset "fancybox/blank.gif"
+//= depend_on_asset "fancybox/overlay.png"
+
 /*! fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -76,7 +81,7 @@
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-  background-image: url('/assets/fancybox/sprite.png');
+  background-image: asset-url('fancybox/sprite.png');
 }
 
 #fancybox-loading {
@@ -94,7 +99,7 @@
 #fancybox-loading div {
   width: 44px;
   height: 44px;
-  background: url('/assets/fancybox/loading.gif') center center no-repeat;
+  background: asset-url('fancybox/loading.gif') center center no-repeat;
 }
 
 .fancybox-close {
@@ -114,7 +119,7 @@
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url('/assets/fancybox/blank.gif'); /* helps IE */
+  background: transparent asset-url('fancybox/blank.gif'); /* helps IE */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   z-index: 8040;
 }
@@ -175,7 +180,7 @@
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: url('/assets/fancybox/overlay.png');
+  background: asset-url('fancybox/overlay.png');
 }
 
 .fancybox-overlay-fixed {
