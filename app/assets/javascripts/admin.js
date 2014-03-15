@@ -6,5 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.transit
 //= require fancybox
 //= require_directory ./admin
