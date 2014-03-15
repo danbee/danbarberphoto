@@ -31,6 +31,15 @@ describe 'visitor navigates site' do
 
     click_link 'portfolio'
 
-    expect(page).to have_link(category.name)
+    expect(page).to have_link(category.name.downcase)
+  end
+
+  it 'shows the photos for the category' do
+    visit categories_path
+
+    click_link category.name.downcase
+
+    selector = "a[data-id='#{photo.id}']"
+    expect(page).to have_selector(selector)
   end
 end
