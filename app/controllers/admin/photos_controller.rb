@@ -47,7 +47,7 @@ class Admin::PhotosController < Admin::AdminController
   end
 
   def permitted_params
-    params.require(:photo).permit(:image, :title, :description, :flickr_url, :featured, :enabled, :taken_at)
+    params.require(:photo).permit(:image, :title, :description, :flickr_url, :featured, :enabled, :taken_at, category_ids: [])
   end
 
 end
