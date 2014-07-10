@@ -6,7 +6,7 @@
         = label_tag "photo_category_ids_#{photo_category.id}", photo_category.name
 
   = inputs_field_set do
-    = f.input :photo
+    = f.input :image, as: :file
     = f.input :title
     = f.input :description
     = f.input :flickr_url
