@@ -1,16 +1,14 @@
 source 'http://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.5'
 
-gem 'rails', '~> 4.0.0'
+gem 'rails', '~> 4.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sass-rails', "  ~> 4.0.0"
-gem 'coffee-rails', "~> 4.0.0"
+gem 'coffee-rails', "~> 4.1.0"
 gem 'uglifier'
-
-gem 'sprockets_better_errors'
 
 gem 'bourbon'
 
