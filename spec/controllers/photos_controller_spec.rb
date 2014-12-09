@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PhotosController do
+describe PhotosController, type: :controller do
   describe "GET index" do
     it "renders the index template" do
       get :index
@@ -12,14 +12,14 @@ describe PhotosController do
     let(:photo) { create(:photo) }
 
     it "logs a photo view" do
-      Photo.any_instance.should_receive(:log_view).once
+      expect_any_instance_of(Photo).to receive(:log_view).once
       get :log_view, id: photo.id
-      should respond_with(:success)
+      expect(response).to be_successful
     end
 
     it "responds with not_found if the photo isn't present" do
       get :log_view, id: 999
-      should respond_with(:not_found)
+      expect(response.status).to eql(404)
     end
   end
 end
