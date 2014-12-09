@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PagesController do
+describe PagesController, type: :controller do
   describe "GET show" do
     let(:test_page) { create(:page) }
 
