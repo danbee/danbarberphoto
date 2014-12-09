@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'visitor navigates site' do
+feature 'visitor navigates site' do
 
   let!(:category) { create(:category) }
   let!(:photo) { create(:photo, featured: true, categories: [category]) }
