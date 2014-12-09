@@ -16,7 +16,7 @@ describe ContactsController, type: :controller do
 
   describe "POST create" do
     it "saves a new contact" do
-      Contact.any_instance.should_receive(:save).once.and_return(true)
+      expect_any_instance_of(Contact).to receive(:save).once.and_return(true)
       post :create, contact: contact_params
       expect(flash[:notice]).to eql(I18n.t("contact.thanks"))
       expect(response).to redirect_to(:new_contact)
