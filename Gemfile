@@ -77,6 +77,4 @@ gem 'dragonfly-s3_data_store'
 gem 'unf'
 gem 'haml'
 
-gem 'skylight'
-
 gem 'slugtastic'
