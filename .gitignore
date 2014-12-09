@@ -10,3 +10,4 @@ public/system
 **/.DS*
 .sass-cache/
 .envrc
+config/database.yml
