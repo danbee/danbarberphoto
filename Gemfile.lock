@@ -272,8 +272,6 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    skylight (0.5.1)
-      activesupport (>= 3.0.0)
     slop (3.6.0)
     slugtastic (1.2.1)
     sprockets (2.12.3)
@@ -344,7 +342,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   shoulda-matchers
   simple_form
-  skylight
   slugtastic
   sqlite3
   squeel
