@@ -1,6 +1,6 @@
 class PagePresenter < SimpleDelegator
   def content_as_html
-    PagePresenter.markdown.render(content)
+    PagePresenter.markdown.render(content).html_safe
   end
 
   def self.markdown

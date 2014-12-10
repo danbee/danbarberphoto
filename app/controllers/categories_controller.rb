@@ -8,6 +8,8 @@ class CategoriesController < ApplicationController
 
     @page_title = 'Portfolio'
 
+    @num_blank = 4 - @categories.length
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render xml: @categories }

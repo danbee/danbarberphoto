@@ -9,7 +9,7 @@
   <% if flash[:alert] -%>
     <div id="alert"><%= flash[:alert] %></div>
   <% end -%>
-  <%= form_for :contact, :url => { :action => 'create' }, :html => { :id => 'contact_form' } do |f| %>
+  <%= form_for :contact, url: { action: 'create' }, html: { id: 'contact_form' } do |f| %>
     <p>Please use the form below to contact me.</p>
     <p>
       <%= f.label :name %>
@@ -28,7 +28,7 @@
       <%= f.text_area :message %>
     </p>
     <p>
-      <%= f.label "-", :style => "opacity: 0;" %>
+      <%= f.label "-", style: "opacity: 0;" %>
       <%= f.submit 'Send Message' %>
     </p>
   <% end %>

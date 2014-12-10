@@ -7,10 +7,10 @@
     <meta name="keywords" content="photography, images, landscapes" />
     <meta name="description" content="The photography portfolio of Dan Barber" />
     <meta name="language" content="English" />
-    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'favicon.ico' %>
-    <%= render :partial => "shared/typekit" %>
+    <%= render 'shared/typekit' %>
   </head>
 
   <body>
@@ -22,7 +22,7 @@
 
           <div class="sgParent sg-12">
             <header class="sg-11">
-              <%= link_to image_tag(asset_url('title.svg'), :alt => 'Dan Barber Photography', :width => 236), '/' %>
+              <%= link_to image_tag(asset_url('title.svg'), alt: 'Dan Barber Photography', width: 236), '/' %>
             </header>
 
             <%= yield :navigation %>
@@ -38,7 +38,7 @@
 
       </div>
 
-      <%= render :partial => 'shared/analytics' if Rails.env.production? %>
+      <%= render 'shared/analytics' if Rails.env.production? %>
 
     </body>
 
