@@ -8,12 +8,9 @@ class Photo < ActiveRecord::Base
 
   @@per_page = 11
 
-  scope :enabled, lambda {
-    where(enabled: true)
-  }
-  scope :featured, lambda {
-    enabled.where(featured: true)
-  }
+  scope :enabled, lambda { where(enabled: true) }
+
+  scope :featured, lambda { enabled.where(featured: true) }
 
   def to_s
     self.title
