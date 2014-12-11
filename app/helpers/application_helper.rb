@@ -1,9 +1,9 @@
 module ApplicationHelper
   def page_title(title)
     if title.present?
-      "#{title} - Dan Barber Photography"
+      "#{title} - #{APP_CONFIG['page_title']}"
     else
-      "Dan Barber Photography"
+      APP_CONFIG['page_title']
     end
   end
 end
