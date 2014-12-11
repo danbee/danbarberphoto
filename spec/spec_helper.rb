@@ -5,6 +5,10 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 
+# For code coverage
+require 'simplecov'
+SimpleCov.start
+
 # Use Poltergeist
 Capybara.javascript_driver = :poltergeist
 

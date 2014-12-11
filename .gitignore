@@ -11,3 +11,4 @@ public/system
 .sass-cache/
 .envrc
 config/database.yml
+coverage
