@@ -6,5 +6,13 @@ DanBarberPhoto
 This is the source code for DanBarberPhoto.com.
 
 The session cookie has been set to `secure: true` so the admin login will only
-work over an HTTPS connection. Nginx can be used as a local proxy for
-development purposes.
+work over an HTTPS connection. Use the tunnels gem to proxy the development
+server to HTTPS:
+
+```bash
+# If you're using pow
+$ sudo tunnels
+
+# If using rails server
+$ sudo tunnels 443 3000
+```
