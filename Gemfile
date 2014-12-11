@@ -55,6 +55,7 @@ group :test do
   gem 'database_cleaner'
   gem 'fivemat'
   gem 'capybara-screenshot'
+  gem 'simplecov'
 end
 
 group :production do
