@@ -8,6 +8,6 @@
 
   %body
     #login
-      %header{ :role => "banner" }= render :partial => "admin/shared/login_header"
-      = render :partial => "shared/flash_messages"
+      %header{ role: "banner" }= render partial: "admin/shared/login_header"
+      = render partial: "shared/flash_messages"
       = yield
