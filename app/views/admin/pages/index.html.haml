@@ -7,9 +7,9 @@
       %th Title
       %th
   %tbody
-    = render :partial => "page", :collection => @pages
+    = render partial: "page", collection: @pages
   %tfoot
     %tr
-      %td{:colspan => 4}
+      %td{ colspan: 4 }
 %br/
-= link_to 'New Page', new_admin_page_path, :class => [:button, :new]
+= link_to 'New Page', new_admin_page_path, class: [:button, :new]

@@ -2,7 +2,7 @@
   %ul.categories
     - @categories.each do |photo_category|
       %li
-        = check_box_tag "photo[category_ids][]", photo_category.id, @photo.categories.include?(photo_category), :id => "photo_category_ids_#{photo_category.id}"
+        = check_box_tag "photo[category_ids][]", photo_category.id, @photo.categories.include?(photo_category), id: "photo_category_ids_#{photo_category.id}"
         = label_tag "photo_category_ids_#{photo_category.id}", photo_category.name
 
   = inputs_field_set do

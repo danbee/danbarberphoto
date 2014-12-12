@@ -8,7 +8,7 @@
 
   %body
     #page
-      %header{ :role => "banner" }= render :partial => "admin/shared/header"
-      = render :partial => "shared/flash_messages"
+      %header{ role: "banner" }= render partial: "admin/shared/header"
+      = render partial: "shared/flash_messages"
       = yield
-      %footer{ :role => "footer" }= render :partial => "admin/shared/footer"
+      %footer{ role: "footer" }= render partial: "admin/shared/footer"

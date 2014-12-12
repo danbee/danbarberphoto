@@ -1,4 +1,4 @@
 %nav
   %ul
     - @admin_menu.each do |key, value|
-      = render :partial => "admin/shared/menu_item", :locals => { :menu_item => key }
+      = render partial: "admin/shared/menu_item", locals: { menu_item: key }

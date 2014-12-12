@@ -1,11 +1,11 @@
 %h2 Photos
 
-= will_paginate @photos, :remote => true
+= will_paginate @photos, remote: true
 
 .photos
-  = render :partial => "photo", :collection => @photos
+  = render partial: "photo", collection: @photos
 
-= will_paginate @products, :remote => true
+= will_paginate @products, remote: true
 
 %br/
-= link_to 'New Photo', new_admin_photo_path, :class => [:button, :new]
+= link_to 'New Photo', new_admin_photo_path, class: [:button, :new]
