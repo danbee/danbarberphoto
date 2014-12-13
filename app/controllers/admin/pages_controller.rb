@@ -12,6 +12,11 @@ class Admin::PagesController < Admin::AdminController
     @page = Page.find(params[:id])
   end
 
+  def show
+    page = Page.find(params[:id])
+    @page = PagePresenter.new(page)
+  end
+
   def update
     @page = Page.find(params[:id])
 
