@@ -2,7 +2,7 @@ class Admin::PhotosController < Admin::AdminController
   before_filter :get_categories
 
   def index
-    @photos = Photo.paginate(:page => params[:page])
+    @photos = Photo.paginate(page: params[:page], per_page: 16)
   end
 
   def new
