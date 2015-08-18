@@ -37,6 +37,15 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rbenv_type, :user
 set :rbenv_ruby, '2.2.1'
 
+set :foreman_use_sudo, false # Set to :rbenv for rbenv sudo, :rvm for rvmsudo or true for normal sudo
+set :foreman_roles, :all
+set :foreman_template, 'systemd'
+set :foreman_export_path, File.join(Dir.home, '.init')
+set :foreman_options, {
+  app: application,
+  log: File.join(shared_path, 'log')
+}
+
 namespace :deploy do
 
   after :restart, :clear_cache do

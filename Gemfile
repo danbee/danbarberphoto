@@ -24,6 +24,7 @@ gem 'capistrano'
 gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
+gem 'capistrano-foreman'
 
 # To use debugger
 # gem 'ruby-debug'
