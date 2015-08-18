@@ -48,9 +48,6 @@ module DanBarberPhoto
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Prefer SASS syntax for stylesheets
-    config.sass.preferred_syntax = :sass
-
     # Configure factories
     config.generators do |g|
       g.test_framework :rspec, fixture: true
