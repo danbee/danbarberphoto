@@ -71,7 +71,6 @@ end
 
 gem 'newrelic_rpm'
 
-gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
 gem 'pg'
 gem 'devise'
 gem 'simple_form'
