@@ -64,6 +64,7 @@ group :test do
 end
 
 group :production do
+  gem 'foreman'
   gem 'puma'
   gem 'rails_12factor'
 end
