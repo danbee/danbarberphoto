@@ -1,3 +1,5 @@
+require 'capistrano/foreman'
+
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
@@ -37,15 +39,6 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rbenv_type, :user
 set :rbenv_ruby, '2.2.1'
 
-set :foreman_use_sudo, false # Set to :rbenv for rbenv sudo, :rvm for rvmsudo or true for normal sudo
-set :foreman_roles, :all
-set :foreman_template, 'systemd'
-set :foreman_export_path, File.join(Dir.home, '.init')
-set :foreman_options, {
-  app: application,
-  log: File.join(shared_path, 'log')
-}
-
 namespace :deploy do
 
   after :restart, :clear_cache do
@@ -57,4 +50,48 @@ namespace :deploy do
     end
   end
 
+end
+
+namespace :foreman do
+  desc 'Export the Procfile to Debian systemd scripts'
+  task :export do
+    on roles(:app) do |host|
+      log_path         = shared_path.join('log')
+      environment_path = fetch(:foreman_env)
+      within release_path do
+        as :root do
+          execute :sudo, "foreman export initscript /etc/init.d/ -a #{fetch(:application)} -u #{host.user} -l #{log_path} -e #{environment_path}"
+        end
+      end
+    end
+  end
+
+  desc 'Start the application services'
+  task :start do
+    on roles(:app) do |host|
+      as :root do
+        execute :start, fetch(:application)
+      end
+    end
+  end
+
+  desc 'Stop the application services'
+  task :stop do
+    on roles(:app) do |host|
+      as :root do
+        execute :stop, fetch(:application)
+      end
+    end
+  end
+
+  desc 'Restart the application services'
+  task :restart do
+    on roles(:app) do |host|
+      as :root do
+        execute :service, "#{fetch(:application)} start || service #{fetch(:application)} restart"
+      end
+    end
+  end
+
+  before 'deploy:publishing', 'foreman:export'
 end

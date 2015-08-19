@@ -24,7 +24,6 @@ gem 'capistrano'
 gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
-gem 'capistrano-foreman'
 
 # To use debugger
 # gem 'ruby-debug'
@@ -65,12 +64,14 @@ group :test do
 end
 
 group :production do
-  gem 'foreman'
   gem 'puma'
   gem 'rails_12factor'
 end
 
 gem 'newrelic_rpm'
+
+gem 'foreman'
+gem 'foreman-export-initscript'
 
 gem 'pg'
 gem 'devise'
