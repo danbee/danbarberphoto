@@ -129,8 +129,6 @@ GEM
       nokogiri (~> 1.5, >= 1.5.11)
     foreman (0.78.0)
       thor (~> 0.19.1)
-    foreman-export-initscript (0.0.1)
-      foreman
     formatador (0.2.5)
     haml (4.0.7)
       tilt
@@ -303,7 +301,6 @@ DEPENDENCIES
   factory_girl_rails
   fivemat
   foreman
-  foreman-export-initscript
   haml
   hpricot
   jquery-rails

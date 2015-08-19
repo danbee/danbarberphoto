@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -71,7 +71,6 @@ end
 gem 'newrelic_rpm'
 
 gem 'foreman'
-gem 'foreman-export-initscript'
 
 gem 'pg'
 gem 'devise'
