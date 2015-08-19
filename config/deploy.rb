@@ -51,6 +51,16 @@ namespace :deploy do
 end
 
 namespace :foreman do
+  desc 'Export the Procfile to systemd'
+  task :export do
+    on roles(:app) do |host|
+      within current_path do
+        execute :pwd
+        execute :sudo, :foreman, 'export --app danbarberphoto --user danbarber systemd /etc/systemd/system'
+      end
+    end
+  end
+
   desc 'Start the application services'
   task :start do
     on roles(:app) do |host|
@@ -66,6 +76,4 @@ namespace :foreman do
       end
     end
   end
-
-  before 'deploy:publishing', 'foreman:export'
 end
