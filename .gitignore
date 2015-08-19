@@ -12,3 +12,4 @@ public/system
 .envrc
 config/database.yml
 coverage
+dragonfly.log
