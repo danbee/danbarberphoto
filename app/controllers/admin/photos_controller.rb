@@ -37,7 +37,7 @@ class Admin::PhotosController < Admin::AdminController
     @photo = Photo.find(params[:id])
     @photo.destroy
 
-    redirect_to admin_photos_path, notice: 'Photo was deleted.'
+    redirect_to :back, notice: 'Photo was deleted.'
   end
 
   private
