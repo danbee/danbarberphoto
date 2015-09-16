@@ -7,7 +7,7 @@ describe Photo do
 
   let(:photo) { create(:photo) }
 
-  it "logs a view" do
-    expect { photo.log_view }.to change{photo.views}.by(1)
+  it 'logs a view' do
+    expect { photo.log_view }.to change { photo.views }.by(1)
   end
 end
