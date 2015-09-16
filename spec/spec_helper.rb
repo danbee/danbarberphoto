@@ -53,12 +53,12 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    Capybara.default_wait_time = 2
+    Capybara.default_max_wait_time = 2
     DatabaseCleaner.strategy = :transaction
   end
 
   config.before(:each, js: true) do
-    Capybara.default_wait_time = 10
+    Capybara.default_max_wait_time = 10
     DatabaseCleaner.strategy = :deletion
   end
 
