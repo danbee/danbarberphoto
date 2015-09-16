@@ -10,8 +10,8 @@ class AdminUser < ActiveRecord::Base
   end
 
   # new function to return whether a password has been set
-  def has_no_password?
-    self.encrypted_password.blank?
+  def no_password?
+    encrypted_password.blank?
   end
 
   # new function to provide access to protected method unless_confirmed

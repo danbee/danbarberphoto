@@ -1,60 +1,64 @@
-class Admin::ConfirmationsController < ::Devise::PasswordsController
-  layout "admin/layouts/login"
+module Admin
+  class ConfirmationsController < ::Devise::PasswordsController
+    layout 'admin/layouts/login'
 
-  skip_before_filter(:authenticate_user!)
+    skip_before_filter(:authenticate_user!)
 
-  def update
-    with_unconfirmed_confirmable do
-      if @confirmable.has_no_password?
-        @confirmable.attempt_set_password(params[:admin_user])
-        if @confirmable.valid?
-          do_confirm
+    def update
+      with_unconfirmed_confirmable do
+        if @confirmable.has_no_password?
+          update_password
         else
-          do_show
-          @confirmable.errors.clear #so that we wont render :new
+          self.class.add_error_on(self, :email, :password_already_set)
         end
-      else
-        self.class.add_error_on(self, :email, :password_allready_set)
       end
+
+      render_with_scope :new unless confirmable.errors.empty?
     end
 
-    if !@confirmable.errors.empty?
-      render_with_scope :new
-    end
-  end
+    def show
+      with_unconfirmed_confirmable do
+        if @confirmable.has_no_password?
+          do_show
+        else
+          do_confirm
+        end
+      end
 
-  def show
-    with_unconfirmed_confirmable do
-      if @confirmable.has_no_password?
-        do_show
-      else
+      render_with_scope :new unless @confirmable.errors.empty?
+    end
+
+    private
+
+    def update_password
+      @confirmable.attempt_set_password(params[:admin_user])
+      if @confirmable.valid?
         do_confirm
+      else
+        do_show
+        @confirmable.errors.clear # so that we won't render :new
       end
     end
-    if !@confirmable.errors.empty?
-      render_with_scope :new
+
+    protected
+
+    def with_unconfirmed_confirmable
+      @confirmable = AdminUser.find_or_initialize_with_error_by(:confirmation_token, params[:confirmation_token])
+
+      @confirmable.only_if_unconfirmed { yield } unless @confirmable.new_record?
     end
-  end
 
-  protected
-
-  def with_unconfirmed_confirmable
-    @confirmable = AdminUser.find_or_initialize_with_error_by(:confirmation_token, params[:confirmation_token])
-    if !@confirmable.new_record?
-      @confirmable.only_if_unconfirmed {yield}
+    def do_show
+      @confirmation_token = params[:confirmation_token]
+      @requires_password = true
+      self.resource = @confirmable
+      render_with_scope :show
     end
-  end
 
-  def do_show
-    @confirmation_token = params[:confirmation_token]
-    @requires_password = true
-    self.resource = @confirmable
-    render_with_scope :show
-  end
-
-  def do_confirm
-    @confirmable.confirm!
-    set_flash_message :notice, :confirmed
-    sign_in_and_redirect(resource_name, @confirmable)
+    def do_confirm
+      @confirmable.confirm!
+      set_flash_message :notice, :confirmed
+      sign_in_and_redirect(resource_name, @confirmable)
+    end
   end
 end
