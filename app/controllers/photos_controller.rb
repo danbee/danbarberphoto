@@ -25,14 +25,14 @@ class PhotosController < ApplicationController
 
   private
 
-  def with_category(category_id)
+  def for_category(category_id)
     @category = Category.find_by_id(category_id)
     @photos = @category.photos.enabled.order { taken_at.desc }
               .paginate(page: params[:page], per_page: 11)
     @page_title = @category.name
   end
 
-  def alls
+  def all
     @photos = Photo.enabled.order { taken_at.desc }
               .paginate(page: params[:page], per_page: 11)
     @page_title = 'All Photos'
