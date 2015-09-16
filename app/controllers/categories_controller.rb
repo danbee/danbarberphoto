@@ -26,5 +26,4 @@ class CategoriesController < ApplicationController
       format.xml  { render xml: @category }
     end
   end
-
 end
