@@ -4,6 +4,6 @@ class PagePresenter < SimpleDelegator
   end
 
   def self.markdown
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions: {})
   end
 end

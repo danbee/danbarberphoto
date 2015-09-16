@@ -9,12 +9,12 @@ class Contact
 
   def initialize(attributes = {})
     attributes.each do |key, value|
-      self.send("#{key}=", value)
+      send("#{key}=", value)
     end
   end
 
   def read_attribute_for_validation(key)
-    self.send(key)
+    send(key)
   end
 
   def save
@@ -22,7 +22,6 @@ class Contact
       Notifier.contact_notification(self).deliver
       return true
     end
-    return false
+    false
   end
-
 end
