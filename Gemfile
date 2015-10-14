@@ -52,6 +52,8 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'shoulda-context'
   gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'database_cleaner'
@@ -72,7 +74,7 @@ gem 'pg'
 gem 'devise'
 gem 'simple_form'
 gem 'squeel'
-#gem 'mini_exiftool'
+# gem 'mini_exiftool'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'dragonfly'
