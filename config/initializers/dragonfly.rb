@@ -9,16 +9,16 @@ Dragonfly.app.configure do
 
   url_format "/media/:job/:name"
 
-  if %w[development test].include? Rails.env
-    datastore :file,
-      root_path: Rails.root.join('public/system/dragonfly', Rails.env),
-      server_root: Rails.root.join('public')
-  else
+  if Rails.env.in?(%w(development production))
     datastore :s3,
       bucket_name: ENV['AWS_BUCKET'],
       access_key_id: ENV['AWS_KEY'],
       secret_access_key: ENV['AWS_SECRET'],
       region: 'eu-west-1'
+  else
+    datastore :file,
+      root_path: Rails.root.join('public/system/dragonfly', Rails.env),
+      server_root: Rails.root.join('public')
   end
 
   processor :preview do |content| content.process! :thumb, '600x600' end
