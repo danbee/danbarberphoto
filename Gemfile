@@ -43,6 +43,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'tunnel'
+  gem 'rbtrace', git: 'https://github.com/tmm1/rbtrace', branch: 'master'
+  gem 'foreman'
 end
 
 group :test, :development do
