@@ -8,8 +8,9 @@ class Photo < ActiveRecord::Base
   self.per_page = 11
 
   scope :enabled, -> { where(enabled: true) }
-
   scope :featured, -> { enabled.where(featured: true) }
+
+  after_create :process_exif
 
   def to_s
     title
@@ -26,5 +27,18 @@ class Photo < ActiveRecord::Base
       self.views += 1
     end
     save
+  end
+
+  private
+
+  def process_exif
+    self.title = exif.title if title.empty?
+    self.description = exif.description if description.empty?
+    self.taken_at = exif.date_time_original
+    save
+  end
+
+  def exif
+    @exif ||= MiniExiftool.new(image.file.path)
   end
 end
