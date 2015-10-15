@@ -4,7 +4,7 @@ module Admin
     before_filter :authenticate_admin_user!
     before_filter :admin_menu
 
-    force_ssl host: APP_CONFIG[:ssl_hostname]
+    force_ssl host: APP_CONFIG[:ssl_hostname] if Rails.env.production?
 
     def admin_menu
       @admin_menu = { dashboard: '',
