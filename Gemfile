@@ -31,6 +31,25 @@ gem 'jquery-rails'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'aws-sdk'
 
+gem 'newrelic_rpm'
+
+gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
+gem 'pg'
+gem 'devise'
+gem 'simple_form'
+gem 'squeel'
+gem 'mini_exiftool'
+gem 'will_paginate'
+gem 'redcarpet'
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
+gem 'unf'
+gem 'haml'
+
+gem 'skylight'
+
+gem 'slugtastic'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
@@ -69,22 +88,3 @@ group :production do
   gem 'puma'
   gem 'rails_12factor'
 end
-
-gem 'newrelic_rpm'
-
-gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
-gem 'pg'
-gem 'devise'
-gem 'simple_form'
-gem 'squeel'
-# gem 'mini_exiftool'
-gem 'will_paginate'
-gem 'redcarpet'
-gem 'dragonfly'
-gem 'dragonfly-s3_data_store'
-gem 'unf'
-gem 'haml'
-
-gem 'skylight'
-
-gem 'slugtastic'

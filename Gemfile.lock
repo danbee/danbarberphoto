@@ -155,6 +155,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.6.2)
+    mini_exiftool (2.5.1)
     mini_portile (0.6.2)
     minitest (5.8.1)
     msgpack (0.6.2)
@@ -322,6 +323,7 @@ DEPENDENCIES
   hpricot
   jquery-rails
   letter_opener
+  mini_exiftool
   newrelic_rpm
   pg
   poltergeist
