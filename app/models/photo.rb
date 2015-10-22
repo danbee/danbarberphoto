@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
 
   validates :image, presence: true
 
-  self.per_page = 11
+  paginates_per 11
 
   scope :enabled, -> { where(enabled: true) }
 

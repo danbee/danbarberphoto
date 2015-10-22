@@ -3,13 +3,13 @@ ruby '2.2.3'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'rails', '~> 4.1.0'
+gem 'rails', '~> 4.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sass-rails', "  ~> 5.0.0"
-gem 'coffee-rails', "~> 4.1.0"
+gem 'sass-rails'
+gem 'coffee-rails'
 gem 'uglifier'
 
 gem 'bourbon'
@@ -52,17 +52,16 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
-gem 'pg'
-gem 'simple_form'
-gem 'squeel'
-gem 'will_paginate'
-gem 'redcarpet'
+gem 'administrate'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
-gem 'unf'
+gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
 gem 'haml'
-
+gem 'kaminari'
+gem 'pg'
+gem 'redcarpet'
+gem 'simple_form'
 gem 'skylight'
-
 gem 'slugtastic'
+gem 'squeel'
+gem 'unf'

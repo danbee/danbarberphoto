@@ -4,4 +4,8 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name, :slug
 
   has_slug :slug, from: :name
+
+  def to_s
+    name
+  end
 end
