@@ -1,7 +1,0 @@
-%tr
-  %td= category.name
-  %td= category.slug
-  %td= category.base_colour
-  %td{ class: :actions }
-    = link_to 'Edit', edit_admin_category_path(category)
-    = link_to 'Destroy', [:admin, category], data: { confirm: 'Are you sure?' }, method: :delete

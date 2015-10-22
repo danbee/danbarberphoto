@@ -16,35 +16,17 @@ gem 'bourbon'
 
 gem 'jquery-rails'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'aws-sdk'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development do
-  gem 'sqlite3'
   gem 'ruby_parser'
-  gem 'hpricot'
   gem 'powder'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener'
-  gem 'tunnel'
-  gem 'rbtrace', git: 'https://github.com/tmm1/rbtrace', branch: 'master'
-  gem 'foreman'
 end
 
 group :test, :development do
@@ -72,10 +54,8 @@ end
 
 gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'
 gem 'pg'
-gem 'devise'
 gem 'simple_form'
 gem 'squeel'
-# gem 'mini_exiftool'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'dragonfly'
