@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
   def index
-    @categories = Category.order('sort ASC').paginate page: params[:page], per_page: 4
+    @categories = Category.order('sort ASC').page(params[:page]).per(4)
 
     @photos = Photo.featured.limit(2).order('RANDOM()')
 

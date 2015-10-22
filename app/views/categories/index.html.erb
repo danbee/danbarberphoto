@@ -2,12 +2,12 @@
 
 <% content_for :navigation do %>
   <div class="sg-5 page-links">
-    <% if @categories.previous_page -%>
-      <%= link_to content_tag(:div, e(:larr)), { page: @categories.previous_page }, class: 'prev-link' %>
+    <% if !@categories.first_page? -%>
+      <%= link_to content_tag(:div, e(:larr)), { page: @categories.prev_page }, class: 'prev-link' %>
     <% end %>
   </div>
   <div class="sg-5 page-links">
-    <% if @categories.next_page -%>
+    <% if !@categories.last_page? -%>
       <%= link_to content_tag(:div, e(:rarr)), { page: @categories.next_page }, class: 'next-link' %>
     <% end %>
   </div>
