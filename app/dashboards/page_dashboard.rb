@@ -1,4 +1,5 @@
 require "administrate/base_dashboard"
+require "administrate/fields/markdown"
 
 class PageDashboard < Administrate::BaseDashboard
   READ_ONLY_ATTRIBUTES = [
@@ -17,7 +18,7 @@ class PageDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     title: Field::String,
-    content: Field::String,
+    content: Field::Markdown,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }

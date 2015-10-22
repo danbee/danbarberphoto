@@ -1,0 +1,3 @@
+<%= f.label field.attribute %>
+<%= image_tag field.data.thumb('32x32#').url, alt: nil if field.data.present? %>
+<%= f.file_field field.attribute %>

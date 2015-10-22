@@ -1,4 +1,5 @@
 require "administrate/base_dashboard"
+require "administrate/fields/colour"
 
 class CategoryDashboard < Administrate::BaseDashboard
   READ_ONLY_ATTRIBUTES = [
@@ -14,16 +15,16 @@ class CategoryDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    photos: Field::HasMany,
     id: Field::Number,
     name: Field::String,
+    slug: Field::String,
     description: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    photo_id: Field::Number,
-    base_colour: Field::String,
+    # photo_id: Field::Number,
+    base_colour: Field::Colour,
     sort: Field::Number,
-    slug: Field::String,
+    photos: Field::HasMany,
   }
 
   # TABLE_ATTRIBUTES
@@ -31,7 +32,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to remove the limit or customize the returned array.
-  TABLE_ATTRIBUTES = ATTRIBUTE_TYPES.keys.first(4)
+  TABLE_ATTRIBUTES = %i(base_colour name description photos)
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
