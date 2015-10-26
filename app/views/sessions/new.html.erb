@@ -1,13 +1,21 @@
+<header class="header">
+  <h1>Sign In</h1>
+</header>
+
 <%= form_for :session, url: session_path do |form| %>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+  <div class="form-inputs">
+    <div class="form-field form-field--string">
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+    </div>
+
+    <div class="form-field form-field--string">
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
   </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
+
+  <div class="form-actions">
     <%= form.submit "Sign in" %>
   </div>
 <% end %>
