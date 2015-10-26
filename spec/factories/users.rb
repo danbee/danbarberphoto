@@ -3,5 +3,4 @@ FactoryGirl.define do
     email "test@example.com"
     password_digest ""
   end
-
 end

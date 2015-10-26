@@ -1,4 +1,12 @@
+require 'monban/constraints/signed_in'
+require 'monban/constraints/signed_out'
+
 DanBarberPhoto::Application.routes.draw do
+  resource :session, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
