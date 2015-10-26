@@ -12,8 +12,4 @@ class Contact
       send("#{key}=", value)
     end
   end
-
-  def read_attribute_for_validation(key)
-    send(key)
-  end
 end
