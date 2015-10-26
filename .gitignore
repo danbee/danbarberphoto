@@ -13,3 +13,4 @@ public/system
 config/database.yml
 coverage
 dragonfly.log
+data.sql
