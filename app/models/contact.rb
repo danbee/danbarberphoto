@@ -16,12 +16,4 @@ class Contact
   def read_attribute_for_validation(key)
     send(key)
   end
-
-  def save
-    if self.valid?
-      Notifier.contact_notification(self).deliver
-      return true
-    end
-    false
-  end
 end

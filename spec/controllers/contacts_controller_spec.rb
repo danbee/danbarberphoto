@@ -16,13 +16,18 @@ describe ContactsController, type: :controller do
 
   describe 'POST create' do
     it 'saves a new contact' do
-      expect_any_instance_of(Contact).to receive(:save).once.and_return(true)
+      valid_contact = double(valid?: true)
+      allow(Contact).to receive(:new).and_return(valid_contact)
+      allow(Notifier).to receive(:contact_notification).and_return(double(deliver: true))
       post :create, contact: contact_params
+
+      expect(Notifier).to have_received(:contact_notification).with(valid_contact)
       expect(flash[:notice]).to eql(I18n.t('contact.thanks'))
       expect(response).to redirect_to(:new_contact)
     end
 
     it 're-renders the form if params are missing' do
+      allow(Contact).to receive(:new).and_return(double(valid?: false))
       post :create, contact: {}
       expect(flash[:alert]).to eql(I18n.t('contact.invalid'))
       expect(response).to render_template(:new)
