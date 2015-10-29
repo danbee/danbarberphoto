@@ -1,1 +1,1 @@
-<%= image_tag field.data.thumb('400x400').url %>
+<%= image_tag field.data.url(:admin_show) if field.data.present? %>

@@ -53,6 +53,7 @@ group :production do
 end
 
 gem 'administrate'
+gem 'cloudinary', github: 'cloudinary/cloudinary_gem'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
 gem 'exception_notification', :git => 'git://github.com/rails/exception_notification', :require => 'exception_notifier'

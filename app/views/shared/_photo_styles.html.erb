@@ -1,18 +1,22 @@
 <style type="text/css">
   <% photos.each do |photo| %>
-    #<%= photo.name.parameterize %>.sg-<%= size %> {
-      background: url(<%= photo.image.send(:"size#{size}").url %>);
-    }
+    <% if photo.image.present? %>
+      #<%= photo.name.parameterize %>.sg-<%= size %> {
+        background: url(<%= photo.image.url(:"size#{size}") %>);
+      }
+    <% end %>
   <% end %>
   @media
   only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5) {
     <% photos.each do |photo| %>
-      #<%= photo.name.parameterize %>.sg-<%= size %> {
-        background: url(<%= photo.image.send(:"size#{size}x2").url %>);
-        background-size: 100%;
-      }
+      <% if photo.image.present? %>
+        #<%= photo.name.parameterize %>.sg-<%= size %> {
+          background: url(<%= photo.image.url(:"size#{size}x2") %>);
+          background-size: 100%;
+        }
+      <% end %>
     <% end %>
   }
 </style>

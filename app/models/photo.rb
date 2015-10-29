@@ -1,9 +1,7 @@
+require 'cloudinary_image'
+
 class Photo < ActiveRecord::Base
   has_and_belongs_to_many :categories
-
-  dragonfly_accessor :image
-
-  validates :image, presence: true
 
   paginates_per 11
 
@@ -17,6 +15,15 @@ class Photo < ActiveRecord::Base
 
   def name
     title
+  end
+
+  def image=(image_path)
+    @image = CloudinaryImage.create(image_path)
+    self.image_cloudinary_id = @image.id
+  end
+
+  def image
+    @image ||= CloudinaryImage.new(image_cloudinary_id)
   end
 
   def log_view
