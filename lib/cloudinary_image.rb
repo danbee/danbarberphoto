@@ -33,7 +33,7 @@ class CloudinaryImage
 
   def url(format = nil)
     if FORMATS[format].present?
-      Cloudinary::Utils.cloudinary_url(id, FORMATS[format].dup)
+      Cloudinary::Utils.cloudinary_url(id, FORMATS[format].dup.merge(ssl_detected: true))
     else
       Cloudinary::Utils.cloudinary_url(id)
     end
