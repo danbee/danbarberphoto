@@ -10,8 +10,10 @@ feature 'visitor navigates site' do
   end
 
   it 'increments the view counter when an image is displayed', js: true do
+    stub_request(:get, 'http://res.cloudinary.com/danbarber/image/upload/photo.jpg')
+
     category = create(:category)
-    photo = create(:photo, featured: true, categories: [category])
+    photo = create(:photo, image_cloudinary_id: 'photo', featured: true, categories: [category])
 
     visit root_path
 
