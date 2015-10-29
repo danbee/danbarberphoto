@@ -6,12 +6,6 @@ GIT
       aws_cf_signer
       rest-client
 
-GIT
-  remote: git://github.com/rails/exception_notification
-  revision: 192a49a02d63d28b23ed41cebadfedd490929cf1
-  specs:
-    exception_notification (1.0.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -358,7 +352,6 @@ DEPENDENCIES
   dotenv-rails
   dragonfly
   dragonfly-s3_data_store
-  exception_notification!
   factory_girl_rails
   fivemat
   haml
