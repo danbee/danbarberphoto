@@ -15,8 +15,8 @@ class Photo < ActiveRecord::Base
     title
   end
 
-  def image=(image_path)
-    @image = CloudinaryImage.create(image_path)
+  def image=(file_upload)
+    @image = CloudinaryImage.create(file_upload)
     self.image_cloudinary_id = @image.id
   end
 
