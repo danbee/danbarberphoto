@@ -10,10 +10,6 @@ feature 'visitor navigates site' do
   end
 
   it 'increments the view counter when an image is displayed', js: true do
-    image = File.read(File.join(fixture_path, 'photo.jpg'))
-    stub_request(:get, 'http://res.cloudinary.com/test/image/upload/photo.jpg')
-      .to_return(body: image, headers: { 'Content-Type' => 'image/jpeg' })
-
     category = create(:category)
     photo = create(:photo, image_cloudinary_id: 'photo', featured: true, categories: [category])
 
