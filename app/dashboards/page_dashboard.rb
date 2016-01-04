@@ -1,13 +1,6 @@
 require "administrate/base_dashboard"
-require "administrate/fields/markdown"
 
 class PageDashboard < Administrate::BaseDashboard
-  READ_ONLY_ATTRIBUTES = [
-    :id,
-    :created_at,
-    :updated_at,
-  ]
-
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -16,19 +9,23 @@ class PageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    content: Field::Markdown,
+    content: Field::MarkdownField,
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
 
-  # TABLE_ATTRIBUTES
+  # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
   #
   # By default, it's limited to four items to reduce clutter on index pages.
-  # Feel free to remove the limit or customize the returned array.
-  TABLE_ATTRIBUTES = ATTRIBUTE_TYPES.keys.first(4)
+  # Feel free to add, remove, or rearrange items.
+  COLLECTION_ATTRIBUTES = [
+    :name,
+    :title,
+    :content,
+  ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -37,5 +34,9 @@ class PageDashboard < Administrate::BaseDashboard
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = ATTRIBUTE_TYPES.keys - READ_ONLY_ATTRIBUTES
+  FORM_ATTRIBUTES = [
+    :name,
+    :title,
+    :content,
+  ]
 end

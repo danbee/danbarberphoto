@@ -13,6 +13,7 @@ class DashboardManifest
     :photos,
     :categories,
     :pages,
+    :users,
   ]
 
   # `ROOT_DASHBOARD`

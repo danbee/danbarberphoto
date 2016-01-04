@@ -1,12 +1,6 @@
 require "administrate/base_dashboard"
 
 class PhotoDashboard < Administrate::BaseDashboard
-  READ_ONLY_ATTRIBUTES = [
-    :id,
-    :created_at,
-    :updated_at,
-  ]
-
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -16,25 +10,30 @@ class PhotoDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     title: Field::String,
     image: Field::Image,
-    description: Field::String,
-    taken_at: Field::DateTime,
-    id: Field::Number,
+    description: Field::Text,
     flickr_url: Field::String,
+    taken_at: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    sort: Field::Number,
     featured: Field::Boolean,
     enabled: Field::Boolean,
+    id: Field::Number,
+    sort: Field::Number,
     views: Field::Number,
     categories: Field::HasMany,
   }
 
-  # TABLE_ATTRIBUTES
+  # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
   #
   # By default, it's limited to four items to reduce clutter on index pages.
-  # Feel free to remove the limit or customize the returned array.
-  TABLE_ATTRIBUTES = %i(image title taken_at views)
+  # Feel free to add, remove, or rearrange items.
+  COLLECTION_ATTRIBUTES = [
+    :image,
+    :title,
+    :taken_at,
+    :views,
+  ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -43,5 +42,15 @@ class PhotoDashboard < Administrate::BaseDashboard
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = ATTRIBUTE_TYPES.keys - READ_ONLY_ATTRIBUTES
+  FORM_ATTRIBUTES = [
+    :title,
+    :image,
+    :description,
+    :flickr_url,
+    :taken_at,
+    :sort,
+    :featured,
+    :enabled,
+    :categories,
+  ]
 end

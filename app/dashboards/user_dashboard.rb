@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class CategoryDashboard < Administrate::BaseDashboard
+class UserDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,14 +9,10 @@ class CategoryDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    name: Field::String,
-    slug: Field::String,
-    description: Field::Text,
+    email: Field::String,
+    password_digest: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    base_colour: Field::ColourField,
-    sort: Field::Number,
-    photos: Field::HasMany,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -25,10 +21,10 @@ class CategoryDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :base_colour,
-    :name,
-    :description,
-    :photos,
+    :id,
+    :email,
+    :password_digest,
+    :created_at,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,11 +35,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :slug,
-    :description,
-    :base_colour,
-    :sort,
-    :photos,
+    :email,
+    :password_digest,
   ]
 end
