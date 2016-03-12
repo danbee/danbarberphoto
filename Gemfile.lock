@@ -156,7 +156,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.99.1)
-    mini_portile2 (2.0.0)
+    mini_portile2 (2.1.0)
     minitest (5.8.4)
     momentjs-rails (2.11.0)
       railties (>= 3.1)
@@ -170,12 +170,14 @@ GEM
     neat (1.7.4)
       bourbon (>= 4.0)
       sass (>= 3.3)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8.rc3)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     normalize-rails (3.0.3)
     parser (2.3.0.6)
       ast (~> 2.2)
     pg (0.18.4)
+    pkg-config (1.1.7)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -331,6 +333,7 @@ DEPENDENCIES
   letter_opener
   monban
   monban-generators
+  nokogiri (~> 1.6.8.rc3)
   pg
   poltergeist
   powder
