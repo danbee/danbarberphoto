@@ -3,11 +3,12 @@ require 'monban/constraints/signed_out'
 
 DanBarberPhoto::Application.routes.draw do
   namespace :admin do
-    DashboardManifest::DASHBOARDS.each do |dashboard_resource|
-      resources dashboard_resource
-    end
+    resources :categories
+    resources :pages
+    resources :photos
+    resources :users
 
-    root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
+    root to: "categories#index"
   end
 
   resource :session, only: [:new, :create, :destroy]

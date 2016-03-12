@@ -8,10 +8,10 @@ class PageDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    title: Field::String,
-    content: Field::MarkdownField,
     id: Field::Number,
     name: Field::String,
+    title: Field::String,
+    content: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -22,14 +22,20 @@ class PageDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :name,
     :title,
-    :content,
+    :name,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = ATTRIBUTE_TYPES.keys
+  SHOW_PAGE_ATTRIBUTES = [
+    :id,
+    :name,
+    :title,
+    :content,
+    :created_at,
+    :updated_at,
+  ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -39,4 +45,11 @@ class PageDashboard < Administrate::BaseDashboard
     :title,
     :content,
   ]
+
+  # Overwrite this method to customize how pages are displayed
+  # across all pages of the admin dashboard.
+  #
+  def display_resource(page)
+    page.title
+  end
 end

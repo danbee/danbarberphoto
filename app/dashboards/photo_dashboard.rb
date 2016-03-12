@@ -8,19 +8,21 @@ class PhotoDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    title: Field::String,
-    image: Field::Image,
-    description: Field::Text,
+    categories: Field::HasMany,
+    id: Field::Number,
     flickr_url: Field::String,
-    taken_at: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    title: Field::String,
+    description: Field::Text,
+    sort: Field::Number,
     featured: Field::Boolean,
     enabled: Field::Boolean,
-    id: Field::Number,
-    sort: Field::Number,
+    taken_at: Field::DateTime,
     views: Field::Number,
-    categories: Field::HasMany,
+    image_uid: Field::String,
+    image_name: Field::String,
+    image_cloudinary_id: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -29,28 +31,54 @@ class PhotoDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :image,
     :title,
     :taken_at,
-    :views,
+    :featured,
+    :categories,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = ATTRIBUTE_TYPES.keys
+  SHOW_PAGE_ATTRIBUTES = [
+    :categories,
+    :id,
+    :flickr_url,
+    :created_at,
+    :updated_at,
+    :title,
+    :description,
+    :sort,
+    :featured,
+    :enabled,
+    :taken_at,
+    :views,
+    :image_uid,
+    :image_name,
+    :image_cloudinary_id,
+  ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :title,
-    :image,
-    :description,
+    :categories,
     :flickr_url,
-    :taken_at,
+    :title,
+    :description,
     :sort,
     :featured,
     :enabled,
-    :categories,
+    :taken_at,
+    :views,
+    :image_uid,
+    :image_name,
+    :image_cloudinary_id,
   ]
+
+  # Overwrite this method to customize how photos are displayed
+  # across all pages of the admin dashboard.
+  #
+  # def display_resource(photo)
+  #   "Photo ##{photo.id}"
+  # end
 end

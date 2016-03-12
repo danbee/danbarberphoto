@@ -21,15 +21,18 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
     :email,
-    :password_digest,
-    :created_at,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = ATTRIBUTE_TYPES.keys
+  SHOW_PAGE_ATTRIBUTES = [
+    :id,
+    :email,
+    :password_digest,
+    :created_at,
+    :updated_at,
+  ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -38,4 +41,11 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :password_digest,
   ]
+
+  # Overwrite this method to customize how users are displayed
+  # across all pages of the admin dashboard.
+  #
+  # def display_resource(user)
+  #   "User ##{user.id}"
+  # end
 end

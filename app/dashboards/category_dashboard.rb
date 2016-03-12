@@ -8,15 +8,16 @@ class CategoryDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    photos: Field::HasMany,
     id: Field::Number,
     name: Field::String,
-    slug: Field::String,
     description: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    base_colour: Field::ColourField,
+    photo_id: Field::Number,
+    base_colour: Field::String,
     sort: Field::Number,
-    photos: Field::HasMany,
+    slug: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -25,25 +26,43 @@ class CategoryDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :base_colour,
     :name,
-    :description,
+    :base_colour,
     :photos,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = ATTRIBUTE_TYPES.keys
+  SHOW_PAGE_ATTRIBUTES = [
+    :id,
+    :name,
+    :slug,
+    :base_colour,
+    :description,
+    :created_at,
+    :updated_at,
+    :photo_id,
+    :sort,
+    :photos,
+  ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :photos,
     :name,
-    :slug,
     :description,
+    :photo_id,
     :base_colour,
     :sort,
-    :photos,
+    :slug,
   ]
+
+  # Overwrite this method to customize how categories are displayed
+  # across all pages of the admin dashboard.
+  #
+  def display_resource(category)
+    category.name
+  end
 end

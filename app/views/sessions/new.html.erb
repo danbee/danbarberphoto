@@ -4,14 +4,22 @@
 
 <%= form_for :session, url: session_path do |form| %>
   <div class="form-inputs">
-    <div class="form-field form-field--string">
-      <%= form.label :email %>
-      <%= form.email_field :email %>
+    <div class="field-unit field-unit--string">
+      <div class="field-unit__label">
+        <%= form.label :email %>
+      </div>
+      <div class="field-unit__field">
+        <%= form.email_field :email %>
+      </div>
     </div>
 
-    <div class="form-field form-field--string">
-      <%= form.label :password %>
-      <%= form.password_field :password %>
+    <div class="field-unit field-unit--string">
+      <div class="field-unit__label">
+        <%= form.label :password %>
+      </div>
+      <div class="field-unit__field">
+        <%= form.password_field :password %>
+      </div>
     </div>
   </div>
 

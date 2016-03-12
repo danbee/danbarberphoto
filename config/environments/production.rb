@@ -74,7 +74,7 @@ DanBarberPhoto::Application.configure do
     :domain         => 'heroku.com'
   }
   ActionMailer::Base.delivery_method = :smtp
-  
+
   config.action_mailer.default_url_options = { :host => "danbarberphoto.com" }
 
 end
