@@ -27,9 +27,7 @@ DanBarberPhoto::Application.routes.draw do
   end
 
   resources :photos do
-    member do
-      post :log_view
-    end
+    resources :views, only: [:create]
   end
 
   resources :contacts, only: [:new, :create]

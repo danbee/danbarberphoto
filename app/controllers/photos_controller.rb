@@ -13,16 +13,6 @@ class PhotosController < ApplicationController
     end
   end
 
-  def log_view
-    photo = Photo.find_by_id(params[:id])
-    if photo.present?
-      photo.log_view
-      head :ok
-    else
-      head :not_found
-    end
-  end
-
   private
 
   def for_category(category_id)
