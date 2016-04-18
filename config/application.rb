@@ -60,11 +60,6 @@ module DanBarberPhoto
     if Rails.env.production?
       # Heartbeat
       config.middleware.insert_before 0, 'Heartbeat'
-
-      # Rack Middleware
-      config.middleware.use ::ExceptionNotifier, :email_prefix => "[DanBarberPhoto] ",
-                                                 :sender_address => %{"Exception Notification" <notifier@danbarberphoto.com>},
-                                                 :exception_recipients => %w{dan@danbarberphoto.com}
     end
 
   end
