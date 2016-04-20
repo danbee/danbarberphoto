@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, :slug
 
-  has_slug :slug, from: :name
+  slug :slug, from: :name
 
   def to_s
     name
