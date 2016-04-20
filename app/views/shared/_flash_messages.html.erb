@@ -1,0 +1,13 @@
+<% if !flash[:notice].blank? %>
+  <p class="flash notice">
+    <%= flash[:notice] %>
+    <%= link_to raw("&times;"), "#", class: :close %>
+  </p>
+<% end %>
+
+<% if !flash[:alert].blank? %>
+  <p class="flash alert">
+    <%= flash[:alert] %>
+    <%= link_to raw("&times;"), "#", class: :close %>
+  </p>
+<% end %>

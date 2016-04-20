@@ -55,7 +55,6 @@ end
 gem 'administrate'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
-gem 'haml'
 gem 'kaminari'
 gem 'monban'
 gem 'monban-generators'
