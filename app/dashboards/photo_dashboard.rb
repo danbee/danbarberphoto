@@ -14,7 +14,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     title: Field::String,
-    description: Field::Text,
+    description: Field::MarkdownField,
     sort: Field::Number,
     featured: Field::Boolean,
     enabled: Field::Boolean,
@@ -72,10 +72,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     :categories,
   ]
 
-  # Overwrite this method to customize how photos are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(photo)
-  #   "Photo ##{photo.id}"
-  # end
+  def display_resource(photo)
+    photo.title
+  end
 end
