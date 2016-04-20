@@ -14,7 +14,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     title: Field::String,
-    description: Field::MarkdownField,
+    description: MarkdownField,
     sort: Field::Number,
     featured: Field::Boolean,
     enabled: Field::Boolean,

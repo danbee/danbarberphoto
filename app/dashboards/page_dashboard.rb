@@ -11,7 +11,7 @@ class PageDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     title: Field::String,
-    content: Field::MarkdownField,
+    content: MarkdownField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
