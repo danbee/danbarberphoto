@@ -20,9 +20,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     enabled: Field::Boolean,
     taken_at: Field::DateTime,
     views: Field::Number,
-    image_uid: Field::String,
-    image_name: Field::String,
-    image_cloudinary_id: Field::String,
+    image: Field::Image,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -31,6 +29,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
+    :image,
     :title,
     :taken_at,
     :featured,
@@ -40,39 +39,37 @@ class PhotoDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :categories,
+    :title,
+    :description,
+    :image,
     :id,
     :flickr_url,
     :created_at,
     :updated_at,
-    :title,
-    :description,
+    :taken_at,
     :sort,
     :featured,
     :enabled,
-    :taken_at,
     :views,
-    :image_uid,
-    :image_name,
-    :image_cloudinary_id,
+    :categories,
   ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :categories,
-    :flickr_url,
     :title,
     :description,
+    :image,
+    :flickr_url,
+    :created_at,
+    :updated_at,
+    :taken_at,
     :sort,
     :featured,
     :enabled,
-    :taken_at,
     :views,
-    :image_uid,
-    :image_name,
-    :image_cloudinary_id,
+    :categories,
   ]
 
   # Overwrite this method to customize how photos are displayed
