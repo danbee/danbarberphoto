@@ -55,6 +55,7 @@ end
 gem 'administrate'
 gem 'administrate-field-image'
 gem 'administrate-field-color'
+gem 'administrate-field-markdown'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
 gem 'kaminari'

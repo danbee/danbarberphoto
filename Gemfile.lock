@@ -54,6 +54,10 @@ GEM
     administrate-field-image (0.0.2)
       administrate (>= 0.2.0.rc1, < 0.3.0)
       rails (~> 4.2)
+    administrate-field-markdown (0.0.2)
+      administrate (>= 0.2.0.rc1, < 0.3.0)
+      kramdown (~> 1.10)
+      rails (~> 4.2)
     arel (6.0.3)
     ast (2.2.0)
     autoprefixer-rails (6.3.6)
@@ -324,6 +328,7 @@ DEPENDENCIES
   administrate
   administrate-field-color
   administrate-field-image
+  administrate-field-markdown
   aws-sdk
   better_errors
   binding_of_caller
