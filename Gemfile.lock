@@ -48,6 +48,9 @@ GEM
       rails (~> 4.2)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-color (0.0.1)
+      administrate (>= 0.2.0.rc1, < 0.3.0)
+      rails (~> 4.2)
     administrate-field-image (0.0.2)
       administrate (>= 0.2.0.rc1, < 0.3.0)
       rails (~> 4.2)
@@ -319,6 +322,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-color
   administrate-field-image
   aws-sdk
   better_errors

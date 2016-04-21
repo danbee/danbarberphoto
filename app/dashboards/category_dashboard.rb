@@ -15,7 +15,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     photo_id: Field::Number,
-    base_colour: ColourField,
+    base_colour: Field::Color,
     sort: Field::Number,
     slug: Field::String,
   }
