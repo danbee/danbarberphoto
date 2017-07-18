@@ -21,7 +21,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     taken_at: Field::DateTime,
     views: Field::Number,
     image: Field::Image,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -34,7 +34,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     :taken_at,
     :featured,
     :categories,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -52,7 +52,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     :enabled,
     :views,
     :categories,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -70,9 +70,12 @@ class PhotoDashboard < Administrate::BaseDashboard
     :enabled,
     :views,
     :categories,
-  ]
+  ].freeze
 
-  def display_resource(photo)
-    photo.title
-  end
+  # Overwrite this method to customize how photos are displayed
+  # across all pages of the admin dashboard.
+  #
+  # def display_resource(photo)
+  #   "Photo ##{photo.id}"
+  # end
 end

@@ -53,6 +53,7 @@ group :production do
 end
 
 gem 'administrate'
+gem 'administrate-field-image'
 gem 'dragonfly'
 gem 'dragonfly-s3_data_store'
 gem 'kaminari'

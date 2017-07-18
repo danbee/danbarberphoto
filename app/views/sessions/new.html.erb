@@ -1,29 +1,31 @@
-<header class="header">
-  <h1>Sign In</h1>
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title" id="page-title">Sign In</h1>
 </header>
 
-<%= form_for :session, url: session_path do |form| %>
-  <div class="form-inputs">
-    <div class="field-unit field-unit--string">
-      <div class="field-unit__label">
-        <%= form.label :email %>
+<section class="main-content__body main-content__body--flush">
+  <%= form_for :session, url: session_path do |form| %>
+    <div class="form-inputs">
+      <div class="field-unit field-unit--string">
+        <div class="field-unit__label">
+          <%= form.label :email %>
+        </div>
+        <div class="field-unit__field">
+          <%= form.email_field :email %>
+        </div>
       </div>
-      <div class="field-unit__field">
-        <%= form.email_field :email %>
+
+      <div class="field-unit field-unit--string">
+        <div class="field-unit__label">
+          <%= form.label :password %>
+        </div>
+        <div class="field-unit__field">
+          <%= form.password_field :password %>
+        </div>
       </div>
     </div>
 
-    <div class="field-unit field-unit--string">
-      <div class="field-unit__label">
-        <%= form.label :password %>
-      </div>
-      <div class="field-unit__field">
-        <%= form.password_field :password %>
-      </div>
+    <div class="form-actions">
+      <%= form.submit "Sign in" %>
     </div>
-  </div>
-
-  <div class="form-actions">
-    <%= form.submit "Sign in" %>
-  </div>
-<% end %>
+  <% end %>
+</section>

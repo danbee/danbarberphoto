@@ -18,7 +18,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     base_colour: ColourField,
     sort: Field::Number,
     slug: Field::String,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -29,7 +29,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :name,
     :base_colour,
     :photos,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -44,25 +44,24 @@ class CategoryDashboard < Administrate::BaseDashboard
     :photo_id,
     :sort,
     :photos,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :photos,
     :name,
+    :slug,
+    :base_colour,
     :description,
     :photo_id,
-    :base_colour,
     :sort,
-    :slug,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how categories are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(category)
-    category.name
-  end
+  # def display_resource(category)
+  #   "Category ##{category.id}"
+  # end
 end

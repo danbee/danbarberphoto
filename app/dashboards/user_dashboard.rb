@@ -13,7 +13,7 @@ class UserDashboard < Administrate::BaseDashboard
     password_digest: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -22,25 +22,24 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :email,
-  ]
+    :created_at,
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
-    :password_digest,
     :created_at,
     :updated_at,
-  ]
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
-    :password_digest,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
