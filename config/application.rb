@@ -56,11 +56,5 @@ module DanBarberPhoto
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
-
-    if Rails.env.production?
-      # Heartbeat
-      config.middleware.insert_before 0, 'Heartbeat'
-    end
-
   end
 end
