@@ -3,7 +3,7 @@ ruby '2.4.1'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 5.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,6 +31,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'rubocop'
   gem 'pry'
 end
@@ -59,10 +60,9 @@ gem 'dragonfly-s3_data_store'
 gem 'kaminari'
 gem 'monban'
 gem 'monban-generators'
-gem 'nokogiri', '~> 1.6.8.rc3'
+gem 'nokogiri'
 gem 'pg'
 gem 'kramdown'
 gem 'simple_form'
 gem 'slugtastic'
-gem 'squeel'
 gem 'unf'

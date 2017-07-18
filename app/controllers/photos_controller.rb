@@ -17,13 +17,13 @@ class PhotosController < ApplicationController
 
   def for_category(category_id)
     @category = Category.find_by_id(category_id)
-    @photos = @category.photos.enabled.order { taken_at.desc }
+    @photos = @category.photos.enabled.order(taken_at: :desc)
               .page(params[:page])
     @page_title = @category.name
   end
 
   def all
-    @photos = Photo.enabled.order { taken_at.desc }
+    @photos = Photo.enabled.order(taken_at: :desc)
               .page(params[:page])
     @page_title = 'All Photos'
   end

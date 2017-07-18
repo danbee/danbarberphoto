@@ -9,9 +9,11 @@ describe ContactsController, type: :controller do
   end
 
   let(:contact_params) do
-    { name: 'Dan Barber',
+    {
+      name: 'Dan Barber',
       email: 'danbee@gmail.com',
-      message: 'This is a message.' }
+      message: 'This is a message.',
+    }
   end
 
   describe 'POST create' do
@@ -19,7 +21,7 @@ describe ContactsController, type: :controller do
       valid_contact = double(valid?: true)
       allow(Contact).to receive(:new).and_return(valid_contact)
       allow(Notifier).to receive(:contact_notification).and_return(double(deliver: true))
-      post :create, contact: contact_params
+      post :create, params: { contact: contact_params }
 
       expect(Notifier).to have_received(:contact_notification).with(valid_contact)
       expect(flash[:notice]).to eql(I18n.t('contact.thanks'))
@@ -28,7 +30,7 @@ describe ContactsController, type: :controller do
 
     it 're-renders the form if params are missing' do
       allow(Contact).to receive(:new).and_return(double(valid?: false))
-      post :create, contact: {}
+      post :create, params: { contact: {} }
       expect(flash[:alert]).to eql(I18n.t('contact.invalid'))
       expect(response).to render_template(:new)
     end
