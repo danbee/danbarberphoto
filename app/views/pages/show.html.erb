@@ -2,7 +2,7 @@
   <div class="sg-5 about">
   </div>
   <div class="sg-5 portfolio">
-    <%= link_to content_tag(:span, 'portfolio'), controller: 'categories' %>
+    <%= link_to content_tag(:span, "portfolio"), controller: "categories" %>
   </div>
 <% end %>
 
@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="sg-11" style="background: url(<%= asset_url('me.jpg') %>);">
+<div class="sg-11" style="background: url(<%= asset_url("me.jpg") %>);">
 </div>
 
 <div class="sg-5" style="background: #222;">
@@ -22,5 +22,5 @@
 <div class="sg-5" style="background: #555;">
 </div>
 <div class="sg-5 contact">
-  <%= link_to content_tag(:span, 'contact'), new_contact_path %>
+  <%= link_to content_tag(:span, "contact"), new_contact_path %>
 </div>
