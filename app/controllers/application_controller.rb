@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def render_404
-    render 'errors/not_found', status: :not_found
+    render "errors/not_found", status: :not_found
   end
 end

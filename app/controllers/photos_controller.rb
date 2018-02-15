@@ -25,6 +25,6 @@ class PhotosController < ApplicationController
   def all
     @photos = Photo.enabled.order(taken_at: :desc)
               .page(params[:page])
-    @page_title = 'All Photos'
+    @page_title = "All Photos"
   end
 end

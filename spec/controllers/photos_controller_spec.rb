@@ -1,8 +1,8 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe PhotosController, type: :controller do
-  describe 'GET index' do
-    it 'renders the index template' do
+  describe "GET index" do
+    it "renders the index template" do
       get :index
       expect(response).to render_template(:index)
     end
