@@ -39,7 +39,6 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda'
-  gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'database_cleaner'
   gem 'fivemat'

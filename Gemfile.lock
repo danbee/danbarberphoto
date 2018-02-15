@@ -367,7 +367,6 @@ DEPENDENCIES
   ruby_parser
   sass-rails
   shoulda
-  shoulda-matchers
   simple_form
   simplecov
   slugtastic
