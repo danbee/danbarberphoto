@@ -25,8 +25,8 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
-  # Include FactoryGirl methods
-  config.include FactoryGirl::Syntax::Methods
+  # Include FactoryBot methods
+  config.include FactoryBot::Syntax::Methods
   config.include Ajax, type: :feature
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

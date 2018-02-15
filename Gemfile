@@ -37,7 +37,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'shoulda'
   gem 'poltergeist'
   gem 'database_cleaner'
