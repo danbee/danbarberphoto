@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Monban::ControllerHelpers
+  include Oath::ControllerHelpers
   protect_from_forgery
 
   rescue_from ActiveRecord::RecordNotFound, with: :render_404

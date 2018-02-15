@@ -6,7 +6,7 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
-    include Monban::ControllerHelpers
+    include Oath::ControllerHelpers
 
     before_action :require_login
 

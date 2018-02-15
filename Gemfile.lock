@@ -180,16 +180,16 @@ GEM
     minitest (5.11.3)
     momentjs-rails (2.17.1)
       railties (>= 3.1)
-    monban (1.1.1)
-      bcrypt
-      rails
-      warden
-    monban-generators (1.0.1)
-      monban (>= 0.0.12)
     multi_json (1.13.1)
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    oath (1.1.0)
+      bcrypt
+      rails
+      warden
+    oath-generators (1.0.1)
+      oath (>= 0.0.12)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
@@ -351,9 +351,9 @@ DEPENDENCIES
   kaminari
   kramdown
   letter_opener
-  monban
-  monban-generators
   nokogiri
+  oath
+  oath-generators
   pg
   poltergeist
   powder
@@ -367,7 +367,6 @@ DEPENDENCIES
   ruby_parser
   sass-rails
   shoulda
-  shoulda-context
   shoulda-matchers
   simple_form
   simplecov
@@ -379,4 +378,4 @@ RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
