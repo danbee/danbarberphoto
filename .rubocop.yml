@@ -391,6 +391,11 @@ Style/WordArray:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-w'
   Enabled: false
 
+Style/SymbolArray:
+  Description: 'Use %i or %I for arrays of symbols.'
+  StyleGuide: '#percent-i'
+  Enabled: false
+
 # Layout
 
 Layout/AlignParameters:
