@@ -33,6 +33,6 @@ DanBarberPhoto::Application.configure do
 
   config.action_mailer.delivery_method = :letter_opener
 
-  config.action_mailer.default_url_options = { :host => "danbarberphoto.dev" }
+  config.action_mailer.default_url_options = { host: "danbarberphoto.dev" }
 
 end
