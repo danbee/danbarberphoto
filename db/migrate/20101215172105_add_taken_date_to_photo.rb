@@ -1,6 +1,6 @@
 class AddTakenDateToPhoto < ActiveRecord::Migration
   def self.up
-    add_column :photos, :taken_at, :datetime 
+    add_column :photos, :taken_at, :datetime
   end
 
   def self.down

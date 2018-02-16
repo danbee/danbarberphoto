@@ -5,7 +5,7 @@ class AddSortOrders < ActiveRecord::Migration
   end
 
   def self.down
-      remove_column :photos, :sort
-      remove_column :categories, :sort
+    remove_column :photos, :sort
+    remove_column :categories, :sort
   end
 end
