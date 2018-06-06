@@ -83,8 +83,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    capybara-screenshot (1.0.18)
-      capybara (>= 1.0, < 3)
+    capybara-screenshot (1.0.21)
+      capybara (>= 1.0, < 4)
       launchy
     cliver (0.3.2)
     coderay (1.1.2)
@@ -208,8 +208,8 @@ GEM
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
     puma (3.11.4)
-    rack (2.0.4)
-    rack-test (0.8.2)
+    rack (2.0.5)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.5)
       actioncable (= 5.1.5)
@@ -326,7 +326,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (3.0.0)
+    xpath (3.1.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
