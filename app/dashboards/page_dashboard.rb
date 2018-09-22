@@ -49,7 +49,7 @@ class PageDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how pages are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(page)
-  #   "Page ##{page.id}"
-  # end
+  def display_resource(page)
+    page.title
+  end
 end

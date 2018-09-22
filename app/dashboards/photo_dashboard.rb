@@ -75,7 +75,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how photos are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(photo)
-  #   "Photo ##{photo.id}"
-  # end
+  def display_resource(photo)
+    photo.name
+  end
 end
