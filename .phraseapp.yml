@@ -1,0 +1,13 @@
+phraseapp:
+  access_token: 47cd92e40f59cae4c038d5439562c0d45701ce8224fd3dfe70474dfbdec68a31
+  project_id: dcaa617ab8b9a938f3447573d53989e0
+  push:
+    sources:
+    - file: ./config/locales/<locale_name>.yml
+      params:
+        file_format: yml
+  pull:
+    targets:
+    - file: ./config/locales/<locale_name>.yml
+      params:
+        file_format: yml
