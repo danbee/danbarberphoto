@@ -1,4 +1,4 @@
-class RemoveDeviseAdminUsers < ActiveRecord::Migration
+class RemoveDeviseAdminUsers < ActiveRecord::Migration[5.1]
   def up
     drop_table :admin_users
   end

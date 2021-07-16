@@ -1,4 +1,4 @@
-class AddColourToCategory < ActiveRecord::Migration
+class AddColourToCategory < ActiveRecord::Migration[5.1]
   def self.up
     add_column :categories, :base_colour, :string
   end

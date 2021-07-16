@@ -1,4 +1,4 @@
-class MoveToManyToMany < ActiveRecord::Migration
+class MoveToManyToMany < ActiveRecord::Migration[5.1]
   def self.up
     remove_column :photos, :category_id
     create_table :categories_photos, id: false do |t|

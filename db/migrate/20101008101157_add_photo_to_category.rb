@@ -1,4 +1,4 @@
-class AddPhotoToCategory < ActiveRecord::Migration
+class AddPhotoToCategory < ActiveRecord::Migration[5.1]
   def self.up
     add_column :categories, :photo_id, :integer
   end

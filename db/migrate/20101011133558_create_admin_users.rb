@@ -1,4 +1,4 @@
-class CreateAdminUsers < ActiveRecord::Migration
+class CreateAdminUsers < ActiveRecord::Migration[5.1]
   def self.up
     create_table :admin_users do |t|
       t.string :first_name, default: "", null: false

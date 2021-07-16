@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028124718) do
+ActiveRecord::Schema.define(version: 2015_10_23_165644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string "name"
     t.text "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "photo_id"
-    t.string "base_colour", limit: 255
+    t.string "base_colour"
     t.integer "sort"
-    t.string "slug", limit: 255
+    t.string "slug"
   end
 
   create_table "categories_photos", id: false, force: :cascade do |t|
@@ -33,33 +33,33 @@ ActiveRecord::Schema.define(version: 20151028124718) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string "name", limit: 255
-    t.string "title", limit: 255
+    t.string "name"
+    t.string "title"
     t.text "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "flickr_url", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "title", limit: 255
+    t.string "flickr_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
     t.text "description"
     t.integer "sort"
     t.boolean "featured", default: false
     t.boolean "enabled", default: true
     t.datetime "taken_at"
     t.integer "views", default: 0
-    t.string "image_uid", limit: 255
-    t.string "image_name", limit: 255
+    t.string "image_uid"
+    t.string "image_name"
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string "session_id", limit: 255, null: false
+    t.string "session_id", null: false
     t.text "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_sessions_on_session_id"
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end

@@ -1,4 +1,4 @@
-class RemovePaperclipColumnsFromPhotos < ActiveRecord::Migration
+class RemovePaperclipColumnsFromPhotos < ActiveRecord::Migration[5.1]
   def change
     remove_column :photos, :photo_file_name
     remove_column :photos, :photo_content_type

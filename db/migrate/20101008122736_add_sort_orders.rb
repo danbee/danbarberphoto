@@ -1,4 +1,4 @@
-class AddSortOrders < ActiveRecord::Migration
+class AddSortOrders < ActiveRecord::Migration[5.1]
   def self.up
     add_column :photos, :sort, :integer
     add_column :categories, :sort, :integer
