@@ -10,7 +10,6 @@ gem "rails", "~> 5.1"
 
 gem "administrate"
 gem "administrate-field-image"
-gem "aws-sdk"
 gem "bourbon"
 gem "coffee-rails"
 gem "dragonfly"
