@@ -1,7 +1,7 @@
 class MoveToManyToMany < ActiveRecord::Migration
   def self.up
     remove_column :photos, :category_id
-    create_table :categories_photos, :id => false do |t|
+    create_table :categories_photos, id: false do |t|
       t.integer :category_id
       t.integer :photo_id
     end

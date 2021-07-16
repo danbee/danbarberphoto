@@ -1,10 +1,10 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
-require 'rails/all'
+require "rails/all"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require *Rails.groups(:assets => %w(development test))
+  Bundler.require *Rails.groups(assets: %w[development test])
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -30,7 +30,7 @@ module DanBarberPhoto
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join("my", "locales", "*.{rb,yml}").to_s]
     config.i18n.enforce_available_locales = true
     config.i18n.default_locale = :en
 
@@ -43,10 +43,10 @@ module DanBarberPhoto
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.assets.precompile += %w(favicon.ico fancybox/sprite.png fancybox/loading.gif fancybox/blank.gif fancybox/overlay.png)
+    config.assets.precompile += %w[favicon.ico fancybox/sprite.png fancybox/loading.gif fancybox/blank.gif fancybox/overlay.png]
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = "1.0"
 
     # Prefer SASS syntax for stylesheets
     config.sass.preferred_syntax = :sass
@@ -54,7 +54,7 @@ module DanBarberPhoto
     # Configure factories
     config.generators do |g|
       g.test_framework :rspec, fixture: true
-      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
   end
 end

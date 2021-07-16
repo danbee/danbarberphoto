@@ -1,12 +1,12 @@
 source "http://rubygems.org"
-ruby "2.6.6"
+ruby "2.7.2"
 
-gem "dotenv-rails", groups: [:development, :test]
+gem "dotenv-rails", groups: %i[development test]
 
 gem "rails", "~> 5.1"
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem "rails", :git => "git://github.com/rails/rails.git"
 
 gem "administrate"
 gem "administrate-field-image"
@@ -33,28 +33,28 @@ gem "unf"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development do
-  gem "ruby_parser"
-  gem "powder"
   gem "better_errors"
   gem "binding_of_caller"
   gem "letter_opener"
+  gem "powder"
+  gem "ruby_parser"
   gem "standardrb"
 end
 
 group :test, :development do
-  gem "rspec-rails"
-  gem "rails-controller-testing"
-  gem "rubocop"
   gem "pry"
+  gem "rails-controller-testing"
+  gem "rspec-rails"
+  gem "rubocop"
 end
 
 group :test do
-  gem "factory_bot_rails"
-  gem "shoulda"
-  gem "poltergeist"
-  gem "database_cleaner"
-  gem "fivemat"
   gem "capybara-screenshot"
+  gem "database_cleaner"
+  gem "factory_bot_rails"
+  gem "fivemat"
+  gem "poltergeist"
+  gem "shoulda"
   gem "simplecov"
 end
 
