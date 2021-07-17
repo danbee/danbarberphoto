@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Photo do
+describe Photo, type: :model do
   it { should have_and_belong_to_many(:categories) }
 
   it { should validate_presence_of(:image) }

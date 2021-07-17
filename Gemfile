@@ -54,7 +54,9 @@ group :test do
   gem "fivemat"
   gem "poltergeist"
   gem "shoulda"
+  gem "shoulda-matchers"
   gem "simplecov"
+  gem "webdrivers"
 end
 
 group :production do

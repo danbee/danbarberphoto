@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe Category do
-  it { should have_and_belong_to_many(:photos) }
-  it { should validate_presence_of(:name) }
-  it { should validate_presence_of(:slug) }
-  it { should validate_uniqueness_of(:name) }
-  it { should validate_uniqueness_of(:slug) }
+describe Category, type: :model do
+  it { is_expected.to have_and_belong_to_many(:photos) }
+  it { is_expected.to validate_presence_of(:name) }
+  it { is_expected.to validate_presence_of(:slug) }
+  it { is_expected.to validate_uniqueness_of(:name) }
+  it { is_expected.to validate_uniqueness_of(:slug) }
 
   let(:category) { create(:category, name: "A Test Category") }
 

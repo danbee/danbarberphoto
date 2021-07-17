@@ -3,14 +3,20 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rspec/rails"
 require "capybara/rspec"
-require "capybara/poltergeist"
 
 # For code coverage
 require "simplecov"
 SimpleCov.start
 
-# Use Poltergeist
-Capybara.javascript_driver = :poltergeist
+# Use Firefox headless
+Capybara.register_driver :firefox_headless do |app|
+  options = ::Selenium::WebDriver::Firefox::Options.new
+  options.args << "--headless"
+
+  Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
+end
+
+Capybara.javascript_driver = :firefox_headless
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -68,5 +74,12 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
   end
 end
