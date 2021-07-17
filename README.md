@@ -1,7 +1,7 @@
 DanBarberPhoto
 ==============
 
-[ ![Codeship Status for danbee/danbarberphoto](https://app.codeship.com/projects/bdd9fe40-63ad-0132-3763-76d0773b13a7/status?branch=master)](https://app.codeship.com/projects/52411)
+[ ![Codeship Status for danbee/danbarberphoto](https://app.codeship.com/projects/bdd9fe40-63ad-0132-3763-76d0773b13a7/status?branch=main)](https://app.codeship.com/projects/52411)
 
 This is the source code for DanBarberPhoto.com.
 
