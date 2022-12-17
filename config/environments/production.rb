@@ -11,7 +11,7 @@ DanBarberPhoto::Application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -71,7 +71,7 @@ DanBarberPhoto::Application.configure do
     authentication: :plain,
     user_name: ENV["SENDGRID_USERNAME"],
     password: ENV["SENDGRID_PASSWORD"],
-    domain: "heroku.com",
+    domain: "heroku.com"
   }
   ActionMailer::Base.delivery_method = :smtp
 
