@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-ruby "2.7.2"
+ruby "2.7.7"
 
 gem "dotenv-rails", groups: %i[development test]
 
