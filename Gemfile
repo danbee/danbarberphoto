@@ -3,7 +3,7 @@ ruby "2.7.8"
 
 gem "dotenv-rails", groups: %i[development test]
 
-gem "rails", "~> 5.1"
+gem "rails", "~> 6.1"
 
 # Bundle edge Rails instead:
 # gem "rails", :git => "git://github.com/rails/rails.git"
